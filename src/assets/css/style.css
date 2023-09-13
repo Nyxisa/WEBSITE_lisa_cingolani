@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-komet text-base;
+  }
+  h1 {
+    @apply font-itc font-bold;
+  }
+  h2 {
+    @apply font-itc font-bold;
+  }
+  h3 {
+    @apply font-itc;
+  }
+  h4 {
+    @apply font-itc font-bold;
+  }
+  h5 {
+    @apply font-itc font-bold;
+  }
+  p {
+    @apply mb-4;
+  }
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .btn {
+    @apply appearance-none border-2 border-r-4 color-white background-none padding-8px cursor-pointer;
+  }
+
+  .container {
+    @apply flex justify-between items-center p-[20px] fixed w-full bg-white;
+  }
+
+  .logo {
+    @apply w-[80px];
+  }
+
+  .menu-list {
+    @apply flex;
+  }
+
+  .menu-item {
+    @apply p-5;
+  }
+
+  .menu-link {
+    @apply text-black font-medium no-underline;
+  }
+}
