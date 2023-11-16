@@ -3,26 +3,38 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #212121;
+  }
   body {
     @apply font-komet text-base;
   }
   h1 {
-    @apply font-itc font-bold;
+    @apply font-itc font-bold text-5xl;
   }
   h2 {
-    @apply font-itc font-bold;
+    @apply font-itc font-bold text-4xl;
   }
   h3 {
-    @apply font-itc;
+    @apply font-itc text-3xl;
   }
   h4 {
-    @apply font-itc font-bold;
+    @apply font-itc font-bold text-2xl;
   }
   h5 {
-    @apply font-itc font-bold;
+    @apply font-itc font-bold text-xl;
+  }
+  h5 {
+    @apply font-itc font-bold text-lg;
   }
   p {
-    @apply mb-4;
+    @apply mb-4 text-base;
   }
 }
 
@@ -39,23 +51,91 @@ li {
     @apply appearance-none border-2 border-r-4 color-white background-none padding-8px cursor-pointer;
   }
 
-  .container {
-    @apply flex justify-between items-center p-[20px] fixed w-full bg-white;
-  }
-
-  .logo {
-    @apply w-[80px];
-  }
-
   .menu-list {
     @apply flex;
   }
 
   .menu-item {
-    @apply p-5;
+    @apply p-3 grid grid-cols-[1fr,30px] gap-3;
   }
 
   .menu-link {
-    @apply text-black font-medium no-underline;
+    @apply text-lightwhite font-itc font-medium text-xl no-underline text-right;
   }
+
+  .footer {
+    @apply text-lightwhite font-itc font-medium text-base;
+  }
+
+  .footer-socials {
+    @apply xl:grid grid-cols-2 grid-rows-2 xl:gap-y-4 xl:gap-x-4 py-4 flex flex-col gap-2;
+  }
+
+  .footer-socials-item {
+    @apply grid grid-cols-[30px,auto] items-center text-lg gap-2;
+  }
+
+  .footer-socials-link {
+    @apply no-underline -mb-2;
+  }
+
+  .giant-graphic {
+    background: var(
+      --Gradient3,
+      linear-gradient(270deg, #9d70ff 0%, #d6c2fe 33%, #fdc6b3 66%, #fd4505 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: -5rem;
+  }
+
+  .giant-graphic-stroke {
+    color: #212121;
+    background: var(
+      --Gradient3,
+      linear-gradient(270deg, #9d70ff 0%, #d6c2fe 33%, #fdc6b3 66%, #fd4505 100%)
+    );
+    background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+    -webkit-background-clip: text;
+  }
+
+  .stroke-2 {
+    color: #212121;
+    -webkit-text-stroke: 8px transparent;
+    -webkit-background-clip: text;
+  }
+
+  .no-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .div-graphic {
+    width: 200%;
+    background: var(
+      --Gradient3,
+      linear-gradient(270deg, #9d70ff 0%, #d6c2fe 40%, #fdc6b3 60%, #fd4505 100%)
+    );
+    background-clip: text;
+  }
+
+  @keyframes scrolling {
+  0% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scrolling {
+  animation: scrolling 20s linear infinite;
+}
+
+.background-hero {
+background-image: url('/background-img.jpg');
+}
+
 }
