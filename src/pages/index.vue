@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+useHead({
+    title: 'Portfolio | Lisa Cingolani'
+})
+</script>
+
 <template>
     <!-- <div class="flex"><h1 class="font-bold w-fit giant-graphic text-giant">HELLO</h1>
     <h1 class="font-normal giant-graphic text-giant w-fit">HELLO</h1>

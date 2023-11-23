@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+useHead({
+    title: 'Contact | Lisa Cingolani'
+})
+</script>
+
 <template>
         <div class="relative flex gap-4 div-graphic animate-scrolling">
             <h1 class="font-bold w-fit text-giant no-stroke ">CONTACT</h1>
