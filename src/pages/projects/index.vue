@@ -22,7 +22,7 @@ console.log(ProjectsListe)
         <ul>
             <li v-for="projects in ProjectsListe" :key="projects.id">
                 <RouterLink :to="{ name: 'projects-id', params: { id: projects.id } }"
-                    class="text-red-700 hover:text-red-400">
+                    class="text-orange hover:text-purple">
                     <CardProject :key="projects.id" v-bind="{ ...projects }" />
                 </RouterLink>
             </li>
