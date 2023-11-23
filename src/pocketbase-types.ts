@@ -1,6 +1,8 @@
 /**
 * This file was @generated using pocketbase-typegen
 */
+import type PocketBase from 'pocketbase'
+import type { RecordService } from 'pocketbase'
 
 export enum Collections {
 	Projects = "projects",
@@ -20,7 +22,7 @@ export type BaseSystemFields<T = never> = {
 	collectionId: string
 	collectionName: Collections
 	expand?: T
-}
+}	
 
 export type AuthSystemFields<T = never> = {
 	email: string

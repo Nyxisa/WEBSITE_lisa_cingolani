@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
 import { ProjectId } from '@/backend';
+import { useHead } from '@unhead/vue'
 const props = defineProps<{
     id: string,
 }>();
 const ProjectInfo = await ProjectId(props.id);
 
-import { useHead } from '@unhead/vue'
 useHead({
-    title: `${ProjectInfo.Title} | Lisa Cingolani`
+    title: `${ProjectInfo.title} | Lisa Cingolani`
 })
 </script>
 
@@ -22,6 +22,7 @@ useHead({
         <h1 class="font-normal stroke-2 text-giant w-fit ">THE PROJECT</h1>
     </div>
     <h1>{{ ProjectInfo.title }}</h1>
+    <img src="" alt="">
     <p>{{ ProjectInfo.description }}</p>
 </template>
 

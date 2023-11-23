@@ -1,12 +1,10 @@
 <script setup lang="ts">
+import CardProject from '@/components/cardproject.vue';
+import { allProjects } from '@/backend';
 import { useHead } from '@unhead/vue'
 useHead({
     title: 'Projets | Lisa Cingolani'
 })
-
-import CardProject from '@/components/cardproject.vue';
-
-import { allProjects } from '@/backend'
 const ProjectsListe = await allProjects();
 console.log(ProjectsListe)
 </script>
@@ -22,7 +20,7 @@ console.log(ProjectsListe)
         </div>
     <main>
         <ul>
-            <li v-for="projects in ProjectsList" :key="projects.id">
+            <li v-for="projects in ProjectsListe" :key="projects.id">
                 <RouterLink :to="{ name: 'projects-id', params: { id: projects.id } }"
                     class="text-red-700 hover:text-red-400">
                     <CardProject :key="projects.id" v-bind="{ ...projects }" />

@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase' ;
-import type { ProjectsResponse } from '../src/pocketbase-types';
+import type { ProjectsResponse } from '@/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -17,7 +17,7 @@ return allProjectsRecords;
 }
 
 // Un ID d'un projet
-export async function ProjectId(id) {
+export async function ProjectId(id:string) {
   const ProjectIdRecords = await pb.collection('projects').getOne<ProjectsResponse>(id);
   return ProjectIdRecords;
 }
