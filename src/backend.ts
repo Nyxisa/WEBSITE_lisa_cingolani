@@ -3,9 +3,9 @@ import type { ProjectsResponse } from '@/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
-  pocketbase_ip = 'https://portfolio.lisa-cingolani.fr:443'
+  {pocketbase_ip = 'https://portfolio.lisa-cingolani.fr/'}
 else // si developpement
-  pocketbase_ip = 'http://127.0.0.1:8090'
+  {pocketbase_ip = 'http://127.0.0.1:8090'}
 
 //connexion entre l'application et le serveur pocketbase
 export const pb = new PocketBase(pocketbase_ip)

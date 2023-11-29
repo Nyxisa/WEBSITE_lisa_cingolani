@@ -9,7 +9,7 @@ useHead({
     <!-- <div class="flex"><h1 class="font-bold w-fit giant-graphic text-giant">HELLO</h1>
     <h1 class="font-normal giant-graphic text-giant w-fit">HELLO</h1>
     <h1 class="font-normal giant-graphic-stroke text-giant w-fit">HELLO</h1></div> -->
-    <div class="relative flex gap-4 div-graphic animate-scrolling">
+    <div class="relative hidden gap-4 div-graphic animate-scrolling lg:flex">
         <h1 class="font-bold w-fit text-giant no-stroke ">HELLO</h1>
         <h1 class="font-normal text-giant w-fit no-stroke ">HELLO</h1>
         <h1 class="font-normal stroke-2 text-giant w-fit ">HELLO</h1>
