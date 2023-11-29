@@ -18,7 +18,7 @@ useHead({
         <h1 class="font-normal stroke-2 text-giant w-fit ">HELLO</h1>
     </div>
 
-        <div class="relative mt-[300px] -z-10">
+        <div class="hidden lg:block relative mt-[300px] -z-10">
             <div class="w-full h-[100vh] background-hero absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 filter blur-xl"></div>
         </div>
 

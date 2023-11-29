@@ -32,7 +32,7 @@ import behanceLogo from './icons/behance-logo.vue';
                 </ul>
             </div>
 
-            <div class="w-[300px]">
+            <div class="w-[80vw]">
                 <h5 class="mb-2">Let's stay in touch!</h5>
                 <form action="#" class="py-4">
                     <div>
