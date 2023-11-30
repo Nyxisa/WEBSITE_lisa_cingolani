@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import logoGradient from './icons/logo-gradient.vue';
+import LogoGradient from './icons/logo-gradient.vue';
 import linkedinLogo from './icons/linkedin-logo.vue';
 import instagramLogo from './icons/instagram-logo.vue';
 import dribbbleLogo from './icons/dribbble-logo.vue';
@@ -11,7 +11,7 @@ import behanceLogo from './icons/behance-logo.vue';
     <footer class="footer w-[100vw] pt-10">
         <div class="flex justify-between gap-10 pb-5 mx-[6vw]">
             <div class="flex gap-6">
-                <logoGradient />
+                <LogoGradient />
                 <div class="w-[1px] h-auto bg-lightwhite"></div>
             </div>
             <div class="min-w-fit">

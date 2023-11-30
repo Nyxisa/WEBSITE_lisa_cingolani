@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import logoGradient from './icons/logo-gradient.vue';
+import LogoGradient from './icons/logo-gradient.vue';
 
 </script>
 <template>
@@ -10,7 +10,7 @@ import logoGradient from './icons/logo-gradient.vue';
             class="w-[100%] h-[100%] px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl rounded-bl-3xl top-0 right-0 bg-lightblack">
             <div class="w-[200px] h-[200px]">
                 <RouterLink to="/">
-                    <logoGradient class="w-full" />
+                    <LogoGradient class="w-full" />
                 </RouterLink>
             </div>
             <nav class="navbar">
