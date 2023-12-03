@@ -10,8 +10,8 @@ console.error(e);
 }
 
 try {
-const ProjectIDRecords = await ProjectID('tu0t0tl805ez0wo');
-console.log(JSON.stringify(ProjectIDRecords));
+const ProjectIdRecords = await ProjectId();
+console.log(JSON.stringify(ProjectIdRecords));
 } catch (e) {
 console.error(e);
 }

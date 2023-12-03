@@ -176,4 +176,24 @@ li {
       margin: 0 5vw;
     }
   }
+
+@keyframes var-font-anim {
+  0% {
+    font-variation-settings: 'wght' 300;
+  }
+  50% {
+    font-variation-settings: 'wght' 600;
+  }
+  100% {
+    font-variation-settings: 'wght' 300;
+  }
 }
+
+.var-font {
+  animation: var-font-anim 3s infinite;
+  transition: font-variation-settings 0.5s ease;
+}
+
+
+  }
+

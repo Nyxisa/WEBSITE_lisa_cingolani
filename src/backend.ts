@@ -22,7 +22,6 @@ export async function ProjectId(id:string) {
   return ProjectIdRecords;
 }
 
-
 // Liste des projets triés par date
 export async function allProjectsSorted() {
 const allProjectsSortedRecords = await pb.collection('projects').getFullList<ProjectsResponse>({
