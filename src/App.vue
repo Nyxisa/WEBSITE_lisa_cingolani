@@ -15,6 +15,6 @@ import FooterMobile from '@/components/FooterMobile.vue';
             <RouterView />
         </Suspense>
     </main>
-    <FooterPage class="max-w-[calc(100vw-300px)] hidden lg:block" />
-    <FooterMobile class="lg:hidden max-w-[100vw]" />
+    <FooterPage class="lg:max-w-[calc(100vw-300px)] hidden md:block" />
+    <FooterMobile class="md:hidden max-w-[100vw]" />
 </template>

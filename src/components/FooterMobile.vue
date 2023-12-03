@@ -38,14 +38,14 @@ import logoGradient from './icons/logo-gradient.vue';
                 <h5 class="mt-10 mb-5 text-center">Let's stay in touch!</h5>
                 <form action="#">
                     <input type="email" id="email"
-                        class="block w-full px-1 text-base bg-black border-b border-b-lightwhite focus:outline-none text-lightwhite"
+                        class="block w-full px-1 text-base bg-black border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"
                         placeholder="email@example.com">
                 </form>
                 <button type="submit"
                     class="mx-auto mt-5 btn">Join
                     the adventure</button>
             </div>
-            <Logo class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite" />
+            <Logo class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />
         </div>
         <span class="block py-2 text-sm text-center">
             &copy; 2023 Lisa Cingolani.</span>

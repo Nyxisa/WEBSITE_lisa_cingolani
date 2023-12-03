@@ -25,7 +25,7 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
                     <h5 class="mt-4 mb-2">{{ ProjectInfo.title }}</h5>
                     <p class="max-w-[70ch] h-full">{{ ProjectInfo.description }}</p>
                 </div>
-                <RouterLink to="/projects" class="w-full text-xl bg-orange text-lightwhite btn-style">
+                <RouterLink :to="{ name: 'projects-id', params: { id } }" class="w-full text-xl bg-orange text-lightwhite btn-style">
                     Read More
                 </RouterLink>
             </div>
