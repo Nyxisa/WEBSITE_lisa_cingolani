@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CardProject from '@/components/cardproject.vue';
+import CardProject from '@/components/CardProject.vue';
 import { allProjects } from '@/backend';
 import { useHead } from '@unhead/vue'
 useHead({

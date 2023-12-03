@@ -9,7 +9,7 @@ import logoGradient from './icons/logo-gradient.vue';
 
 </script>
 <template>
-    <footer class="footer w-[100vw]">
+    <footer class="w-screen footer">
         <div class="p-10 bg-black">
             <div class="min-w-fit">
                 <h5 class="mb-5 text-center">Catch me on socials!</h5>

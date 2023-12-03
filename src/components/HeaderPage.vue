@@ -5,7 +5,7 @@ import LogoGradient from './icons/logo-gradient.vue';
 </script>
 <template>
     <header
-        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[2px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-white to-transparent">
+        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav">
         <div
             class="w-[100%] h-[100%] px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl rounded-bl-3xl top-0 right-0 bg-lightblack">
             <div class="w-[200px] h-[200px]">

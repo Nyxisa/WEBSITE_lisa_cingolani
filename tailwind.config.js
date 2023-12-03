@@ -19,7 +19,7 @@ module.exports = {
         'transparent': 'transparent',
       },
       fontFamily: {
-        komet: ['komet', 'sans-serif',],
+        halyard: ['halyard-text-variable', 'sans-serif',],
         itc: ['itc-avant-garde-gothic-pro', 'sans-serif',]
       },
       fontSize: {
@@ -35,14 +35,12 @@ module.exports = {
        },
       boxShadow: {
         '1': '0px 4px 4px rgba(0, 0, 0, 0.25);',
+        'nav': ' -2px 4px 20px 2px rgba(0, 0, 0, 0.25);',
       },
       extend: {
         borderRadius: {
-    'default': '3rem',
-    },
-      gridTemplateColumns: {
-        principal: 'repeat(12, minmax(0, 64px))'
-      }
+    'default': '2rem',
+    }
     }
   },
   plugins: [],

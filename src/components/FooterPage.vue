@@ -9,11 +9,7 @@ import behanceLogo from './icons/behance-logo.vue';
 </script>
 <template>
     <footer class="footer w-[100vw] pt-10">
-        <div class="flex justify-between gap-10 pb-5 mx-[6vw]">
-            <div class="flex gap-6">
-                <LogoGradient />
-                <div class="w-[1px] h-auto bg-lightwhite"></div>
-            </div>
+        <div class="flex justify-around gap-10 pb-5 mx-[6vw]">
             <div class="min-w-fit">
                 <h5 class="mb-2">Catch me on socials!</h5>
                 <ul class="footer-socials">
@@ -43,11 +39,11 @@ import behanceLogo from './icons/behance-logo.vue';
                     </div>
                 </form>
                 <button type="submit"
-                    class="my-4 bg-none border-lightwhite border hover:border-none text-lightwhite hover:bg-purple hover:text-lightblack font-medium rounded-full px-5 pt-2.5 pb-1.5 text-center transition-all">Join
+                    class="my-4 btn">Join
                     the adventure</button>
             </div>
         </div>
-        <span class="block py-2 mx-[5vw] -mb-1 text-sm text-center border-t border-lightwhite">
+        <span class="block py-4 pt-6 text-sm text-center bg-black">
             &copy; 2023 Lisa Cingolani.</span>
     </footer>
 </template>
