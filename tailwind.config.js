@@ -23,12 +23,12 @@ module.exports = {
         itc: ['itc-avant-garde-gothic-pro', 'sans-serif',]
       },
       fontSize: {
-      'xs':'0.75rem', //12px Xsmall//
-      'sm':'0.875rem', //14px Small//
-      'base':'1rem', //16px Body//
-      'lg':'1.25rem', //20px H6//
-      'xl':'1.5rem', //24px H5// 
-      '2xl':'2rem', //32px H4//
+      'xs':'0.75rem', //12px Xsmall | M-Small//
+      'sm':'0.875rem', //14px Small | M-Body//
+      'base':'1rem', //16px Body | M-H4//
+      'lg':'1.25rem', //20px H6 | M-H3//
+      'xl':'1.5rem', //24px H5 | M-H2// 
+      '2xl':'2rem', //32px H4 | M-H1//
       '3xl':'2.5rem', //40px H3//
       '4xl':'3rem', //48px H2//
       '5xl':'4rem', //64px H1//

@@ -12,9 +12,9 @@
     </div>
     <!-- Mobile -->
     <div class="margins">
-        <div class="text-center lg:hidden">
-            <h1 class="text-2xl">LISA CINGOLANI</h1>
-            <h2 class="text-xl font-light">PORTFOLIO</h2>
+        <div class="text-center lg:hidden ">
+            <h1 class="w-full mx-auto bg-black border-none btn-style">PORTFOLIO</h1>
+            <!-- <h2 class="text-xl font-light">PORTFOLIO</h2> -->
         </div>
         <section class="herogrid">
             <div class="rounded-3xl div1 bg-[url('/bg_home1.png')] bg-cover"> </div>
