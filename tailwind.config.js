@@ -23,6 +23,7 @@ module.exports = {
         itc: ['itc-avant-garde-gothic-pro', 'sans-serif',]
       },
       fontSize: {
+      'xs':'0.75rem', //12px Xsmall//
       'sm':'0.875rem', //14px Small//
       'base':'1rem', //16px Body//
       'lg':'1.25rem', //20px H6//

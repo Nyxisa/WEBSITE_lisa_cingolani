@@ -26,8 +26,8 @@ function closeMenu() {
             '!-translate-y-full !bg-transparent': !dirTop,
             '!bg-black': underLimit
         }">
-        <RouterLink to="/">
-            <Logo class="w-8 h-38 fill-lightwhite" />
+        <RouterLink to="/" class="flex items-end gap-1">
+            <Logo class="w-8 h-38 fill-lightwhite" /><span class="text-[0.5rem] font-thin font-itc">Lisa<br>Cingolani</span>
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
             <nav aria-label="Site Nav"

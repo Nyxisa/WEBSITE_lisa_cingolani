@@ -19,6 +19,10 @@ console.log(ProjectsListeSorted)
         <h1 class="font-normal text-giant w-fit no-stroke ">PROJECTS</h1>
         <h1 class="font-normal stroke-2 text-giant w-fit ">PROJECTS</h1>
     </div>
+
+    <div class="text-center lg:hidden">
+        <h1 class="text-2xl">PROJECTS</h1>
+    </div>
     <main>
         <ul class="flex-wrap justify-around -mb-8 md:gap-5 lg:gap-20 md:mb-0 md:flex">
             <li v-for="projects in ProjectsListeSorted" :key="projects.id">
