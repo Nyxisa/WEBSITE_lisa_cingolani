@@ -21,3 +21,13 @@ export async function ProjectId(id:string) {
   const ProjectIdRecords = await pb.collection('projects').getOne<ProjectsResponse>(id);
   return ProjectIdRecords;
 }
+
+
+// Liste des projets triés par date
+export async function allProjectsSorted() {
+const allProjectsSortedRecords = await pb.collection('projects').getFullList<ProjectsResponse>({
+        sort: '-date',
+    });
+return allProjectsSortedRecords;
+}
+

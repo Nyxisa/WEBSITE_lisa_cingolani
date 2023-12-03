@@ -24,7 +24,7 @@ function closeMenu() {
         class="fixed z-10 flex items-center justify-between w-screen px-6 py-4 transition-all duration-300 ease-in-out translate-y-0 bg-black text-lightwhite shadow-1 lg:py-4"
         :class="{
             '!-translate-y-full !bg-transparent': !dirTop,
-            '!bg-black lg:!bg-black': underLimit
+            '!bg-black': underLimit
         }">
         <RouterLink to="/">
             <Logo class="w-8 h-38 fill-lightwhite" />

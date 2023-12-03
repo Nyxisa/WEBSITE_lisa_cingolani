@@ -8,7 +8,7 @@ import behanceLogo from './icons/behance-logo.vue';
 
 </script>
 <template>
-    <footer class="footer w-[100vw] pt-10">
+    <footer class="footer w-[100vw] pt-20 bg-gradient-to-b from-lightblack to-black">
         <div class="flex justify-around gap-10 pb-5 mx-[6vw]">
             <div class="min-w-fit">
                 <h5 class="mb-2">Catch me on socials!</h5>
@@ -43,7 +43,7 @@ import behanceLogo from './icons/behance-logo.vue';
                     the adventure</button>
             </div>
         </div>
-        <span class="block py-4 pt-6 text-sm text-center bg-black">
+        <span class="block py-4 pt-6 text-sm text-center">
             &copy; 2023 Lisa Cingolani.</span>
     </footer>
 </template>

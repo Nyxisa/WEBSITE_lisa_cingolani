@@ -13,10 +13,10 @@
     <!-- Mobile -->
     <div class="margins">
         <div class="text-center lg:hidden">
-            <h1 class="text-lg">LISA CINGOLANI</h1>
-            <h2 class="text-base font-light">PORTFOLIO</h2>
+            <h1 class="text-2xl">LISA CINGOLANI</h1>
+            <h2 class="text-xl font-light">PORTFOLIO</h2>
         </div>
-        <section class="homegrid">
+        <section class="herogrid">
             <div class="rounded-3xl div1 bg-[url('/bg_home1.png')] bg-cover"> </div>
             <div class="rounded-3xl div2 bg-[url('/bg_home2.png')] bg-cover"> </div>
             <div class="rounded-3xl div3 bg-[url('/bg_home3.png')] bg-cover flex items-center justify-center">
@@ -25,10 +25,12 @@
 
         </section>
         <div class="p-5 rounded-3xl bg-lightwhite">
-            <h3 class="px-5 pt-2 pb-1 mb-4 text-base border-2 rounded-full w-fit border-lightblack text-lightblack">QUICK
+            <h3 class="px-5 pt-2 pb-1 mb-4 text-base border-2 rounded-full lg:text-lg w-fit border-lightblack text-lightblack">QUICK
                 INTRODUCTION</h3>
-            <p class="px-2 max-w-[70ch] text-base text-lightblack">I'm Lisa Cingolani, a web design student at the
-                University of Montbéliard. My interest in visual identity and branding allows me to bring a unique and
+            <p class="px-2 text-base text-lightblack lg:text-lg">I'm <strong>Lisa Cingolani</strong>, a <strong>web design
+                    student</strong> at the
+                University of Montbéliard. My interest in <strong>visual identity</strong> and <strong>branding</strong>
+                allows me to bring a unique and
                 cohesive touch to my projects.</p>
         </div>
     </div>

@@ -13,39 +13,21 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
 </script>
     
 <template>
-    <div class="flex flex-col items-center self-stretch gap-4 pb-4 bg-white rounded-default shadow-1">
-        <img :src="urlImg0" class="object-cover rounded-b-none rounded-xl" />
-        <div class="flex items-center gap-4 w-[100%]">
-            <!-- <h6 class="mb-0">{{ CategoryTab.join(" | ") }}</h6> -->
-            <h6 class="mb-0">Webdesign</h6>
-            <div class="flex-1 border-b border-black"></div>
-        </div>
-        <h5 class="mb-0">{{ ProjectInfo.title }}</h5>
-        <p>Lorem ipsum dolor sit amet consectetur. Varius lectus dictum rhoncus
-            egestas. Imperdiet rhoncus in tellus cras condimentum posuere.</p>
-    </div>
-
-
-    <div
-        class="bg-white text-lightblack rounded-[30px] flex flex-col items-start justify-between self-stretch  h-[508px] overflow-hidden shadow-1">
-        <div class="bg-lightgrey self-stretch  h-[200px]"></div>
-        <div class="pt-5 pr-[30px] pb-5 pl-[30px] flex flex-col gap-[30px] items-start justify-start self-stretch ">
-            <div class="flex flex-col gap-2.5 items-start justify-start self-stretch ">
-                <div class="pt-5 pb-5 flex flex-row gap-2.5 items-center justify-center self-stretch ">
-                    <h4> Branding </h4>
-                    <div class="border-solid border-black border-t border-r-[0] border-b-[0] border-l-[0] flex-1 h-0">
-                    </div>
-                </div>
-                <h5>Logo Design</h5>
-                <p>
-                    Fictional retro-futuristic car brand. Lorem ipsum dolor sit amet
-                    consectetur. Varius lectus dictum rhoncus egestas. Imperdiet rhoncus
-                    in tellus cras condimentum posuere.
-                </p>
+    <div class="mx-auto flex flex-col h-full mb-10 text-lightblack rounded-default shadow-1 max-w-[350px]">
+        <img :src="urlImg0" class="object-cover rounded-b-none rounded-default h-[200px] md:h-[250px] lg:h-[300px]" />
+        <div class="flex flex-col justify-between h-full px-8 py-5 rounded-t-none rounded-default bg-lightwhite">
+            <div class="flex items-center w-full gap-4">
+                <h6 class="mb-0"> {{ CategoryTab.slice(0,1).join(" | ") }}</h6>
+                <div class="flex-1 border-b border-black"></div>
             </div>
-            <div
-                class="bg-orange text-lightwhite rounded-[50px] pt-[18px] pr-8 pb-[18px] pl-8 flex flex-row gap-2.5 items-center justify-center self-stretch ">
-                Read More
+            <div class="flex flex-col justify-between h-full">
+                <div class="h-full">
+                    <h5 class="mt-4 mb-2">{{ ProjectInfo.title }}</h5>
+                    <p class="max-w-[70ch] h-full">{{ ProjectInfo.description }}</p>
+                </div>
+                <RouterLink to="/projects" class="w-full text-xl bg-orange text-lightwhite btn-style">
+                    Read More
+                </RouterLink>
             </div>
         </div>
     </div>
