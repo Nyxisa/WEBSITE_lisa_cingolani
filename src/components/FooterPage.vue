@@ -34,12 +34,12 @@ import behanceLogo from './icons/behance-logo.vue';
                     <div>
                         <label for="email" class="block mb-2 text-sm">Email</label>
                         <input type="email" id="email"
-                            class="block w-full px-1 text-base border-b bg-lightblack border-b-lightwhite focus:outline-none text-lightwhite"
+                            class="block w-full px-1 text-base bg-transparent border-b border-b-lightwhite focus:outline-none text-lightwhite"
                             placeholder="email@example.com">
                     </div>
                 </form>
                 <button type="submit"
-                    class="my-4 btn">Join
+                    class="my-4 btn focus:translate-y-[1px] hover:-translate-y-[1px]">Join
                     the adventure</button>
             </div>
         </div>

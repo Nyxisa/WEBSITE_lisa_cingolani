@@ -42,7 +42,7 @@ import logoGradient from './icons/logo-gradient.vue';
                         placeholder="email@example.com">
                 </form>
                 <button type="submit"
-                    class="mx-auto mt-5 btn">Join
+                    class="mx-auto mt-5 btn focus:translate-y-[1px] hover:-translate-y-[1px]">Join
                     the adventure</button>
             </div>
             <Logo class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />

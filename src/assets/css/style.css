@@ -9,6 +9,16 @@
     padding: 0;
   }
 
+  #app {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
   html {
     @apply bg-lightblack text-lightwhite;
   }
@@ -49,7 +59,7 @@ li {
 
 @layer components {
   .btn {
-    @apply appearance-none bg-none block border-lightwhite border-2 hover:border-transparent text-lightwhite hover:bg-purple hover:text-lightblack font-semibold rounded-full px-5 pt-2 pb-1 text-center transition-all cursor-pointer;
+    @apply appearance-none bg-purple block text-lightblack hover:bg-lightpurple hover:text-lightblack font-semibold rounded-full px-5 pt-2 pb-1 text-center transition-all cursor-pointer;
   }
 
   .btn-style {
@@ -218,6 +228,11 @@ li {
     @apply flex items-center gap-2 pb-2 w-fit;
   }
 
+  .input {
+    @apply bg-transparent transition-all w-full px-1 text-base lg:text-xl border-b-2 border-b-lightwhite focus:outline-none focus:border-b-4 focus:border-b-lightpurple placeholder:text-lightwhite;
+  }
+
+  /* LA GRILLE TEST RANDOM
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -262,5 +277,5 @@ li {
 
   .li4 {
     grid-area: li4;
-  }
+  } */
 }
