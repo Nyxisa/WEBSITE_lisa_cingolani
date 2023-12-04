@@ -269,39 +269,73 @@ li {
 
   @keyframes fluidWave {
     0% {
-      transform: translateY(0) translateX(20px);
+      transform: translateY(0) translateX(0);
     }
     50% {
-      transform: translateY(30px) translateX(-10px);
+      transform: translateY(50px) translateX(5px);
     }
     100% {
-      transform: translateY(0) translateX(20px);
+      transform: translateY(0) translateX(0px);
     }
   }
 
   .wave1 {
-    margin-top: -125px;
-    margin-left: 15px;
-    min-width: 1200px;
-    height: 500px;
-    animation: fluidWave 15s infinite ease-in-out;
-    rotate: -15deg;
+    --mask: radial-gradient(223.61px at 50% 300px, #000 99%, #0000 101%) calc(50% - 200px) 0/400px
+        51% repeat-x,
+      radial-gradient(223.61px at 50% -200px, #0000 99%, #000 101%) 50% 100px/400px
+        calc(51% - 100px) repeat-x,
+      radial-gradient(223.61px at 50% calc(100% - 300px), #000 99%, #0000 101%) calc(50% - 200px)
+        100%/400px 51% repeat-x,
+      radial-gradient(223.61px at 50% calc(100% + 200px), #0000 99%, #000 101%) 50%
+        calc(100% - 100px) / 400px calc(51% - 100px) repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    width: 1000px;
+    height: 400px;
+    background: linear-gradient( #9d70ff 0%, #d6c2fe 100%);
+    animation: fluidWave 7s infinite;
+    rotate: 45deg;
   }
-  .wave2 {
-    margin-top: -450px;
-    min-width: 1200px;
-    height: 500px;
-    animation: fluidWave 12s infinite ease-in-out;
-    rotate: -15deg;
+    .wave2 {
+    --mask: radial-gradient(223.61px at 50% 300px, #000 99%, #0000 101%) calc(50% - 200px) 0/400px
+        51% repeat-x,
+      radial-gradient(223.61px at 50% -200px, #0000 99%, #000 101%) 50% 100px/400px
+        calc(51% - 100px) repeat-x,
+      radial-gradient(223.61px at 50% calc(100% - 300px), #000 99%, #0000 101%) calc(50% - 200px)
+        100%/400px 51% repeat-x,
+      radial-gradient(223.61px at 50% calc(100% + 200px), #0000 99%, #000 101%) 50%
+        calc(100% - 100px) / 400px calc(51% - 100px) repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    margin-top: -325px;
+    width: 1000px;
+    height: 400px;
+    background: #F4F4F4;
+    animation: fluidWave 6s infinite;
+    rotate: 45deg;
   }
 
   .wave3 {
-    margin-top: -475px;
-    margin-left: -15px;
-    min-width: 1200px;
-    height: 500px;
-    animation: fluidWave 12s infinite ease-in-out;
-    rotate: -15deg;
+    --mask: radial-gradient(223.61px at 50% 300px, #000 99%, #0000 101%) calc(50% - 200px) 0/400px
+        51% repeat-x,
+      radial-gradient(223.61px at 50% -200px, #0000 99%, #000 101%) 50% 100px/400px
+        calc(51% - 100px) repeat-x,
+      radial-gradient(223.61px at 50% calc(100% - 300px), #000 99%, #0000 101%) calc(50% - 200px)
+        100%/400px 51% repeat-x,
+      radial-gradient(223.61px at 50% calc(100% + 200px), #0000 99%, #000 101%) 50%
+        calc(100% - 100px) / 400px calc(51% - 100px) repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    margin-top: -350px;
+    width: 1000px;
+    height: 400px;
+    background: linear-gradient( #fd4505 0%, #fdc6b3 100%);
+    animation: fluidWave 6s infinite;
+    rotate: 45deg;
   }
 
   /* LA GRILLE TEST RANDOM

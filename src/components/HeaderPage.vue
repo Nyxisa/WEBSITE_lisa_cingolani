@@ -5,7 +5,7 @@ import LogoGradient from './icons/logo-gradient.vue';
 </script>
 <template>
     <header
-        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav overflow-hidden backdrop-filter backdrop-blur-3xl">
+        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav overflow-hidden">
         <div
             class="w-[100%] h-[100%] px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl rounded-bl-3xl top-0 right-0 bg-lightblack">
             <div class="w-[200px] h-[200px]">
@@ -40,9 +40,9 @@ import LogoGradient from './icons/logo-gradient.vue';
                 <span class="absolute text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
             </label>
             <div class="blur-2xl">
-                <img src="/svg/wave1.svg" class="wave1"/>
-                <img src="/svg/wave2.svg" class="wave2"/>
-                <img src="/svg/wave3.svg" class="wave3"/>
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
             </div>
         </div>
     </header>
