@@ -186,6 +186,15 @@ li {
     }
   }
 
+.software-grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  }
+
+
   @keyframes var-font-anim {
     0% {
       font-variation-settings: 'wght' 300;
@@ -272,7 +281,7 @@ li {
       transform: translateY(0) translateX(0);
     }
     50% {
-      transform: translateY(50px) translateX(5px);
+      transform: translateY(25px) translateX(5px);
     }
     100% {
       transform: translateY(0) translateX(0px);
@@ -330,7 +339,7 @@ li {
 
     -webkit-mask: var(--mask);
     mask: var(--mask);
-    margin-top: -350px;
+    margin-top: -325px;
     width: 1000px;
     height: 400px;
     background: linear-gradient( #fd4505 0%, #fdc6b3 100%);
