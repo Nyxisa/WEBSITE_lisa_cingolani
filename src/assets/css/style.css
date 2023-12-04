@@ -232,6 +232,39 @@ li {
     @apply bg-transparent transition-all w-full px-1 text-base lg:text-xl border-b-2 border-b-lightwhite focus:outline-none focus:border-b-4 focus:border-b-lightpurple placeholder:text-lightwhite;
   }
 
+  /* Style for custom check mark */
+
+  input[type='checkbox'] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+  }
+
+  input[type='checkbox']::before {
+    content: '\2713';
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid #f4f4f4;
+    border-radius: 3px;
+  }
+
+  input[type='checkbox']:checked::before {
+    color: #f4f4f4;
+    background-color: #9d70ff;
+    border: 2px solid #f4f4f4;
+  }
+
   /* LA GRILLE TEST RANDOM
   .container {
     display: grid;
