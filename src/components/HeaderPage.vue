@@ -39,9 +39,10 @@ import LogoGradient from './icons/logo-gradient.vue';
                 </div>
                 <span class="absolute text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
             </label>
-            <div class="">
-                <div class="wave1"></div>
-                <div class="wave2"></div>
+            <div class="blur-2xl">
+                <img src="/svg/wave1.svg" class="wave1"/>
+                <img src="/svg/wave2.svg" class="wave2"/>
+                <img src="/svg/wave3.svg" class="wave3"/>
             </div>
         </div>
     </header>
