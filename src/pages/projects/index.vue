@@ -14,7 +14,7 @@ console.log(ProjectsListeSorted)
 
 <template>
     <ProjectsAnim/>
-    <section class="margins mt-[25px]">
+    <section class="margins lg:mt-[25px]">
         <div class="text-center lg:hidden">
             <h1 class="w-full mx-auto mb-8 bg-black border-none btn-style">PROJECTS</h1>
         </div>

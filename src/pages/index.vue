@@ -20,7 +20,7 @@ console.log(ProjectsListeSorted)
                 <h3 class="text-xl font-light">Latest Projects</h3>
                 <div class="flex-1 border-b border-lightwhite"></div>
             </div>
-            <ul class="flex-wrap justify-around -mb-8 md:gap-5 lg:gap-20 md:mb-0 md:flex">
+            <ul class="flex-wrap justify-around -mb-8 md:gap-5 lg:gap-8 md:mb-0 md:flex">
                 <li v-for="projects in ProjectsListeSorted.slice(0, 3)" :key="projects.id">
                     <RouterLink :to="{ name: 'projects-id', params: { id: projects.id } }" class="flex flex-col h-full">
                         <CardProject :key="projects.id" v-bind="{ ...projects }" />

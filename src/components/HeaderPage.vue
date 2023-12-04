@@ -5,7 +5,7 @@ import LogoGradient from './icons/logo-gradient.vue';
 </script>
 <template>
     <header
-        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav">
+        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav overflow-hidden backdrop-filter backdrop-blur-3xl">
         <div
             class="w-[100%] h-[100%] px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl rounded-bl-3xl top-0 right-0 bg-lightblack">
             <div class="w-[200px] h-[200px]">
@@ -16,12 +16,11 @@ import LogoGradient from './icons/logo-gradient.vue';
             <nav class="navbar">
                 <ul class="grid justify-end">
                     <li class="menu-item">
-                        <RouterLink class="menu-link" to="/">HOME</RouterLink><img src="./icons/nav/home.svg"
-                            alt="home">
+                        <RouterLink class="menu-link" to="/">HOME</RouterLink><img src="./icons/nav/home.svg" alt="home">
                     </li>
                     <li class="menu-item">
-                        <RouterLink class="menu-link" to="/projects">PROJECTS</RouterLink><img src="./icons/nav/projects.svg"
-                            alt="projects">
+                        <RouterLink class="menu-link" to="/projects">PROJECTS</RouterLink><img
+                            src="./icons/nav/projects.svg" alt="projects">
                     </li>
                     <li class="menu-item">
                         <RouterLink class="menu-link" to="/about">ABOUT</RouterLink><img src="./icons/nav/about.svg"
@@ -40,6 +39,10 @@ import LogoGradient from './icons/logo-gradient.vue';
                 </div>
                 <span class="absolute text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
             </label>
+            <div class="">
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+            </div>
         </div>
     </header>
 </template>

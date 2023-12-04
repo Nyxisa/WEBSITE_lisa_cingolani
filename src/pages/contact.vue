@@ -11,8 +11,10 @@ import ContactForm from '@/components/ContactForm.vue';
 <template>
     <ContactAnim />
     <section class="margins lg:mt-[25px]">
-    <p class="md:text-lg max-w-[60ch]">Feel free to reach out to me through the contact form below, whether you have a project in mind, want to collaborate,
-        or simply have a question. I'm looking forward to hearing from you!</p>
-        <ContactForm/>
-        </section>
+        <h1 class="w-full mb-8 bg-black border-none lg:hidden btn-style">CONTACT</h1>
+        <p class="md:text-lg max-w-[60ch]">Feel free to reach out to me through the contact form below, whether you have a
+            project in mind, want to collaborate,
+            or simply have a question. I'm looking forward to hearing from you!</p>
+        <ContactForm />
+    </section>
 </template>
