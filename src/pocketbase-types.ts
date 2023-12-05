@@ -73,6 +73,9 @@ export type ProjectsRecord = {
 	softwares_icons?: string[]
 	image2?: string
 	image3?: string
+	textli1?: string
+	textli2?: string
+	textli3?: string
 }
 
 export type UsersRecord = {

@@ -40,6 +40,11 @@ const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text2 }}</p>
+            <ul class="flex flex-col gap-4">
+                <li>{{ ProjectInfo.textli1 }}</li>
+                <li>{{ ProjectInfo.textli2 }}</li>
+                <li>{{ ProjectInfo.textli3 }}</li>
+            </ul>
         </div>
     </section>
 
