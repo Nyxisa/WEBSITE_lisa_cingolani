@@ -16,11 +16,9 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
     
 <template>
     <section class="mb-10">
-        <h1 class="mt-4 mb-2">{{ ProjectInfo.title }}</h1>
-        <div class="flex items-center w-full gap-4 pb-10">
-            <h2 class="pt-3 text-xl font-thin"> {{ CategoryTab.join(" | ") }}</h2>
-            <div class="flex-1 border-b border-lightwhite"></div>
-        </div>
+        <h1 class="mt-4 mb-2 text-orange">{{ ProjectInfo.title }}</h1>
+        <h2 class="pt-3 text-xl font-thin"> {{ CategoryTab.join(" | ") }}</h2>
+        <div class="flex-1 border-b border-lightwhite"></div>
         <p class="max-w-[70ch] h-full">{{ ProjectInfo.description }} Fictional retro-futuristic car brand. Lorem ipsum dolor
             sit
             amet consectetur. Varius lectus dictum rhoncus egestas. Imperdiet rhoncus in tellus cras condimentum posuere.
