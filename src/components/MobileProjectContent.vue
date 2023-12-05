@@ -4,12 +4,12 @@ import { ProjectId } from '@/backend';
 import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps<{
     id: string,
-    image: string,
+    card_image: string,
 }>();
 const ProjectInfo = await ProjectId(props.id);
 const CategoryTab = ref(ProjectInfo.category);
 
-const img0 = ProjectInfo.image
+const img0 = ProjectInfo.card_image
 const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
 
 </script>

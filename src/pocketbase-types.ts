@@ -45,13 +45,34 @@ export enum ProjectsCategoryOptions {
 	"Packaging" = "Packaging",
 	"Editorial" = "Editorial",
 }
+
+export enum ProjectsSoftwaresOptions {
+	"Figma" = "Figma",
+	"Illustrator" = "Illustrator",
+	"InDesign" = "InDesign",
+	"AfterEffects" = "AfterEffects",
+	"Photoshop" = "Photoshop",
+	"Dimension" = "Dimension",
+	"Blender" = "Blender",
+}
 export type ProjectsRecord = {
 	title?: string
 	description?: string
-	image?: string
+	card_image?: string
 	category?: ProjectsCategoryOptions[]
 	alt_img?: string
 	date?: IsoDateString
+	intro?: string
+	image1?: string
+	text1?: string
+	text2?: string
+	text3?: string
+	text4?: string
+	outro?: string
+	softwares?: ProjectsSoftwaresOptions[]
+	softwares_icons?: string[]
+	image2?: string
+	image3?: string
 }
 
 export type UsersRecord = {

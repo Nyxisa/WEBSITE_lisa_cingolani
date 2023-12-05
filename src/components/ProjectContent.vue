@@ -9,8 +9,18 @@ const props = defineProps<{
 const ProjectInfo = await ProjectId(props.id);
 const CategoryTab = ref(ProjectInfo.category);
 
-const img0 = ProjectInfo.image
+const img0 = ProjectInfo.card_image
 const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
+const img1 = ProjectInfo.image1
+const urlImg1 = img1 && pb.getFileUrl(ProjectInfo, img1, { thumb: '100x200' })
+const img2 = ProjectInfo.image2
+const urlImg2 = img2 && pb.getFileUrl(ProjectInfo, img2, { thumb: '100x200' })
+const img3 = ProjectInfo.image3
+const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
+
+
+// const icon1 = ProjectInfo.softwares_icons
+// const urlIcon1 = icon1 && pb.getFileUrl(ProjectInfo, icon1, { thumb: '100x200' })
 
 </script>
     
@@ -21,68 +31,46 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
             <h2 class="pt-3 text-xl font-thin"> {{ CategoryTab.join(" | ") }}</h2>
             <div class="flex-1 border-b border-lightwhite"></div>
         </div>
-        <p class="max-w-[70ch] h-full">{{ ProjectInfo.description }} Fictional retro-futuristic car brand. Lorem ipsum dolor
-            sit
-            amet consectetur. Varius lectus dictum rhoncus egestas. Imperdiet rhoncus in tellus cras condimentum posuere.
-            Fictional retro-futuristic car brand. </p>
-        <img :src="urlImg0" class="max-h-[500px] mt-10 w-full" />
+        <p class="max-w-[70ch] h-full">{{ ProjectInfo.intro }}</p>
+        <img :src="urlImg1" class="w-auto max-h-full mx-auto" />
     </section>
 
-    <section class="flex justify-between gap-10 py-10"> 
-        <img :src="urlImg0" class="max-h-[500px] w-[50%]" />
+    <section class="flex justify-between gap-10 py-10">
+        <img :src="urlImg2" class="max-h-[500px] w-[50%]" />
         <div>
-            <p class="max-w-[70ch]">Fictional retro-futuristic car brand. Lorem ipsum dolor sit amet consectetur. Varius
-                lectus dictum rhoncus
-                egestas.
-                Imperdiet rhoncus in tellus cras condimentum posuere.
-                Fictional retro-futuristic car brand.</p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur. </li>
-                <li> Varius lectus dictum rhoncus egestas.</li>
-                <li> Imperdiet rhoncus in tellus cras</li>
-                <li> condimentum posuere.</li>
-            </ul>
-            <p class="max-w-[70ch]">Fictional retro-futuristic car brand. Lorem ipsum dolor sit amet consectetur. Varius
-                lectus dictum rhoncus
-                egestas.
-                Imperdiet rhoncus in tellus cras condimentum posuere.</p>
+            <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
+            <p class="max-w-[70ch]">{{ ProjectInfo.text2 }}</p>
         </div>
     </section>
 
     <section class="flex justify-between gap-10 py-10">
         <div>
-            <p class="max-w-[70ch]">Fictional retro-futuristic car brand. Lorem ipsum dolor sit amet consectetur. Varius
-                lectus dictum rhoncus
-                egestas.
-                Imperdiet rhoncus in tellus cras condimentum posuere.
-                Fictional retro-futuristic car brand.</p>
-            <p class="max-w-[70ch]">Fictional retro-futuristic car brand. Lorem ipsum dolor sit amet consectetur. Varius
-                lectus dictum rhoncus
-                egestas.
-                Imperdiet rhoncus in tellus cras condimentum posuere.</p>
+            <p class="max-w-[70ch]">{{ ProjectInfo.text3 }}</p>
+            <p class="max-w-[70ch]">{{ ProjectInfo.text4 }}</p>
         </div>
         <ul class="software-grid">
-            <li>FIGMA</li>
-            <li>ILLUSTRATOR</li>
-            <li>PHOTOSHOP</li>
-            <li>INDESIGN</li>
+            <li>
+                <!-- {{ ProjectInfo.softwares_icons.slice(1, 2) }} -->
+                {{ ProjectInfo.softwares.slice(0, 1)[0] }}
+            </li>
+            <li>{{ ProjectInfo.softwares.slice(1, 2)[0] }}</li>
+            <li>{{ ProjectInfo.softwares.slice(2, 3)[0] }}</li>
+            <li>{{ ProjectInfo.softwares.slice(3, 4)[0] }}</li>
         </ul>
     </section>
 
     <section class="flex justify-between gap-10 py-10 max-w-[100%]">
-        <img :src="urlImg0" class="w-[30%] h-fit" />
-        <img :src="urlImg0" class="w-[30%] h-fit" />
-        <img :src="urlImg0" class="w-[30%] h-fit" />
+        <img :src="urlImg3" class="w-[30%] h-fit" />
+        <img :src="urlImg2" class="w-[30%] h-fit" />
+        <img :src="urlImg1" class="w-[30%] h-fit" />
     </section>
 
-    <p class="max-w-[70ch] py-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui aperiam inventore culpa
-        fuga sit iusto incidunt eveniet. Ad voluptatem unde provident similique enim! Quasi, ipsam. Sapiente tempora quis
-        numquam.
+    <p class="max-w-[70ch] py-10">{{ ProjectInfo.outro }}
     </p>
 
     <div class="">
-    <p class="ml-auto font-light border-none btn-style bg-grey">Share on Facebook / Twitter / LinkedIn</p>
-    <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https://portfolio.lisa-cingolani.fr/{{ id }}"></a>
+        <p class="ml-auto font-light border-none btn-style bg-grey">Share on Facebook / Twitter / LinkedIn</p>
+        <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https://portfolio.lisa-cingolani.fr/{{ id }}"></a>
                     <a href="https://twitter.com/intent/tweet?url=https://portfolio.lisa-cingolani.fr/{{ id }}"></a> -->
-</div>
+    </div>
 </template>
