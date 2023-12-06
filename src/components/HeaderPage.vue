@@ -5,9 +5,7 @@ import LogoGradient from './icons/logo-gradient.vue';
 </script>
 <template>
     <header
-        class="z-10 w-[300px] h-[100vh] pl-[2px] py-[1px] rounded-tl-3xl rounded-bl-3xl fixed top-0 right-0 bg-gradient-to-bl from-lightwhite to-lightblack shadow-nav overflow-hidden">
-        <div
-            class="w-[100%] h-[100%] px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl rounded-bl-3xl top-0 right-0 bg-lightblack">
+            class="z-10 w-[300px] h-[100vh] rounded-bl-3xl fixed top-0 right-0 shadow-nav overflow-hidden px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl bg-lightblack">
             <div class="w-[200px] h-[200px]">
                 <RouterLink to="/">
                     <LogoGradient class="w-full" />
@@ -32,18 +30,17 @@ import LogoGradient from './icons/logo-gradient.vue';
                     </li>
                 </ul>
             </nav>
-            <label class="relative inline-flex items-center cursor-pointer">
+            <label class="relative z-10 inline-flex items-center cursor-pointer">
                 <input type="checkbox" value="" class="sr-only peer">
                 <div
                     class="w-20 h-8 bg-grey rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:w-9 after:h-6 after:rounded-full after:bg-white after:transition-all">
                 </div>
-                <span class="absolute text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
+                <span class="absolute z-20 text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
             </label>
             <div class="blur-2xl">
                 <div class="wave1"></div>
                 <div class="wave2"></div>
                 <div class="wave3"></div>
             </div>
-        </div>
     </header>
 </template>

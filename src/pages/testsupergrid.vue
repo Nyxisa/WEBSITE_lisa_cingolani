@@ -20,7 +20,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
                         about creativity and
                         technology.</p>
                 </div>
-                <img src="/profile_pic.png" class="w-40 h-40 lg:w-[25%] lg:h-auto" alt="">
+                <img src="/profile_pic.webp" class="w-40 h-40 lg:w-[25%] lg:h-auto" alt="">
             </div>
             <p class="lg:pt-4 lg:text-lg max-w-[50ch]"> As a constant learner, I'm drawn to the ever-evolving digital world.
                 Pursuing a degree in Multimedia, I

@@ -8,7 +8,7 @@ import FooterMobile from '@/components/FooterMobile.vue';
 </script>
 
 <template>
- <HeaderPage class="hidden lg:block" />
+ <HeaderPage class="hidden lg:flex" />
     <HeaderMobile class="lg:hidden" />
     <main class="lg:max-w-[calc(100vw-300px)] pt-24 pb-8 lg:py-0 overflow-hidden">
         <Suspense>

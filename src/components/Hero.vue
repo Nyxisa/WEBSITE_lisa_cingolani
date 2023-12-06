@@ -17,9 +17,9 @@
             <!-- <h2 class="text-xl font-light">PORTFOLIO</h2> -->
         </div>
         <section class="herogrid">
-            <div class="rounded-3xl div1 bg-[url('/bg_home1.png')] bg-cover"> </div>
-            <div class="rounded-3xl div2 bg-[url('/bg_home2.png')] bg-cover"> </div>
-            <div class="rounded-3xl div3 bg-[url('/bg_home3.png')] bg-cover flex items-center justify-center">
+            <div class="rounded-3xl div1 bg-[url('/bg_home1.webp')] bg-cover"> </div>
+            <div class="rounded-3xl div2 bg-[url('/bg_home2.webp')] bg-cover"> </div>
+            <div class="rounded-3xl div3 bg-[url('/bg_home3.webp')] bg-cover flex items-center justify-center">
                 <h2 class="pt-3 mb-0 text-5xl">HI!</h2>
             </div>
 
