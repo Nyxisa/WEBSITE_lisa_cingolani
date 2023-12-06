@@ -7,20 +7,16 @@ const props = defineProps<{
     image: string,
 }>();
 const ProjectInfo = await ProjectId(props.id);
-const CategoryTab = ref(ProjectInfo.category);
+console.log(ProjectInfo)
 
-const img0 = ProjectInfo.card_image
-const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
 const img1 = ProjectInfo.image1
 const urlImg1 = img1 && pb.getFileUrl(ProjectInfo, img1, { thumb: '100x200' })
 const img2 = ProjectInfo.image2
 const urlImg2 = img2 && pb.getFileUrl(ProjectInfo, img2, { thumb: '100x200' })
 const img3 = ProjectInfo.image3
 const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
-
-
-// const icon1 = ProjectInfo.softwares_icons
-// const urlIcon1 = icon1 && pb.getFileUrl(ProjectInfo, icon1, { thumb: '100x200' })
+const img4 = ProjectInfo.image4
+const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
 
 </script>
     
@@ -28,15 +24,15 @@ const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
     <section class="mb-10">
         <h1 class="mt-4 mb-2">{{ ProjectInfo.title }}</h1>
         <div class="flex items-center w-full gap-4 pb-10">
-            <h2 class="pt-3 text-xl font-thin"> {{ CategoryTab.join(" | ") }}</h2>
+            <h2 class="pt-3 text-xl font-thin"> {{ ProjectInfo.category.join(" | ") }}</h2>
             <div class="flex-1 border-b border-lightwhite"></div>
         </div>
         <p class="max-w-[70ch] h-full">{{ ProjectInfo.intro }}</p>
-        <img :src="urlImg1" class="w-auto max-h-full mx-auto" />
+        <img :src="urlImg1" class="w-full max-h-full mx-auto" />
     </section>
 
-    <section class="flex justify-between gap-10 py-10">
-        <img :src="urlImg2" class="max-h-[500px] w-[50%]" />
+    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row">
+        <img :src="urlImg2" class="max-h-[500px] lg:w-[50%] lg:mx-0 mx-auto" />
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text2 }}</p>
@@ -48,7 +44,7 @@ const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
         </div>
     </section>
 
-    <section class="flex justify-between gap-10 py-10">
+    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row">
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text3 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text4 }}</p>
@@ -64,10 +60,10 @@ const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
         </ul>
     </section>
 
-    <section class="flex justify-between gap-10 py-10 max-w-[100%]">
-        <img :src="urlImg3" class="w-[30%] h-fit" />
-        <img :src="urlImg2" class="w-[30%] h-fit" />
-        <img :src="urlImg1" class="w-[30%] h-fit" />
+    <section class="flex lg:flex-row flex-col justify-between gap-10 py-10 max-w-[100%]">
+        <img :src="urlImg3" class="lg:w-[30%] h-fit" />
+        <img :src="urlImg2" class="lg:w-[30%] h-fit" />
+        <img :src="urlImg4" class="lg:w-[30%] h-fit" />
     </section>
 
     <p class="max-w-[70ch] py-10">{{ ProjectInfo.outro }}

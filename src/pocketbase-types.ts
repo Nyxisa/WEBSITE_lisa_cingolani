@@ -54,28 +54,33 @@ export enum ProjectsSoftwaresOptions {
 	"Photoshop" = "Photoshop",
 	"Dimension" = "Dimension",
 	"Blender" = "Blender",
+	"Vue.js" = "Vue.js",
+	"HTML" = "HTML",
+	"CSS" = "CSS",
+	"Tailwind" = "Tailwind",
 }
 export type ProjectsRecord = {
 	title?: string
 	description?: string
 	card_image?: string
+	image1?: string
+	image2?: string
+	image3?: string
+	image4?: string
 	category?: ProjectsCategoryOptions[]
 	alt_img?: string
 	date?: IsoDateString
 	intro?: string
-	image1?: string
 	text1?: string
 	text2?: string
+	textli1?: string
+	textli2?: string
+	textli3?: string
 	text3?: string
 	text4?: string
 	outro?: string
 	softwares?: ProjectsSoftwaresOptions[]
 	softwares_icons?: string[]
-	image2?: string
-	image3?: string
-	textli1?: string
-	textli2?: string
-	textli3?: string
 }
 
 export type UsersRecord = {
