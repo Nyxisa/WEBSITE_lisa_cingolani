@@ -32,7 +32,7 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
     </section>
 
     <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row">
-        <img :src="urlImg2" class="max-h-[500px] lg:w-[50%] lg:mx-0 mx-auto" />
+        <img :src="urlImg2" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text2 }}</p>
