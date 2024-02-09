@@ -157,6 +157,10 @@ li {
     background-image: url('/background-img.jpg');
   }
 
+  .bigname {
+    font-variation-settings: 'wght' 100;
+  }
+
   .herogrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -190,37 +194,34 @@ li {
     }
   }
 
-.software-grid {
-  display: grid;
-  text-align: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  margin: 0 auto;
+  .software-grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
   }
-
 
   @keyframes var-font-anim {
     0% {
-      font-variation-settings: 'wght' 300;
+      font-variation-settings: 'wght' 100;
     }
     30% {
-      font-variation-settings: 'wght' 600;
-    }
-    60% {
-      font-variation-settings: 'wght' 600;
+      font-variation-settings: 'wght' 250;
     }
     90% {
-      font-variation-settings: 'wght' 300;
+      font-variation-settings: 'wght' 100;
     }
     100% {
-      font-variation-settings: 'wght' 300;
+      font-variation-settings: 'wght' 100;
     }
   }
 
   .var-font {
     animation: var-font-anim 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
     transition: font-variation-settings 0.5s ease;
+    animation-fill-mode: forwards;
   }
 
   .about-list p {
@@ -308,11 +309,11 @@ li {
 
     width: 1000px;
     height: 400px;
-    background: linear-gradient( #9d70ff 0%, #d6c2fe 100%);
+    background: linear-gradient(#9d70ff 0%, #d6c2fe 100%);
     animation: fluidWave 7s infinite;
     rotate: 45deg;
   }
-    .wave2 {
+  .wave2 {
     --mask: radial-gradient(223.61px at 50% 300px, #000 99%, #0000 101%) calc(50% - 200px) 0/400px
         51% repeat-x,
       radial-gradient(223.61px at 50% -200px, #0000 99%, #000 101%) 50% 100px/400px
@@ -327,7 +328,7 @@ li {
     margin-top: -325px;
     width: 1000px;
     height: 400px;
-    background: #F4F4F4;
+    background: #f4f4f4;
     animation: fluidWave 6s infinite;
     rotate: 45deg;
   }
@@ -347,7 +348,7 @@ li {
     margin-top: -325px;
     width: 1000px;
     height: 400px;
-    background: linear-gradient( #fd4505 0%, #fdc6b3 100%);
+    background: linear-gradient(#fd4505 0%, #fdc6b3 100%);
     animation: fluidWave 6s infinite;
     rotate: 45deg;
   }

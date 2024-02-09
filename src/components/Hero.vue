@@ -2,16 +2,21 @@
 </script>
 
 <template>
-    <div class="relative hidden gap-10 -mb-10 div-graphic animate-scrolling lg:flex">
+    <!-- <div class="relative hidden gap-10 -mb-10 div-graphic animate-scrolling lg:flex">
         <h1 class="font-bold whitespace-nowrap w-fit text-giant no-stroke ">LISA CINGOLANI</h1>
         <h1 class="font-normal whitespace-nowrap text-giant w-fit no-stroke ">LISA CINGOLANI</h1>
         <h1 class="font-normal stroke-2 whitespace-nowrap text-giant w-fit ">LISA CINGOLANI</h1>
         <h1 class="font-bold whitespace-nowrap w-fit text-giant no-stroke ">LISA CINGOLANI</h1>
         <h1 class="font-normal whitespace-nowrap text-giant w-fit no-stroke ">LISA CINGOLANI</h1>
         <h1 class="font-normal stroke-2 whitespace-nowrap text-giant w-fit ">LISA CINGOLANI</h1>
-    </div>
+    </div> -->
+
+
+
     <!-- Mobile -->
     <div class="margins">
+        <span class="font-thin text-transparent div-graphic bigname font-halyard text-giant"><strong class="var-font">Lisa
+                Cingolani</strong></span>
         <div class="text-center lg:hidden ">
             <h1 class="w-full mx-auto bg-black border-none btn-style">PORTFOLIO</h1>
             <!-- <h2 class="text-xl font-light">PORTFOLIO</h2> -->
@@ -25,13 +30,16 @@
 
         </section>
         <div class="p-5 rounded-3xl bg-lightwhite">
-            <h3 class="px-5 pt-2 pb-1 mb-4 text-base border-2 rounded-full lg:text-lg w-fit border-lightblack text-lightblack">QUICK
+            <h3
+                class="px-5 pt-2 pb-1 mb-4 text-base border-2 rounded-full lg:text-lg w-fit border-lightblack text-lightblack">
+                QUICK
                 INTRODUCTION</h3>
-            <p class="px-2 text-base text-lightblack lg:text-lg">I'm <strong class="var-font">Lisa Cingolani</strong>, a <strong class="var-font">web design
+            <p class="px-2 text-base text-lightblack lg:text-lg">I'm <strong class="var-font">Lisa Cingolani</strong>, a
+                <strong class="var-font">web design
                     student</strong> at the
-                University of Montbéliard. My interest in <strong class="var-font">visual identity</strong> and <strong class="var-font">branding</strong>
+                University of Montbéliard. My interest in <strong class="var-font">visual identity</strong> and <strong
+                    class="var-font">branding</strong>
                 allows me to bring a unique and
-                cohesive touch to my projects.</p>
-        </div>
+            cohesive touch to my projects.</p>
     </div>
-</template>
+</div></template>

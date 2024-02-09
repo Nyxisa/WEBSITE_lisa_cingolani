@@ -19,7 +19,7 @@ module.exports = {
         'transparent': 'transparent',
       },
       fontFamily: {
-        halyard: ['halyard-text-variable', 'sans-serif',],
+        halyard: ['halyard-display-variable', 'sans-serif',],
         itc: ['itc-avant-garde-gothic-pro', 'sans-serif',]
       },
       fontSize: {
