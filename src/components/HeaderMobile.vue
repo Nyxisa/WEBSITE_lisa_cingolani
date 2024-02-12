@@ -41,7 +41,7 @@ function closeMenu() {
                         <RouterLink @click="closeMenu" to="/">Accueil</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/projects_fr">Projets</RouterLink>
+                        <RouterLink @click="closeMenu" to="/projects_en">Projets</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
                         <RouterLink @click="closeMenu" to="/about">À Propos</RouterLink>

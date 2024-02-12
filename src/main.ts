@@ -25,7 +25,6 @@ const router = createRouter({
     }}, 
 });
 
-
 const app = createApp(App);
 const head = createHead()
 app.use(router);

@@ -4,7 +4,7 @@ useHead({
     title: 'Contact | Lisa Cingolani'
 })
 import ContactAnim from '@/components/ContactAnim.vue';
-import ContactFormFR from '@/components/ContactForm_fr.vue';
+import ContactForm from '@/components/ContactForm.vue';
 
 </script>
 
@@ -20,6 +20,6 @@ import ContactFormFR from '@/components/ContactForm_fr.vue';
         <p class="md:text-lg max-w-[65ch] mb-2"> N'hésitez pas à me contacter via le formulaire de contact ci-dessous, que vous
             ayez un projet en tête, que vous souhaitiez collaborer, ou que vous ayez simplement une question à poser.</p>
         <p>J'ai hâte de vous lire !</p>
-        <ContactFormFR />
+        <ContactForm />
     </section>
 </template>

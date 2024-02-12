@@ -4,12 +4,12 @@ useHead({
     title: 'À Propos | Lisa Cingolani'
 })
 
-import AboutAnimFR from '@/components/AboutAnim_fr.vue'
+import AboutAnim from '@/components/AboutAnim.vue'
 </script>
 
 
 <template>
-    <AboutAnimFR />
+    <AboutAnim />
     <article class="margins lg:mt-[25px]">
         <div class="flex items-center w-full gap-4 mb-8">
             <h1 class="text-transparent whitespace-nowrap lg:hidden div-graphic font_thin">
