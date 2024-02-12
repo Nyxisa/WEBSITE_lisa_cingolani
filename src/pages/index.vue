@@ -17,7 +17,7 @@ console.log(ProjectsListeSorted)
         <Hero />
         <section class="margins">
             <div class="flex items-center w-full gap-4 mt-12 mb-8">
-                <h3 class="text-xl font-light">Latest Projects</h3>
+                <h3 class="text-xl font-light">Derniers Projets</h3>
                 <div class="flex-1 border-b border-lightwhite"></div>
             </div>
             <ul

@@ -21,7 +21,7 @@
                 à vos idées ensemble ?</h2>
             <div class="flex items-center justify-center w-1/2 pb-2 bg-left bg-cover rounded-simple"
                 style="background-image: url(/bg_home2.webp)">
-                <p class="-mb-4 text-xs"><span class="pr-2 text-4xl">5</span>projects</p>
+                <p class="-mb-4 text-xs"><span class="pr-2 text-4xl">5</span>projets</p>
             </div>
         </div>
     </section>

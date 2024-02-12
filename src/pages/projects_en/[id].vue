@@ -2,7 +2,6 @@
 import { pb } from '@/backend'
 import { ProjectId } from '@/backend';
 import { allProjectsSorted } from '@/backend';
-import TheProjectAnim from '@/components/TheProjectAnim.vue';
 import { useHead } from '@unhead/vue'
 import ProjectContent from '@/components/ProjectContent.vue';
 import AllCard from '@/components/AllCard.vue';
@@ -21,7 +20,6 @@ useHead({
 </script>
 
 <template>
-    <TheProjectAnim />
     <article class="margins mt-[25px]">
         <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.card_image }" />
     </article>

@@ -22,12 +22,10 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
     
 <template>
     <section class="mb-10">
-        <h1 class="mt-4 mb-2 font-bold font-itc">{{ ProjectInfo.title }}</h1>
-        <div class="flex items-center w-full gap-4 pb-10">
-            <h2 class="pt-3 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
-            <div class="flex-1 border-b border-lightwhite"></div>
-        </div>
-        <p class="max-w-[70ch] h-full">{{ ProjectInfo.intro }}</p>
+        <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
+        <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
+        <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
+        <p class="max-w-[70ch] pt-5 h-full">{{ ProjectInfo.intro }}</p>
         <img :src="urlImg1" class="w-full max-h-full mx-auto" />
     </section>
 

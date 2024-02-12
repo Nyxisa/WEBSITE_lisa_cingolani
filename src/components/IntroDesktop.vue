@@ -10,7 +10,7 @@
             </div>
             <div class="flex items-center justify-center bg-left bg-cover h-1/2 rounded-simple"
                 style="background-image: url(/bg_home2.webp)">
-                <p class="-mb-4 text-lg"><span class="pr-2 text-7xl">5</span>projects</p>
+                <p class="-mb-4 text-lg"><span class="pr-2 text-7xl">5</span>projets</p>
             </div>
         </div>
         <div class="w-3/4 p-8 border border-opacity-10 border-lightwhite rounded-simple">
