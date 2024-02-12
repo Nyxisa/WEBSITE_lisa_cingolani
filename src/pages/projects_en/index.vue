@@ -13,15 +13,18 @@ console.log(ProjectsListeSorted)
 </script>
 
 <template>
-    <ProjectsAnim/>
+    <ProjectsAnim />
     <section class="margins lg:mt-[25px]">
-        <div class="text-center lg:hidden">
-            <h1 class="w-full mx-auto mb-8 bg-black border-none btn-style">PROJECTS</h1>
+        <div class="flex items-center w-full gap-4 mb-8">
+            <h1 class="text-transparent lg:hidden div-graphic font_thin">
+                Projets
+            </h1>
+            <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         </div>
         <ul class="flex-wrap justify-around -mb-16 md:mb-0 md:flex">
-            <li v-for="projects in ProjectsListeSorted" :key="projects.id" class="xl:w-[30%]">
-                <RouterLink :to="{ name: 'projects-id', params: { id: projects.id } }" class="flex flex-col h-full">
-                    <CardProject :key="projects.id" v-bind="{ ...projects }" />
+            <li v-for="projects_en in ProjectsListeSorted" :key="projects_en.id" class="xl:w-[30%]">
+                <RouterLink :to="{ name: 'projects_en-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
+                    <CardProject :key="projects_en.id" v-bind="{ ...projects_en }" />
                 </RouterLink>
                 <Circle class="mx-auto mb-10 md:hidden" />
             </li>

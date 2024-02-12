@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import IntroMobile from './IntroMobile.vue'
+import IntroDesktop from './IntroDesktop.vue'
+import SkillsPills from './SkillsPills.vue';
 </script>
 
 <template>
@@ -11,35 +14,33 @@
         <h1 class="font-normal stroke-2 whitespace-nowrap text-giant w-fit ">LISA CINGOLANI</h1>
     </div> -->
 
-
-
-    <!-- Mobile -->
     <div class="margins">
-        <span class="font-thin text-transparent div-graphic bigname font-halyard text-giant"><strong class="var-font">Lisa
-                Cingolani</strong></span>
-        <div class="text-center lg:hidden ">
-            <h1 class="w-full mx-auto bg-black border-none btn-style">PORTFOLIO</h1>
-            <!-- <h2 class="text-xl font-light">PORTFOLIO</h2> -->
+        <div class="flex">
+            <h1 class="w-full">
+                <strong class="text-transparent div-graphic font_thin var-font">Lisa Cingolani</strong>
+            </h1>
+            <h1 class="text-transparent font_thin">
+                <strong class="opacity-40 mirror div-graphic md:opacity-20">Designer</strong>
+            </h1>
         </div>
-        <section class="herogrid">
+        <!-- <section class="herogrid">
             <div class="rounded-3xl div1 bg-[url('/bg_home1.webp')] bg-cover"> </div>
             <div class="rounded-3xl div2 bg-[url('/bg_home2.webp')] bg-cover"> </div>
             <div class="rounded-3xl div3 bg-[url('/bg_home3.webp')] bg-cover flex items-center justify-center">
                 <h2 class="pt-3 mb-0 text-5xl">HI!</h2>
-            </div>
+            </div> 
+        </section>-->
 
-        </section>
-        <div class="p-5 rounded-3xl bg-lightwhite">
-            <h3
-                class="px-5 pt-2 pb-1 mb-4 text-base border-2 rounded-full lg:text-lg w-fit border-lightblack text-lightblack">
-                QUICK
-                INTRODUCTION</h3>
-            <p class="px-2 text-base text-lightblack lg:text-lg">I'm <strong class="var-font">Lisa Cingolani</strong>, a
-                <strong class="var-font">web design
-                    student</strong> at the
-                University of Montbéliard. My interest in <strong class="var-font">visual identity</strong> and <strong
-                    class="var-font">branding</strong>
-                allows me to bring a unique and
-            cohesive touch to my projects.</p>
+        <!-- Working section !! -->
+
+        <IntroMobile class="md:hidden" />
+        <IntroDesktop class="hidden md:flex" />
+        <!-- <video width="600" height="100%" autoplay loop muted playsinline>
+            <source src="/my_arrow.mov" type='video/mp4; codecs="hvc1"'>
+            <source src="/my_arrow.webm" type="video/webm">
+        </video> -->
+        <SkillsPills class="mt-10" />
+        <!-- Working section !! -->
+
     </div>
-</div></template>
+</template>

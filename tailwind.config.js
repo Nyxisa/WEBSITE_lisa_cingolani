@@ -32,15 +32,20 @@ module.exports = {
       '3xl':'2.5rem', //40px H3//
       '4xl':'3rem', //48px H2//
       '5xl':'4rem', //64px H1//
+      '6xl':'5rem', //80px H1//
+      '7xl':'6rem', //96px H1//
+      '8xl':'7rem', //112px H1//
       'giant':'8rem', //128px PAGE TITLE//
        },
       boxShadow: {
         '1': '0px 4px 4px rgba(0, 0, 0, 0.25);',
-        'nav': ' -2px 4px 20px 2px rgba(0, 0, 0, 0.25);',
+        'none': '0px 0px 0px rgba(0, 0, 0, 0);',
+        'nav': ' -2px 4px 20px 2px rgba(0, 0, 0, 0.25)',
       },
       extend: {
         borderRadius: {
     'default': '2rem',
+    'simple': '1rem',
     }
     }
   },

@@ -3,7 +3,7 @@
 */
 
 export enum Collections {
-	Projects = "projects",
+	ProjectsEn = "projects_en",
 	Users = "users",
 }
 
@@ -31,7 +31,7 @@ export type AuthSystemFields<T = never> = {
 
 // Record types for each collection
 
-export enum ProjectsCategoryOptions {
+export enum ProjectsEnCategoryOptions {
 	"Branding" = "Branding",
 	"Webdesign" = "Webdesign",
 	"Typography" = "Typography",
@@ -46,7 +46,7 @@ export enum ProjectsCategoryOptions {
 	"Editorial" = "Editorial",
 }
 
-export enum ProjectsSoftwaresOptions {
+export enum ProjectsEnSoftwaresOptions {
 	"Figma" = "Figma",
 	"Illustrator" = "Illustrator",
 	"InDesign" = "InDesign",
@@ -59,7 +59,7 @@ export enum ProjectsSoftwaresOptions {
 	"CSS" = "CSS",
 	"Tailwind" = "Tailwind",
 }
-export type ProjectsRecord = {
+export type ProjectsEnRecord = {
 	title?: string
 	description?: string
 	card_image?: string
@@ -67,7 +67,7 @@ export type ProjectsRecord = {
 	image2?: string
 	image3?: string
 	image4?: string
-	category?: ProjectsCategoryOptions[]
+	category?: ProjectsEnCategoryOptions[]
 	alt_img?: string
 	date?: IsoDateString
 	intro?: string
@@ -79,7 +79,7 @@ export type ProjectsRecord = {
 	text3?: string
 	text4?: string
 	outro?: string
-	softwares?: ProjectsSoftwaresOptions[]
+	softwares?: ProjectsEnSoftwaresOptions[]
 	softwares_icons?: string[]
 }
 
@@ -89,17 +89,17 @@ export type UsersRecord = {
 }
 
 // Response types include system fields and match responses from the PocketBase API
-export type ProjectsResponse = Required<ProjectsRecord> & BaseSystemFields
+export type ProjectsEnResponse = Required<ProjectsEnRecord> & BaseSystemFields
 export type UsersResponse = Required<UsersRecord> & AuthSystemFields
 
 // Types containing all Records and Responses, useful for creating typing helper functions
 
 export type CollectionRecords = {
-	projects: ProjectsRecord
+	projects_en: ProjectsEnRecord
 	users: UsersRecord
 }
 
 export type CollectionResponses = {
-	projects: ProjectsResponse
+	projects_en: ProjectsEnResponse
 	users: UsersResponse
 }

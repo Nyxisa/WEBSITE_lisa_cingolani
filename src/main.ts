@@ -7,8 +7,9 @@ import { createHead } from "@unhead/vue"
 import './assets/css/style.css'
 import V3ScrollLock from 'v3-scroll-lock'
 
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
   routes: [
     ...routes,
     {
@@ -16,12 +17,19 @@ const router = createRouter({
       component: NotFound,
     },
   ],
+   scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0, behavior: 'smooth' };
+    }}, 
 });
+
 const app = createApp(App);
 const head = createHead()
 app.use(router);
 app.use(head);
-app.use(V3ScrollLock, {})
+app.use(V3ScrollLock, {});
 app.mount('#app');
 
 

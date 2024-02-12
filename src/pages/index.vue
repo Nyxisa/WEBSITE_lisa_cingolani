@@ -20,10 +20,11 @@ console.log(ProjectsListeSorted)
                 <h3 class="text-xl font-light">Latest Projects</h3>
                 <div class="flex-1 border-b border-lightwhite"></div>
             </div>
-            <ul class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 lg:gap-8 md:mb-0 md:flex">
-                <li v-for="projects in ProjectsListeSorted.slice(0, 3)" :key="projects.id">
-                    <RouterLink :to="{ name: 'projects-id', params: { id: projects.id } }" class="flex flex-col h-full">
-                        <CardProject :key="projects.id" v-bind="{ ...projects }" />
+            <ul
+                class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 lg:gap-8 md:mb-0 md:flex">
+                <li v-for="projects_en in ProjectsListeSorted.slice(0, 3)" :key="projects_en.id">
+                    <RouterLink :to="{ name: 'projects_en-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
+                        <CardProject :key="projects_en.id" v-bind="{ ...projects_en }" />
                     </RouterLink>
                     <Circle class="mx-auto mb-10 md:hidden" />
                 </li>

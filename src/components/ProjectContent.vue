@@ -22,9 +22,9 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
     
 <template>
     <section class="mb-10">
-        <h1 class="mt-4 mb-2">{{ ProjectInfo.title }}</h1>
+        <h1 class="mt-4 mb-2 font-bold font-itc">{{ ProjectInfo.title }}</h1>
         <div class="flex items-center w-full gap-4 pb-10">
-            <h2 class="pt-3 text-xl font-thin"> {{ ProjectInfo.category.join(" | ") }}</h2>
+            <h2 class="pt-3 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
             <div class="flex-1 border-b border-lightwhite"></div>
         </div>
         <p class="max-w-[70ch] h-full">{{ ProjectInfo.intro }}</p>

@@ -18,12 +18,6 @@ useHead({
     title: `${ProjectInfo.title} | Lisa Cingolani`
 })
 
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
-};
 </script>
 
 <template>
@@ -36,6 +30,6 @@ const scrollToTop = () => {
             <h3 class="text-xl font-light">See more projects</h3>
             <div class="flex-1 border-b border-lightwhite"></div>
         </div>
-        <AllCard @click="scrollToTop" />
+        <AllCard />
     </section>
 </template>
