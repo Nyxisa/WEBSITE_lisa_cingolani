@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
-import { ProjectIdEN } from '@/backend';
+import { ProjectIdFR } from '@/backend';
 import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps<{
     id: string,
 }>();
-const ProjectInfo = await ProjectIdEN(props.id);
+const ProjectInfo = await ProjectIdFR(props.id);
 const CategoryTab = ref(ProjectInfo.category);
 
 const img0 = ProjectInfo.card_image

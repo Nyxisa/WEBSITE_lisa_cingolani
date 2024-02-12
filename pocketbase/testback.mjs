@@ -1,17 +1,17 @@
-import { allProjects, ProjectId} from './backend.mjs'
+import { allProjectsEN, ProjectIdEN} from './backend.mjs'
 
 console.log("-------------------------------------Liste de tous les projets---------------------------------------------------")
 
 try {
-const allProjectsRecords = await allProjects();
-console.log(JSON.stringify(allProjectsRecords, null, 2));
+const allProjectsENRecords = await allProjectsEN();
+console.log(JSON.stringify(allProjectsENRecords, null, 2));
 } catch (e) {
 console.error(e);
 }
 
 try {
-const ProjectIdRecords = await ProjectId();
-console.log(JSON.stringify(ProjectIdRecords));
+const ProjectIdENRecords = await ProjectIdEN();
+console.log(JSON.stringify(ProjectIdENRecords));
 } catch (e) {
 console.error(e);
 }

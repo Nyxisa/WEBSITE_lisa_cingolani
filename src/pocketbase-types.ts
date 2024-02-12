@@ -3,7 +3,9 @@
 */
 
 export enum Collections {
+	Home = "home",
 	ProjectsEn = "projects_en",
+	ProjectsFr = "projects_fr",
 	Users = "users",
 }
 
@@ -30,6 +32,15 @@ export type AuthSystemFields<T = never> = {
 } & BaseSystemFields<T>
 
 // Record types for each collection
+
+export type HomeRecord = {
+	intro?: string
+	text1?: string
+	text2?: string
+	cta?: string
+	nb_projects?: string
+	latest?: string
+}
 
 export enum ProjectsEnCategoryOptions {
 	"Branding" = "Branding",
@@ -83,23 +94,77 @@ export type ProjectsEnRecord = {
 	softwares_icons?: string[]
 }
 
+export enum ProjectsFrCategoryOptions {
+	"Branding" = "Branding",
+	"Webdesign" = "Webdesign",
+	"Typography" = "Typography",
+	"Development" = "Development",
+	"3D" = "3D",
+	"Motion Design" = "Motion Design",
+	"Print" = "Print",
+	"UI/UX" = "UI/UX",
+	"Illustration" = "Illustration",
+	"Logo Design" = "Logo Design",
+	"Packaging" = "Packaging",
+	"Editorial" = "Editorial",
+}
+
+export enum ProjectsFrSoftwaresOptions {
+	"Figma" = "Figma",
+	"Illustrator" = "Illustrator",
+	"InDesign" = "InDesign",
+	"AfterEffects" = "AfterEffects",
+	"Photoshop" = "Photoshop",
+	"Dimension" = "Dimension",
+	"Blender" = "Blender",
+	"Vue.js" = "Vue.js",
+	"HTML" = "HTML",
+	"CSS" = "CSS",
+	"Tailwind" = "Tailwind",
+}
+export type ProjectsFrRecord = {
+	title?: string
+	description?: string
+	card_image?: string
+	category?: ProjectsFrCategoryOptions[]
+	alt_image?: string
+	date?: IsoDateString
+	intro?: string
+	text1?: string
+	text2?: string
+	textli1?: string
+	textli2?: string
+	textli3?: string
+	text3?: string
+	text4?: string
+	outro?: string
+	softwares?: ProjectsFrSoftwaresOptions[]
+	softwares_icons?: string[]
+}
+
 export type UsersRecord = {
 	name?: string
 	avatar?: string
 }
 
 // Response types include system fields and match responses from the PocketBase API
+export type HomeResponse = Required<HomeRecord> & BaseSystemFields
 export type ProjectsEnResponse = Required<ProjectsEnRecord> & BaseSystemFields
+export type ProjectsFrResponse = Required<ProjectsFrRecord> & BaseSystemFields
 export type UsersResponse = Required<UsersRecord> & AuthSystemFields
 
 // Types containing all Records and Responses, useful for creating typing helper functions
 
 export type CollectionRecords = {
+	home: HomeRecord
 	projects_en: ProjectsEnRecord
+	projects_fr: ProjectsFrRecord
 	users: UsersRecord
 }
 
 export type CollectionResponses = {
+	home: HomeResponse
 	projects_en: ProjectsEnResponse
+	projects_fr: ProjectsFrResponse
 	users: UsersResponse
 }

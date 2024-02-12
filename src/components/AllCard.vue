@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
-import { allProjectsSorted } from '@/backend';
+import { allProjectsSortedEN } from '@/backend';
 import ProjectCard from '@/components/ProjectCard.vue';
-const ProjectsListeSorted = await allProjectsSorted();
+const ProjectsListeSorted = await allProjectsSortedEN();
 console.log(ProjectsListeSorted)
 </script>
 <template>

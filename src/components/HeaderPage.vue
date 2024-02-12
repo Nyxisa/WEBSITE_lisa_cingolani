@@ -17,7 +17,7 @@ import LogoGradient from './icons/logo-gradient.vue';
                     <RouterLink class="menu-link" to="/">Accueil</RouterLink><img src="./icons/nav/home.svg" alt="home">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/projects_en">Projets</RouterLink><img src="./icons/nav/projects.svg"
+                    <RouterLink class="menu-link" to="/projects_fr">Projets</RouterLink><img src="./icons/nav/projects.svg"
                         alt="projects">
                 </li>
                 <li class="menu-item">

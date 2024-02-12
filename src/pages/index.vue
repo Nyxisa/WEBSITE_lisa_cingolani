@@ -7,8 +7,8 @@ useHead({
 })
 
 import ProjectCard from '@/components/ProjectCard.vue';
-import { allProjectsSorted } from '@/backend';
-const ProjectsListeSorted = await allProjectsSorted();
+import { allProjectsSortedEN } from '@/backend';
+const ProjectsListeSorted = await allProjectsSortedEN();
 console.log(ProjectsListeSorted)
 </script>
 
