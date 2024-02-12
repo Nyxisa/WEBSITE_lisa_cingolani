@@ -25,11 +25,11 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
         <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
         <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
-        <p class="max-w-[70ch] pt-5 h-full">{{ ProjectInfo.intro }}</p>
+        <p class="max-w-[70ch] py-5 h-full">{{ ProjectInfo.intro }}</p>
         <img :src="urlImg1" class="w-full max-h-full mx-auto" />
     </section>
 
-    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row">
+    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row [&_p]:pb-5">
         <img :src="urlImg2" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
@@ -42,7 +42,7 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
         </div>
     </section>
 
-    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row">
+    <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row [&_p]:pb-5">
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text3 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text4 }}</p>
@@ -67,9 +67,9 @@ const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
     <p class="max-w-[70ch] py-10">{{ ProjectInfo.outro }}
     </p>
 
-    <div class="">
+    <!-- <div class="">
         <p class="ml-auto font-light border-none btn-style bg-grey">Share on Facebook / Twitter / LinkedIn</p>
-        <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https://portfolio.lisa-cingolani.fr/{{ id }}"></a>
-                    <a href="https://twitter.com/intent/tweet?url=https://portfolio.lisa-cingolani.fr/{{ id }}"></a> -->
-    </div>
+       <a href="https://www.facebook.com/sharer/sharer.php?u=https://portfolio.lisa-cingolani.fr/{{ id }}"></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://portfolio.lisa-cingolani.fr/{{ id }}"></a>
+    </div> -->
 </template>

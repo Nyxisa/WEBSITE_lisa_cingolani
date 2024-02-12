@@ -17,8 +17,8 @@ console.log(ProjectsListeSorted)
         <Hero />
         <section class="margins">
             <div class="flex items-center w-full gap-4 mt-12 mb-8">
-                <h3 class="text-xl font-light">Derniers Projets</h3>
-                <div class="flex-1 border-b border-lightwhite"></div>
+                <h3 class="text-xl font-light whitespace-nowrap">Derniers Projets</h3>
+                <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
             </div>
             <ul
                 class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 lg:gap-8 md:mb-0 md:flex">
