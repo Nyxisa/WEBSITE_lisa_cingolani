@@ -38,19 +38,25 @@ function closeMenu() {
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[20svh] text-center lg:m-0 flex-col flex">
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/">HOME</RouterLink>
+                        <RouterLink @click="closeMenu" to="/">Accueil</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/projects_en">PROJECTS</RouterLink>
+                        <RouterLink @click="closeMenu" to="/projects_en">Projets</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/about">ABOUT</RouterLink>
+                        <RouterLink @click="closeMenu" to="/about">À Propos</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/contact">CONTACT</RouterLink>
+                        <RouterLink @click="closeMenu" to="/contact">Contact</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink class="font-dmSans" @click="closeMenu" to="">EN | FR</RouterLink>
+                        <label class="relative z-10 inline-flex items-center cursor-pointer drop-shadow-lg">
+                            <input type="checkbox" value="" class="sr-only peer">
+                            <div
+                                class="w-20 h-8 bg-grey rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:w-9 after:h-6 after:rounded-full after:bg-white after:transition-all">
+                            </div>
+                            <span class="absolute z-20 text-lg text-white font-itc top-1 left-3">FR&nbsp;&nbsp;EN</span>
+                        </label>
                     </li>
                 </ul>
                 <RouterLink class="" @click="closeMenu" to="/">

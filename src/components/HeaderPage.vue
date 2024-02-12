@@ -14,18 +14,18 @@ import LogoGradient from './icons/logo-gradient.vue';
         <nav class="z-10 navbar">
             <ul class="grid justify-end">
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/">HOME</RouterLink><img src="./icons/nav/home.svg" alt="home">
+                    <RouterLink class="menu-link" to="/">Accueil</RouterLink><img src="./icons/nav/home.svg" alt="home">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/projects_en">PROJECTS</RouterLink><img src="./icons/nav/projects.svg"
+                    <RouterLink class="menu-link" to="/projects_en">Projets</RouterLink><img src="./icons/nav/projects.svg"
                         alt="projects">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/about">ABOUT</RouterLink><img src="./icons/nav/about.svg"
+                    <RouterLink class="menu-link" to="/about">À Propos</RouterLink><img src="./icons/nav/about.svg"
                         alt="about">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/contact">CONTACT</RouterLink><img src="./icons/nav/contact.svg"
+                    <RouterLink class="menu-link" to="/contact">Contact</RouterLink><img src="./icons/nav/contact.svg"
                         alt="contact">
                 </li>
             </ul>
