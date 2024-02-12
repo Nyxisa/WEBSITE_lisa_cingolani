@@ -6,7 +6,7 @@ useHead({
     title: 'Portfolio | Lisa Cingolani'
 })
 
-import CardProject from '@/components/CardProject.vue';
+import ProjectCard from '@/components/ProjectCard.vue';
 import { allProjectsSorted } from '@/backend';
 const ProjectsListeSorted = await allProjectsSorted();
 console.log(ProjectsListeSorted)
@@ -25,7 +25,7 @@ console.log(ProjectsListeSorted)
                 <li v-for="projects_en in ProjectsListeSorted.slice(0, 3)" :key="projects_en.id">
                     <RouterLink :to="{ name: 'projects_en-id', params: { id: projects_en.id } }"
                         class="flex flex-col h-full">
-                        <CardProject :key="projects_en.id" v-bind="{ ...projects_en }" />
+                        <ProjectCard :key="projects_en.id" v-bind="{ ...projects_en }" />
                     </RouterLink>
                     <Circle class="mx-auto mb-10 md:hidden" />
                 </li>

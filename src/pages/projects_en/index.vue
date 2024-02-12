@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ProjectId, allProjectsSorted } from '@/backend';
-import CardProject from '@/components/CardProject.vue';
+import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectsAnim from '@/components/ProjectsAnim.vue';
 import Circle from '@/components/icons/circle.vue';
 
@@ -24,7 +24,7 @@ console.log(ProjectsListeSorted)
         <ul class="flex-wrap justify-around -mb-16 md:mb-0 md:flex">
             <li v-for="projects_en in ProjectsListeSorted" :key="projects_en.id" class="xl:w-[30%]">
                 <RouterLink :to="{ name: 'projects_en-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
-                    <CardProject :key="projects_en.id" v-bind="{ ...projects_en }" />
+                    <ProjectCard :key="projects_en.id" v-bind="{ ...projects_en }" />
                 </RouterLink>
                 <Circle class="mx-auto mb-10 md:hidden" />
             </li>
