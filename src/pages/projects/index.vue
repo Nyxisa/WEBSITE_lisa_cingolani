@@ -4,6 +4,11 @@ import ProjectCardFR from '@/components/ProjectCard_fr.vue';
 import ProjectsAnim from '@/components/ProjectsAnim.vue';
 import Circle from '@/components/icons/circle.vue';
 
+import { useHead } from '@unhead/vue'
+useHead({
+    title: 'Projets | Lisa Cingolani'
+})
+
 const props = defineProps<{
     id: string,
 }>();
