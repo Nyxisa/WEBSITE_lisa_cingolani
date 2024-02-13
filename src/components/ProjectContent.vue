@@ -17,7 +17,6 @@ const img3 = ProjectInfo.image3
 const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
 const img4 = ProjectInfo.image4
 const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
-
 </script>
     
 <template>

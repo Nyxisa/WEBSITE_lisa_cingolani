@@ -140,6 +140,7 @@ export type ProjectsFrRecord = {
 	outro?: string
 	softwares?: ProjectsFrSoftwaresOptions[]
 	softwares_icons?: string[]
+	gallery?: string[]
 }
 
 export type UsersRecord = {
