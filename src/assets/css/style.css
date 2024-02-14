@@ -79,7 +79,7 @@
   }
 
   .btn-skills {
-    @apply px-5 pt-2 pb-1 mb-2 text-xs font-medium border w-fit rounded-full font-itc md:text-base lg:text-lg border-lightwhite text-lightwhite;
+    @apply px-5 pt-2 pb-1 flex-1 whitespace-nowrap text-center mb-2 text-xs font-medium border w-fit rounded-full font-itc md:text-base lg:text-lg border-lightwhite text-lightwhite;
   }
 
   .menu-list {
