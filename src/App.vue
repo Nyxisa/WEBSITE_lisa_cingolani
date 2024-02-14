@@ -8,11 +8,11 @@ import FooterMobile from '@/components/FooterMobile.vue';
 </script>
 
 <template>
- <HeaderPage class="hidden lg:flex" />
+    <HeaderPage class="hidden lg:flex" />
     <HeaderMobile class="lg:hidden" />
     <main class="lg:max-w-[calc(100vw-300px)] pt-24 pb-8 lg:py-0 overflow-hidden">
         <Suspense>
-            <RouterView />
+            <RouterView :key="$route.params" />
         </Suspense>
     </main>
     <FooterPage class="lg:max-w-[calc(100vw-300px)] hidden md:block" />

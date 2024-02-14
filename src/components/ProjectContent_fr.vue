@@ -9,32 +9,32 @@ const props = defineProps<{
 const ProjectInfo = await ProjectIdFR(props.id);
 console.log(ProjectInfo)
 
-// const img1 = ProjectInfo.image1
-// const urlImg1 = img1 && pb.getFileUrl(ProjectInfo, img1, { thumb: '100x200' })
-// const img2 = ProjectInfo.image2
-// const urlImg2 = img2 && pb.getFileUrl(ProjectInfo, img2, { thumb: '100x200' })
-// const img3 = ProjectInfo.image3
-// const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
-// const img4 = ProjectInfo.image4
-// const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
+const img1 = ProjectInfo.image1
+const urlImg1 = img1 && pb.getFileUrl(ProjectInfo, img1, { thumb: '100x200' })
+const img2 = ProjectInfo.image2
+const urlImg2 = img2 && pb.getFileUrl(ProjectInfo, img2, { thumb: '100x200' })
+const img3 = ProjectInfo.image3
+const urlImg3 = img3 && pb.getFileUrl(ProjectInfo, img3, { thumb: '100x200' })
+const img4 = ProjectInfo.image4
+const urlImg4 = img3 && pb.getFileUrl(ProjectInfo, img4, { thumb: '100x200' })
 
-const imagebonus = ProjectInfo.gallery;
-console.log(imagebonus);
-const urlImagesBonus = imagebonus.map((nomImage: string) => {
-    return pb.getFileUrl(ProjectInfo, nomImage, { thumb: '100x250' });
-});
-console.log(urlImagesBonus);
+// const imagebonus = ProjectInfo.gallery;
+// console.log(imagebonus);
+// const urlImagesBonus = imagebonus.map((nomImage: string) => {
+//     return pb.getFileUrl(ProjectInfo, nomImage, { thumb: '100x250' });
+// });
+// console.log(urlImagesBonus);
 
 </script>
     
 <template>
     
-        <div v-for= "(url, index) in urlImagesBonus" :key="index" >
+        <!-- <div v-for= "(url, index) in urlImagesBonus" :key="index" >
             <img :src="url" :alt="'Image bonus ' + (index + 1)" >
                 </div>
                 <div >
                 <img :src = "urlImagesBonus[1]" alt = "Image bonus 2" >
-                    </div>
+                    </div> -->
 
 
     <section class="mb-10">

@@ -79,7 +79,7 @@
   }
 
   .btn-skills {
-    @apply px-5 pt-2 pb-1 mb-2 text-xs font-medium border rounded-full font-itc md:text-base lg:text-lg w-fit border-lightwhite text-lightwhite;
+    @apply px-5 pt-2 pb-1 mb-2 text-xs font-medium border w-fit rounded-full font-itc md:text-base lg:text-lg border-lightwhite text-lightwhite;
   }
 
   .menu-list {
@@ -172,16 +172,16 @@
   @keyframes slide-in {
     0% {
       width: 0;
-      opacity:0;
+      opacity: 0;
     }
     100% {
       width: 100%;
-      opacity:50%;
+      opacity: 50%;
     }
   }
 
   .about-text {
-    @apply  md:p-0 md:text-lg bg-lightblack rounded-simple lg:text-xl p-4 max-w-[50ch];
+    @apply md:p-0 md:text-lg bg-lightblack rounded-simple lg:text-xl p-4 max-w-[50ch];
   }
 
   .background-hero {
