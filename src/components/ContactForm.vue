@@ -29,6 +29,7 @@
         <div class="flex items-center gap-4"> <input type="checkbox" id="terms" name="terms" />
             <span>J'accepte de partager les informations fournies par le biais de ce formulaire de contact.</span>
         </div>
-        <button type="submit" class="mt-10 lg:mt-0 btn focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">Envoyer</button>
+        <button type="submit"
+            class="mt-10 lg:mt-0 btn focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">Envoyer</button>
     </div>
 </template>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
-import { ProjectIdEN } from '@/backend';
+import { ProjectId } from '@/backend';
 import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps<{
     id: string,
 }>();
-const ProjectInfo = await ProjectIdEN(props.id);
+const ProjectInfo = await ProjectId(props.id);
 const CategoryTab = ref(ProjectInfo.category);
 
 const img0 = ProjectInfo.card_image
@@ -25,9 +25,9 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
                     <h5 class="mt-4 mb-2">{{ ProjectInfo.title }}</h5>
                     <p class="max-w-[70ch] mb-4 h-full">{{ ProjectInfo.description }}</p>
                 </div>
-                <RouterLink :to="{ name: 'projects_en-id', force:true, params: { id } }"
+                <RouterLink :to="{ name: 'projects_fr-id', force: true, params: { id } }"
                     class="w-full text-xl transition-all border-none focus:translate-y-1 focus:shadow-none hover:-translate-y-[1px] bg-orange text-lightwhite hover:shadow-nav btn-style">
-                    Read More
+                    Voir Le Projet
                 </RouterLink>
             </div>
         </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue';
 import Hero from '@/components/Hero.vue';
 import Circle from '@/components/icons/circle.vue';
 import { useHead } from '@unhead/vue'
@@ -7,8 +8,8 @@ useHead({
 })
 
 import ProjectCard from '@/components/ProjectCard.vue';
-import { allProjectsSortedEN } from '@/backend';
-const ProjectsListeSorted = await allProjectsSortedEN();
+import { allProjectsSorted } from '@/backend';
+const ProjectsListeSorted = await allProjectsSorted();
 console.log(ProjectsListeSorted)
 </script>
 
@@ -22,10 +23,10 @@ console.log(ProjectsListeSorted)
             </div>
             <ul
                 class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 lg:gap-8 md:mb-0 md:flex">
-                <li v-for="projects_en in ProjectsListeSorted.slice(0, 3)" :key="projects_en.id">
-                    <RouterLink :to="{ name: 'projects_en-id', params: { id: projects_en.id } }"
+                <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id">
+                    <RouterLink :to="{ name: 'projects_fr-id', params: { id: projects_fr.id } }"
                         class="flex flex-col h-full">
-                        <ProjectCard :key="projects_en.id" v-bind="{ ...projects_en }" />
+                        <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
                     </RouterLink>
                     <Circle class="mx-auto mb-10 md:hidden" />
                 </li>

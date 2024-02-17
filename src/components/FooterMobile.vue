@@ -5,8 +5,6 @@ import instagramLogo from './icons/instagram-logo.vue';
 import dribbbleLogo from './icons/dribbble-logo.vue';
 import behanceLogo from './icons/behance-logo.vue';
 import Logo from './icons/logo.vue';
-import logoGradient from './icons/logo-gradient.vue';
-
 </script>
 <template>
     <footer class="w-screen bg-gradient-to-t from-lightblack to-black footer">

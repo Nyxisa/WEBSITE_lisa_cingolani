@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ProjectIdFR, allProjectsSortedFR } from '@/backend';
-import ProjectCardFR from '@/components/ProjectCard_fr.vue';
+import { ProjectId, allProjectsSorted } from '@/backend';
+import { ref, onMounted, onUnmounted } from 'vue';
+import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectsAnim from '@/components/ProjectsAnim.vue';
 import Circle from '@/components/icons/circle.vue';
 
@@ -13,7 +14,7 @@ const props = defineProps<{
     id: string,
 }>();
 
-const ProjectsListeSorted = await allProjectsSortedFR();
+const ProjectsListeSorted = await allProjectsSorted();
 console.log(ProjectsListeSorted)
 </script>
 
@@ -29,7 +30,7 @@ console.log(ProjectsListeSorted)
         <ul class="flex-wrap justify-around -mb-16 md:mb-0 md:flex">
             <li v-for="projects_fr in ProjectsListeSorted" :key="projects_fr.id" class="xl:w-[30%]">
                 <RouterLink :to="{ name: 'projects_fr-id', params: { id: projects_fr.id } }" class="flex flex-col h-full">
-                    <ProjectCardFR :key="projects_fr.id" v-bind="{ ...projects_fr }" />
+                    <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
                 </RouterLink>
                 <Circle class="mx-auto mb-10 md:hidden" />
             </li>

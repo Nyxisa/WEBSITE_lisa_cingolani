@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import LogoGradient from './icons/logo-gradient.vue';
 import linkedinLogo from './icons/linkedin-logo.vue';
 import instagramLogo from './icons/instagram-logo.vue';
 import dribbbleLogo from './icons/dribbble-logo.vue';

@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase' ;
-import { ProjectsEnResponse } from '@/pocketbase-types';
+import { ProjectsFrResponse } from '@/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production
@@ -11,21 +11,21 @@ else // si developpement
 export const pb = new PocketBase(pocketbase_ip)
 
 // Liste de tous les projets 
-export async function allProjectsEN() {
-const allProjectsENRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>();
-return allProjectsENRecords;
+export async function allProjects() {
+const allProjectsRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>(id);
+return allProjectsRecords;
 }
 
 // Un ID d'un projet
-export async function ProjectIdEN(id) {
-  const ProjectIdENRecords = await pb.collection('projects_en').getOne<ProjectsEnResponse>(id);
-  return ProjectIdENRecords;
+export async function ProjectId(id) {
+  const ProjectIdRecords = await pb.collection('projects_fr').getOne<ProjectsFrResponse>(id);
+  return ProjectIdRecords;
 }
 
 
 // Liste des projets triés par date
-export async function allProjectsENSorted() {
-const allProjectsENSortedRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>({
+export async function allProjectsSorted() {
+const allProjectsSortedRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({
         sort: '-date',
     });
 return allProjectsENSortedRecords;

@@ -1,5 +1,4 @@
-import PocketBase from 'pocketbase' ;
-import type { ProjectsEnResponse } from '@/pocketbase-types';
+import PocketBase from 'pocketbase';
 import type { ProjectsFrResponse } from '@/pocketbase-types';
 
 var pocketbase_ip = ''
@@ -11,43 +10,23 @@ else // si developpement
 //connexion entre l'application et le serveur pocketbase
 export const pb = new PocketBase(pocketbase_ip)
 
-// Liste de tous les projets EN
-export async function allProjectsEN() {
-const allProjectsENRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>();
-return allProjectsENRecords;
+// Liste de tous les projets
+export async function allProjects() {
+const allProjectsRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>();
+return allProjectsRecords;
 }
 
-// Un ID d'un projet EN
-export async function ProjectIdEN(id:string) {
-  const ProjectIdENRecords = await pb.collection('projects_en').getOne<ProjectsEnResponse>(id);
-  return ProjectIdENRecords;
+// Un ID d'un projet
+export async function ProjectId(id:string) {
+  const ProjectIdRecords = await pb.collection('projects_fr').getOne<ProjectsFrResponse>(id);
+  return ProjectIdRecords;
 }
 
-// Liste des projets EN triés par date
-export async function allProjectsSortedEN() {
-const allProjectsSortedENRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>({
+// Liste des projets triés par date
+export async function allProjectsSorted() {
+const allProjectsSortedRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({
         sort: '-date',
     });
-return allProjectsSortedENRecords;
-}
-
-// Liste de tous les projets FR
-export async function allProjectsFR() {
-const allProjectsFRRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>();
-return allProjectsFRRecords;
-}
-
-// Un ID d'un projet FR
-export async function ProjectIdFR(id:string) {
-  const ProjectIdFRRecords = await pb.collection('projects_fr').getOne<ProjectsFrResponse>(id);
-  return ProjectIdFRRecords;
-}
-
-// Liste des projets FR triés par date
-export async function allProjectsSortedFR() {
-const allProjectsSortedFRRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({
-        sort: '-date',
-    });
-return allProjectsSortedFRRecords;
+return allProjectsSortedRecords;
 }
 
