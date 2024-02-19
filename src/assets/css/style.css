@@ -7,13 +7,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: url('/pointer.svg') 25 25, pointer;
   }
 
   #app {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    cursor: url('/pointer.svg'), pointer;
   }
 
   strong {
@@ -27,6 +27,7 @@
   html {
     @apply md:bg-lightblack bg-black text-lightwhite;
   }
+
   body {
     @apply font-halyard text-base;
   }
