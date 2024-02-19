@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ProjectId, allProjectsSorted } from '@/backend'
 import { ref, onMounted, onUnmounted } from 'vue'
-import { defineProps } from 'vue'
 import { useRouter } from 'vue-router'
 import ProjectCard from '@/components/ProjectCard.vue'
 import ProjectsAnim from '@/components/ProjectsAnim.vue'
