@@ -17,9 +17,8 @@ import ContactForm from '@/components/ContactForm.vue';
             </h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         </div>
-        <p class="md:text-lg max-w-[65ch] mb-2"> N'hésitez pas à me contacter via le formulaire de contact ci-dessous, que vous
-            ayez un projet en tête, que vous souhaitiez collaborer, ou que vous ayez simplement une question à poser.</p>
-        <p>J'ai hâte de vous lire !</p>
+        <p class="md:text-lg max-w-[65ch] mb-2">{{ $t('contact.p1') }}</p>
+        <p>{{ $t('contact.p2') }}</p>
         <ContactForm />
     </section>
 </template>

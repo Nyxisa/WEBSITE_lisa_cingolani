@@ -41,7 +41,7 @@ useHead({
     </article>
     <section class="margins">
         <div class="flex items-center w-full gap-4 mt-12 mb-8">
-            <h3 class="text-xl font-light whitespace-nowrap">Voir d'autres projets</h3>
+            <h3 class="text-xl font-light whitespace-nowrap">{{ $t('projects.seemore') }}</h3>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         </div>
 

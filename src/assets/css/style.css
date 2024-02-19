@@ -156,6 +156,7 @@
 
   .div-graphic {
     width: max-content;
+    text-transform: uppercase;
     background: var(
       --Gradient3,
       linear-gradient(270deg, #9d70ff 0%, #d6c2fe 40%, #fdc6b3 60%, #fd4505 100%)

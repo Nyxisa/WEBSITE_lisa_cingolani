@@ -37,7 +37,7 @@ import Logo from './icons/logo.vue';
                 <form action="#">
                     <input type="email" id="email"
                         class="block w-full px-1 text-base bg-black border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"
-                        placeholder="email@example.com">
+                        :placeholder="$t('footer.placeholder')">
                 </form>
                 <button type="submit" class="mx-auto mt-5 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
                     $t('footer.btn') }}</button>

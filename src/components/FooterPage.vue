@@ -34,7 +34,7 @@ import behanceLogo from './icons/behance-logo.vue';
                         <label for="email" class="block mb-2 text-sm">Email</label>
                         <input type="email" id="email"
                             class="block w-full px-1 text-base bg-transparent border-b border-b-lightwhite focus:outline-none text-lightwhite"
-                            placeholder="email@example.com">
+                            :placeholder="$t('footer.placeholder')">
                     </div>
                 </form>
                 <button type="submit"
