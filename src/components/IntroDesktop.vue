@@ -6,8 +6,8 @@
         style="background-image: url(/bg_home3.webp)"
       >
         <video class="w-full py-4" autoplay loop muted playsinline>
-          <source src="../../public/my_arrow.mov" type='video/mp4; codecs="hvc1"' />
-          <source src="../../public/my_arrow.webm" type="video/webm" />
+          <source src="/my_arrow.mov" type='video/mp4; codecs="hvc1"' />
+          <source src="/my_arrow.webm" type="video/webm" />
         </video>
       </div>
       <div

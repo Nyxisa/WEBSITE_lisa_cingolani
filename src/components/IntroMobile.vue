@@ -4,8 +4,8 @@
             <div class="flex items-center justify-center w-1/4 bg-right bg-cover rounded-simple"
                 style="background-image: url(/bg_home3.webp)">
                 <video class="w-full py-4" autoplay loop muted playsinline>
-                    <source src="../../public/my_arrow.mov" type='video/mp4; codecs="hvc1"'>
-                    <source src="../../public/my_arrow.webm" type="video/webm">
+                    <source src="/my_arrow.mov" type='video/mp4; codecs="hvc1"'>
+                    <source src="/my_arrow.webm" type="video/webm">
                 </video>
             </div>
             <h2 class="w-3/4 p-4 bg-lightblack font_normal rounded-simple">Imaginez un monde où chaque projet est
