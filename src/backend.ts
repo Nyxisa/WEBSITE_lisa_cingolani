@@ -12,21 +12,19 @@ export const pb = new PocketBase(pocketbase_ip)
 
 // Liste de tous les projets
 export async function allProjects() {
-const allProjectsRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>();
+const allProjectsRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({ requestKey: null });
 return allProjectsRecords;
 }
 
 // Un ID d'un projet
 export async function ProjectId(id:string) {
-  const ProjectIdRecords = await pb.collection('projects_fr').getOne<ProjectsFrResponse>(id);
+  const ProjectIdRecords = await pb.collection('projects_fr').getOne<ProjectsFrResponse>(id,{ requestKey: null });
   return ProjectIdRecords;
 }
 
 // Liste des projets triés par date
 export async function allProjectsSorted() {
-const allProjectsSortedRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({
-        sort: '-date',
-    });
+const allProjectsSortedRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({sort: '-date', requestKey: null});
 return allProjectsSortedRecords;
 }
 

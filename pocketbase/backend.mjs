@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase' ;
-import { ProjectsFrResponse } from '@/pocketbase-types';
+import { ProjectsFrResponse } from '/pocketbase-types';
 
 var pocketbase_ip = ''
 if (import.meta.env.MODE === 'production') // si production

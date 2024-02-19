@@ -13,9 +13,13 @@ export default defineConfig({
   plugins: [vue(), Pages(), VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'), // provide a path to the folder where translation data is stored
     })],
+    assetsInclude: ['**/*.mov'], //ajout de la prise en charge des fichiers .mov
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+    target: "ES2022", //ajout du build target
+  },
 })
