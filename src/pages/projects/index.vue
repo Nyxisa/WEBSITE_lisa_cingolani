@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ProjectId, allProjectsSorted, ProjectIdEn, allProjectsSortedEn } from '@/backend'
+import { allProjectsSorted, allProjectsSortedEn } from '@/backend'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import ProjectCard from '@/components/ProjectCard.vue'
@@ -32,8 +32,8 @@ console.log(ProjectsListeSortedEn)
     </div>
 
     <div v-if="$i18n.locale === 'fr'">
-      <ul class="flex-wrap justify-around -mb-16 md:mb-0 md:flex">
-        <li v-for="projects_fr in ProjectsListeSorted" :key="projects_fr.id" class="xl:w-[30%]">
+      <ul class="flex-wrap justify-center -mb-16 md:gap-5 xl:gap-8 md:justify-around md:mb-0 md:flex">
+        <li v-for="projects_fr in ProjectsListeSorted" :key="projects_fr.id" class="2xl:w-[30%]">
           <RouterLink :to="{ name: 'projects-id', params: { id: projects_fr.id } }" class="flex flex-col h-full">
             <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
           </RouterLink>
@@ -43,8 +43,8 @@ console.log(ProjectsListeSortedEn)
     </div>
 
     <div v-else-if="$i18n.locale === 'en'">
-      <ul class="flex-wrap justify-around -mb-16 md:mb-0 md:flex">
-        <li v-for="projects_en in ProjectsListeSortedEn" :key="projects_en.id" class="xl:w-[30%]">
+      <ul class="flex-wrap justify-center -mb-16 md:gap-5 xl:gap-8 md:justify-around md:mb-0 md:flex">
+        <li v-for="projects_en in ProjectsListeSortedEn" :key="projects_en.id" class="2xl:w-[30%]">
           <RouterLink :to="{ name: 'projects-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
             <ProjectCardEn :key="projects_en.id" v-bind="{ ...projects_en }" />
           </RouterLink>

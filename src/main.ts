@@ -39,7 +39,7 @@ function getBrowserLocale(options = {}) {
 
 const i18n = createI18n({
   // locale: getBrowserLocale({ countryCodeOnly: true }) || 'en', 
-  locale: 'en', 
+  locale: 'fr', 
   fallbackLocale: 'en',
   messages: await loadLocaleMessages(), 
 });

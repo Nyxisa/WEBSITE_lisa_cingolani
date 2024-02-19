@@ -46,8 +46,8 @@ useHead({
         </div>
 
         <div v-if="$i18n.locale === 'fr'">
-            <ul class="flex-wrap justify-around -mb-16 md:gap-5 xl:gap-20 md:mb-0 md:flex">
-                <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id">
+            <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
+                <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: projects_fr.id } }" class="flex flex-col h-full">
                         <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
                     </RouterLink>
@@ -56,8 +56,8 @@ useHead({
         </div>
 
         <div v-else-if="$i18n.locale === 'en'">
-            <ul class="flex-wrap justify-around -mb-16 md:gap-5 xl:gap-20 md:mb-0 md:flex">
-                <li v-for="projects_en in ProjectsListeSortedEn.slice(0, 3)" :key="projects_en.id">
+            <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
+                <li v-for="projects_en in ProjectsListeSortedEn.slice(0, 3)" :key="projects_en.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
                         <ProjectCardEn :key="projects_en.id" v-bind="{ ...projects_en }" />
                     </RouterLink>

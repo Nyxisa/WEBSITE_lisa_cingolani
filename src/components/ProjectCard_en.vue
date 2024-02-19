@@ -27,7 +27,7 @@ const urlImg0 = img0 && pb.getFileUrl(ProjectInfo, img0, { thumb: '100x200' })
         </div>
         <RouterLink :to="{ name: 'projects-id', force: true, params: { id } }"
           class="w-full text-xl transition-all border-none focus:translate-y-1 focus:shadow-none hover:-translate-y-[1px] bg-orange text-lightwhite hover:shadow-nav btn-style">
-          Voir Le Projet
+          Read more
         </RouterLink>
       </div>
     </div>
