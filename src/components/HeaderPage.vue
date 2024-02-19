@@ -12,7 +12,7 @@ import Logo from './icons/logo.vue';
             </RouterLink>
         </div>
         <nav class="z-10 navbar">
-            <ul class="grid justify-end">
+            <ul class="grid justify-center">
                 <li class="menu-item">
                     <RouterLink class="menu-link" to="/">Accueil</RouterLink><img src="./icons/nav/home.svg" alt="home">
                 </li>

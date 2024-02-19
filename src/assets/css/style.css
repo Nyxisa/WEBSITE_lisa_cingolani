@@ -88,11 +88,21 @@
   }
 
   .menu-item {
-    @apply p-3 grid grid-cols-[1fr,30px] gap-3;
+    @apply p-3 grid grid-cols-[1fr,30px] gap-3 hover:tracking-wide transition-all duration-300;
   }
 
   .menu-link {
-    @apply text-lightwhite font-itc font-medium text-xl no-underline text-right;
+    @apply text-lightwhite font-itc font-medium text-xl no-underline text-right ease-in-out;
+  }
+
+  /* fix menu shift on hover */
+  .menu-link::before {
+    display: block;
+    content: 'À Propos';
+    letter-spacing: 0.025em;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 
   .footer {
