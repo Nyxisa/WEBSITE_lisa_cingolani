@@ -38,8 +38,8 @@ function getBrowserLocale(options = {}) {
 }
 
 const i18n = createI18n({
-  // locale: getBrowserLocale({ countryCodeOnly: true }) || 'en', 
-  locale: 'fr', 
+  locale: getBrowserLocale({ countryCodeOnly: true }) || 'en', 
+  // locale: 'en', 
   fallbackLocale: 'en',
   messages: await loadLocaleMessages(), 
 });

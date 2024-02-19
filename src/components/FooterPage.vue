@@ -10,7 +10,7 @@ import behanceLogo from './icons/behance-logo.vue';
     <footer class="footer w-[100vw] pt-20 bg-gradient-to-b from-lightblack to-black">
         <div class="flex justify-around gap-10 pb-5 mx-[6vw]">
             <div class="min-w-fit">
-                <h5 class="mb-2">Retrouvez-moi sur les réseaux !</h5>
+                <h5 class="mb-2">{{ $t('footer.cta1') }}</h5>
                 <ul class="footer-socials">
                     <li class="footer-socials-item">
                         <linkedinLogo /><a class="footer-socials-link" href="">Linkedin</a>
@@ -28,7 +28,7 @@ import behanceLogo from './icons/behance-logo.vue';
             </div>
 
             <div class="w-[300px]">
-                <h5 class="mb-2">Restons en contact !</h5>
+                <h5 class="mb-2">{{ $t('footer.cta2') }}</h5>
                 <form action="#" class="py-4">
                     <div>
                         <label for="email" class="block mb-2 text-sm">Email</label>
@@ -38,7 +38,7 @@ import behanceLogo from './icons/behance-logo.vue';
                     </div>
                 </form>
                 <button type="submit"
-                    class="my-4 btn focus:translate-y-[1px] hover:-translate-y-[1px]">Envoyer</button>
+                    class="my-4 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{ $t('footer.btn') }}</button>
             </div>
         </div>
         <span class="block py-4 pt-6 text-sm text-center">

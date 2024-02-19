@@ -31,10 +31,8 @@ import AboutAnim from '@/components/AboutAnim.vue'
                             graphique passionnée par l'innovation créative.</p>
                     </div>
                     <div class="w-1/4 pb-2 bg-center bg-cover md:aspect-square md:rounded-full rounded-simple"
-                        style="background-image: url(/profile_pic.webp)">
-                        <!-- <img src="/profile_pic.webp"
-                        class="min-w-[75px] w-full md:block lg:w-[200px] hidden max-w-[100px] md:max-w-[200px] h-auto"
-                        alt="Photo"> -->
+                        style="background-image: url(/profile_pic.webp)" alt="Photo">
+
                     </div>
                 </div>
 

@@ -14,24 +14,26 @@ import Logo from './icons/logo.vue';
         <nav class="z-10 navbar">
             <ul class="grid justify-center">
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/">Accueil</RouterLink><img src="./icons/nav/home.svg" alt="home">
+                    <RouterLink class="menu-link" to="/">{{ $t('menu.link1') }}</RouterLink><img src="./icons/nav/home.svg"
+                        alt="home">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/projects">Projets</RouterLink><img src="./icons/nav/projects.svg"
-                        alt="projects">
+                    <RouterLink class="menu-link" to="/projects">{{ $t('menu.link2') }}</RouterLink><img
+                        src="./icons/nav/projects.svg" alt="projects">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/about">À Propos</RouterLink><img src="./icons/nav/about.svg"
-                        alt="about">
+                    <RouterLink class="menu-link" to="/about">{{ $t('menu.link3') }}</RouterLink><img
+                        src="./icons/nav/about.svg" alt="about">
                 </li>
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/contact">Contact</RouterLink><img src="./icons/nav/contact.svg"
-                        alt="contact">
+                    <RouterLink class="menu-link" to="/contact">{{ $t('menu.link4') }}</RouterLink><img
+                        src="./icons/nav/contact.svg" alt="contact">
                 </li>
             </ul>
         </nav>
         <label class="relative z-10 inline-flex items-center cursor-pointer drop-shadow-lg">
-            <input type="checkbox" value="" class="sr-only peer">
+            <input type="checkbox" value="" class="sr-only peer"
+                @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
             <div
                 class="w-20 h-8 bg-grey rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:w-9 after:h-6 after:rounded-full after:bg-white after:transition-all">
             </div>

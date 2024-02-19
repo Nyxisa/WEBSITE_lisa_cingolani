@@ -17,6 +17,7 @@ const activeMenu = ref(false)
 function closeMenu() {
     activeMenu.value = false
 }
+
 </script>
 
 <template>
@@ -38,20 +39,21 @@ function closeMenu() {
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[20svh] text-center lg:m-0 flex-col flex">
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/">Accueil</RouterLink>
+                        <RouterLink @click="closeMenu" to="/">{{ $t('menu.link1') }}</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/projects">Projets</RouterLink>
+                        <RouterLink @click="closeMenu" to="/projects">{{ $t('menu.link2') }}</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/about">À Propos</RouterLink>
+                        <RouterLink @click="closeMenu" to="/about">{{ $t('menu.link3') }}</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
-                        <RouterLink @click="closeMenu" to="/contact">Contact</RouterLink>
+                        <RouterLink @click="closeMenu" to="/contact">{{ $t('menu.link4') }}</RouterLink>
                     </li>
                     <li class="block menu-item var-font">
                         <label class="relative z-10 inline-flex items-center cursor-pointer drop-shadow-lg">
-                            <input type="checkbox" value="" class="sr-only peer">
+                            <input type="checkbox" value="" class="sr-only peer"
+                                @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
                             <div
                                 class="w-20 h-8 bg-grey rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:w-9 after:h-6 after:rounded-full after:bg-white after:transition-all">
                             </div>
