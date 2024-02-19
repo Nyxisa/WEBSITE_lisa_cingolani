@@ -40,7 +40,7 @@ console.log(ProjectInfo)
         <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
         <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
-        <p class="max-w-[70ch] py-5 h-full">{{ ProjectInfo.intro }}</p>
+        <p class="max-w-[70ch] py-5 h-full text-base md:text-2xl lg:text-3xl 2xl:text-4xl">{{ ProjectInfo.intro }}</p>
         <!-- <img :src="urlImg1" class="w-full max-h-full mx-auto" /> -->
     </section>
 
@@ -49,27 +49,36 @@ console.log(ProjectInfo)
         <div>
             <p class="max-w-[70ch]">{{ ProjectInfo.text1 }}</p>
             <p class="max-w-[70ch]">{{ ProjectInfo.text2 }}</p>
-            <ul class="flex flex-col gap-4">
-                <li>{{ ProjectInfo.textli1 }}</li>
-                <li>{{ ProjectInfo.textli2 }}</li>
-                <li>{{ ProjectInfo.textli3 }}</li>
-            </ul>
+            <ul class="flex flex-col">
+                    <li v-if="ProjectInfo.textli1">
+                        <p>{{ ProjectInfo.textli1 }}</p>
+                    </li>
+                    <li v-if="ProjectInfo.textli2">
+                        <p>{{ ProjectInfo.textli2 }}</p>
+                    </li>
+                    <li v-if="ProjectInfo.textli3">
+                        <p>{{ ProjectInfo.textli3 }}</p>
+                    </li>
+                </ul>
         </div>
     </section>
 
     <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row [&_p]:pb-5">
         <div>
-            <p class="max-w-[70ch]">{{ ProjectInfo.text3 }}</p>
-            <p class="max-w-[70ch]">{{ ProjectInfo.text4 }}</p>
+            <p class="max-w-[70ch]" v-if="ProjectInfo.text3">{{ ProjectInfo.text3 }}</p>
+            <p class="max-w-[70ch]" v-if="ProjectInfo.text4">{{ ProjectInfo.text4 }}</p>
         </div>
         <ul class="software-grid">
+
             <li>
-                <!-- {{ ProjectInfo.softwares_icons.slice(1, 2) }} -->
-                {{ ProjectInfo.softwares.slice(0, 1)[0] }}
+                <!-- {{ ProjectInfo.softwares_icons[1] }} -->
+                {{ ProjectInfo.softwares[1] }}
             </li>
-            <li>{{ ProjectInfo.softwares.slice(1, 2)[0] }}</li>
-            <li>{{ ProjectInfo.softwares.slice(2, 3)[0] }}</li>
-            <li>{{ ProjectInfo.softwares.slice(3, 4)[0] }}</li>
+            <li>{{ ProjectInfo.softwares[2] }}</li>
+            <li v-if="ProjectInfo.softwares[3]">{{ ProjectInfo.softwares[3] }}</li>
+            <li v-if="ProjectInfo.softwares[4]">{{ ProjectInfo.softwares[4] }}</li>
+            <li v-if="ProjectInfo.softwares[5]">{{ ProjectInfo.softwares[5] }}</li>
+            <li v-if="ProjectInfo.softwares[6]">{{ ProjectInfo.softwares[6] }}</li>
         </ul>
     </section>
 
@@ -79,7 +88,7 @@ console.log(ProjectInfo)
         <img :src="urlImg4" class="lg:w-[30%] h-full" /> -->
     </section>
 
-    <p class="max-w-[70ch] py-10">{{ ProjectInfo.outro }}
+    <p class="max-w-[70ch] py-10 text-base md:text-2xl lg:text-3xl 2xl:text-4xl">{{ ProjectInfo.outro }}
     </p>
 
     <!-- <div class="">
