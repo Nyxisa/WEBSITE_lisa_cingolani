@@ -8,9 +8,15 @@ useHead({
 })
 
 import ProjectCard from '@/components/ProjectCard.vue'
+import ProjectCardEn from '@/components/ProjectCard_en.vue'
+
 import { allProjectsSorted } from '@/backend'
 const ProjectsListeSorted = await allProjectsSorted()
 console.log(ProjectsListeSorted)
+
+import { allProjectsSortedEn } from '@/backend'
+const ProjectsListeSortedEn = await allProjectsSortedEn()
+console.log(ProjectsListeSortedEn)
 </script>
 
 <template>
@@ -21,25 +27,29 @@ console.log(ProjectsListeSorted)
         <h3 class="text-xl font-light whitespace-nowrap">{{ $t('home.lastdescription') }}</h3>
         <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
       </div>
-      <div v-if="$i18n.locale === 'en'">
-        <p>Affiche tes cartes en anglais appel ta deuxieme collection pocketbase</p>
+
+      <div v-if="$i18n.locale === 'fr'">
+        <ul class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 xl:gap-8 md:mb-0 md:flex">
+          <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id">
+            <RouterLink :to="{ name: 'projects-id', params: { id: projects_fr.id } }" class="flex flex-col h-full">
+              <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
+            </RouterLink>
+            <Circle class="mx-auto mb-10 md:hidden" />
+          </li>
+        </ul>
       </div>
-      <div v-else-if="$i18n.locale === 'fr'">
-          <p>Affiche tes cartes en anglais appel ta deuxieme collection pocketbase</p>
+
+      <div v-else-if="$i18n.locale === 'en'">
+        <ul class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 xl:gap-8 md:mb-0 md:flex">
+          <li v-for="projects_en in ProjectsListeSortedEn.slice(0, 3)" :key="projects_en.id">
+            <RouterLink :to="{ name: 'projects-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
+              <ProjectCardEn :key="projects_en.id" v-bind="{ ...projects_en }" />
+            </RouterLink>
+            <Circle class="mx-auto mb-10 md:hidden" />
+          </li>
+        </ul>
       </div>
-      <ul
-        class="justify-center -mb-8 lg:flex-wrap xl:flex-nowrap xl:justify-around md:gap-5 lg:gap-8 md:mb-0 md:flex"
-      >
-        <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id">
-          <RouterLink
-            :to="{ name: 'projects-id', params: { id: projects_fr.id } }"
-            class="flex flex-col h-full"
-          >
-            <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
-          </RouterLink>
-          <Circle class="mx-auto mb-10 md:hidden" />
-        </li>
-      </ul>
+
     </section>
   </div>
 </template>
