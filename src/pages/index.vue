@@ -17,6 +17,28 @@ console.log(ProjectsListeSorted)
 import { allProjectsSortedEn } from '@/backend'
 const ProjectsListeSortedEn = await allProjectsSortedEn()
 console.log(ProjectsListeSortedEn)
+
+const screenSize = ref('');
+onMounted(() => {
+  // Initial screen size
+  updateScreenSize();
+  // Update screen size on resize
+  window.addEventListener('resize', updateScreenSize);
+});
+
+function updateScreenSize() {
+  screenSize.value = getScreenSize();
+}
+function getScreenSize() {
+  if (window.matchMedia('(min-width: 1280px)').matches) {
+    return 'xl';
+  } else {
+    return 'other';
+  }
+}
+function getProjectsListe() {
+  return screenSize.value === 'xl' ? ProjectsListeSorted.slice(0, 3) : ProjectsListeSorted.slice(0, 2);
+}
 </script>
 
 <template>
@@ -40,9 +62,9 @@ console.log(ProjectsListeSortedEn)
 
     <div v-else-if="$i18n.locale === 'en'">
       <ul class="flex-wrap justify-center -mb-8 md:justify-around md:gap-5 xl:gap-8 md:mb-0 md:flex">
-        <li v-for="projects_en in ProjectsListeSorted.slice(0, 3)" :key="projects_en.id" class="2xl:w-[30%]">
-          <RouterLink :to="{ name: 'projects-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
-            <ProjectCardEn :key="projects_en.id" v-bind="{ ...projects_en }" />
+        <li v-for="project in getProjectsListe()" :key="project.id" class="xl:w-[30%]">
+          <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
+            <ProjectCardEn :key="project.id" v-bind="{ ...project }" />
           </RouterLink>
           <Circle class="mx-auto mb-10 md:hidden" />
         </li>
