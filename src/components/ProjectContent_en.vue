@@ -46,18 +46,18 @@ const isVideo = (url: string): boolean => {
 
         <section class="flex flex-col justify-between lg:flex-row col-span-full">
             <div class="mb-10 grid grid-cols-[1fr,_1fr] grid-rows-6 gap-4 h-fit [&_img]:rounded-simple">
-                <img :src="urlAllImg[6]" class="object-cover object-left h-full row-span-3 border border-lightwhite"
-                    alt="Image 1">
-                <img :src="urlAllImg[1]" class="object-cover object-left h-full row-span-4 border border-lightwhite"
-                    alt="Image 2">
-                <img :src="urlAllImg[2]" class="object-cover object-left h-full row-span-3 border border-lightwhite"
-                    alt="Image 3">
-                <img :src="urlAllImg[5]" class="object-cover object-left h-full row-span-2 border border-lightwhite"
-                    alt="Image 4">
+                <img v-if="urlAllImg[6]" :src="urlAllImg[6]"
+                    class="object-cover object-left h-full row-span-3 border border-lightwhite" alt="Image 1">
+                <img v-if="urlAllImg[1]" :src="urlAllImg[1]"
+                    class="object-cover object-left h-full row-span-4 border border-lightwhite" alt="Image 2">
+                <img v-if="urlAllImg[2]" :src="urlAllImg[2]"
+                    class="object-cover object-left h-full row-span-3 border border-lightwhite" alt="Image 3">
+                <img v-if="urlAllImg[5]" :src="urlAllImg[5]"
+                    class="object-cover object-left h-full row-span-2 border border-lightwhite" alt="Image 4">
             </div>
             <div class="flex flex-col gap-10">
-                <div v-html="ProjectInfo.text_1"></div>
-                <div v-html="ProjectInfo.text_2"></div>
+                <div v-if="ProjectInfo.text_1" v-html="ProjectInfo.text_1"></div>
+                <div v-if="ProjectInfo.text_2" v-html="ProjectInfo.text_2"></div>
                 <ul class="flex flex-col" v-if="ProjectInfo.text_li" v-html="ProjectInfo.text_li"></ul>
             </div>
         </section>
@@ -77,12 +77,15 @@ const isVideo = (url: string): boolean => {
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
-        <CarrouselVue :id="props.id" />
+            <CarrouselVue :id="props.id" />
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
-            <Arrow/>
-            <p class="intro-outro" v-html="ProjectInfo.outro"></p>
+            <div class="flex gap-1">
+                <Arrow class="h-fit min-w-[1rem] self-start" />
+                <p class="py-4 md:py-2 intro-outro" v-html="ProjectInfo.outro"></p>
+                <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-fit self-end min-w-[1rem]" />
+            </div>
             <ul class="software-grid">
                 <li>
                     <!-- {{ ProjectInfo.softwares_icons[1] }} -->
