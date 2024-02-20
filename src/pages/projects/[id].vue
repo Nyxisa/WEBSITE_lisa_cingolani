@@ -64,7 +64,7 @@ onMounted(() => {
 
 <template>
     <article class="margins mt-[25px]">
-
+        
         <div v-if="$i18n.locale === 'fr'">
             <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.main_image }" />
         </div>
@@ -72,9 +72,11 @@ onMounted(() => {
         <div v-else-if="$i18n.locale === 'en'">
             <ProjectContentEn :key="ProjectInfoEn.id" v-bind="{ ...ProjectInfoEn, image: ProjectInfoEn.main_image }" />
         </div>
-
+        
     </article>
+    
     <section class="margins">
+        
         <div class="flex items-center w-full gap-4 mt-12 mb-8">
             <h3 class="text-xl font-light whitespace-nowrap">{{ $t('projects.seemore') }}</h3>
             <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
