@@ -15,7 +15,7 @@ console.log(ProjectsListeSortedEn)
 
 const props = defineProps<{
     id: string,
-    card_image: string,
+    main_image: string,
 }>();
 
 const ProjectInfo = await ProjectId(props.id);
@@ -31,11 +31,11 @@ useHead({
     <article class="margins mt-[25px]">
 
         <div v-if="$i18n.locale === 'fr'">
-            <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.card_image }" />
+            <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.main_image }" />
         </div>
 
         <div v-else-if="$i18n.locale === 'en'">
-            <ProjectContentEn :key="ProjectInfoEn.id" v-bind="{ ...ProjectInfoEn, image: ProjectInfoEn.card_image }" />
+            <ProjectContentEn :key="ProjectInfoEn.id" v-bind="{ ...ProjectInfoEn, image: ProjectInfoEn.main_image }" />
         </div>
 
     </article>

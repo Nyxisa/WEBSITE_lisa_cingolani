@@ -49,7 +49,6 @@ export enum ProjectsEnCategoryOptions {
 	"Development" = "Development",
 	"3D" = "3D",
 	"Motion Design" = "Motion Design",
-	"Print" = "Print",
 	"UI/UX" = "UI/UX",
 	"Illustration" = "Illustration",
 	"Logo Design" = "Logo Design",
@@ -73,40 +72,34 @@ export enum ProjectsEnSoftwaresOptions {
 export type ProjectsEnRecord = {
 	title?: string
 	description?: string
-	card_image?: string
-	image1?: string
-	image2?: string
-	image3?: string
-	image4?: string
+	main_image?: string
 	category?: ProjectsEnCategoryOptions[]
 	alt_img?: string
 	date?: IsoDateString
-	intro?: string
-	text1?: string
-	text2?: string
-	textli1?: string
-	textli2?: string
-	textli3?: string
-	text3?: string
-	text4?: string
-	outro?: string
+	intro?: HTMLString
+	text_1?: HTMLString
+	text_2?: HTMLString
+	text_3?: HTMLString
+	text_li?: HTMLString
+	text_4?: HTMLString
+	text_5?: HTMLString
 	softwares?: ProjectsEnSoftwaresOptions[]
 	softwares_icons?: string[]
+	outro?: HTMLString
 }
 
 export enum ProjectsFrCategoryOptions {
 	"Branding" = "Branding",
-	"Webdesign" = "Webdesign",
-	"Typography" = "Typography",
-	"Development" = "Development",
+	"Web Design" = "Web Design",
+	"Typographie" = "Typographie",
+	"Développement Web" = "Développement Web",
 	"3D" = "3D",
 	"Motion Design" = "Motion Design",
-	"Print" = "Print",
 	"UI/UX" = "UI/UX",
 	"Illustration" = "Illustration",
 	"Logo Design" = "Logo Design",
 	"Packaging" = "Packaging",
-	"Editorial" = "Editorial",
+	"Éditorial" = "Éditorial",
 }
 
 export enum ProjectsFrSoftwaresOptions {
@@ -125,7 +118,7 @@ export enum ProjectsFrSoftwaresOptions {
 export type ProjectsFrRecord = {
 	title?: string
 	description?: string
-	card_image?: string
+	main_image?: string
 	category?: ProjectsFrCategoryOptions[]
 	alt_image?: string
 	date?: IsoDateString
