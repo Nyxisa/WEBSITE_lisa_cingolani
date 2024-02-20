@@ -1,8 +1,22 @@
 <script setup lang="ts">
+import { pb } from '@/backend'
+import { ProjectIdEn } from '@/backend';
 import { ref, onUnmounted, onMounted } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
 import Left from '@/components/icons/arrow-left.vue'
 import Right from '@/components/icons/arrow-right.vue'
+const props = defineProps<{
+    id: string,
+}>();
+const ProjectInfo = await ProjectIdEn(props.id);
+console.log(ProjectInfo)
+
+const allImg = ProjectInfo.gallery;
+console.log(allImg);
+const urlAllImg = allImg.map((oneImage: string) => {
+    return pb.getFileUrl(ProjectInfo, oneImage);
+});
+console.log(urlAllImg);
 
 const carrousel = ref<HTMLDivElement | null>(null);
 let displayedImg = ref("#ecran-1");
@@ -35,11 +49,11 @@ onMounted(() => {
 <template>
     <section class="relative carrousel_layout">
         <div class="carrousel_images" ref="carrousel" @scroll.passive="debouncedImg()">
-            <img id="ecran-1" src="/bg_home1.webp" alt="1" />
-            <img id="ecran-2" src="/bg_home2.webp" alt="2" />
-            <img id="ecran-3" src="/bg_home3.webp" alt="3" />
-            <img id="ecran-4" src="/bg_home1.webp" alt="4" />
-            <img id="ecran-5" src="/bg_home2.webp" alt="5" />
+            <img id="ecran-1" v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="1" />
+            <img id="ecran-2" v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="2" />
+            <img id="ecran-3" v-if="urlAllImg[4]" :src="urlAllImg[4]" alt="3" />
+            <img id="ecran-4" v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="4" />
+            <img id="ecran-5" v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="5" />
         </div>
         <div class="carrousel_btn">
             <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
@@ -50,20 +64,20 @@ onMounted(() => {
             </button>
         </div>
         <ul class="flex gap-4 mt-5">
-            <li><a href="#ecran-1" :class="{ actif: displayedImg === '#ecran-1' }">
-                    <div class="circle"></div>
+            <li><a href="#ecran-1" :class="{ carrousel_actif: displayedImg === '#ecran-1' }">
+                    <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-2" :class="{ actif: displayedImg === '#ecran-2' }">
-                    <div class="circle"></div>
+            <li><a href="#ecran-2" :class="{ carrousel_actif: displayedImg === '#ecran-2' }">
+                    <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-3" :class="{ actif: displayedImg === '#ecran-3' }">
-                    <div class="circle"></div>
+            <li><a href="#ecran-3" :class="{ carrousel_actif: displayedImg === '#ecran-3' }">
+                    <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-4" :class="{ actif: displayedImg === '#ecran-4' }">
-                    <div class="circle"></div>
+            <li><a href="#ecran-4" :class="{ carrousel_actif: displayedImg === '#ecran-4' }">
+                    <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-5" :class="{ actif: displayedImg === '#ecran-5' }">
-                    <div class="circle"></div>
+            <li><a href="#ecran-5" :class="{ carrousel_actif: displayedImg === '#ecran-5' }">
+                    <div class="carrousel_circle"></div>
                 </a></li>
         </ul>
 
@@ -71,16 +85,11 @@ onMounted(() => {
 </template>
 
 <style>
-.actif .circle {
+.carrousel_actif .carrousel_circle {
     background-color: white;
 }
 
-.active {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.circle {
+.carrousel_circle {
     width: 8px;
     height: 8px;
     background-color: rgba(255, 255, 255, 0.25);

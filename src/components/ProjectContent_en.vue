@@ -77,7 +77,7 @@ const isVideo = (url: string): boolean => {
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
-           <CarrouselVue/>
+        <CarrouselVue :id="props.id" />
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
