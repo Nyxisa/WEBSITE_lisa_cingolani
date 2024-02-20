@@ -69,13 +69,15 @@ export enum ProjectsEnSoftwaresOptions {
 	"CSS" = "CSS",
 	"Tailwind" = "Tailwind",
 }
-export type ProjectsEnRecord = {
+export type ProjectsEnRecord<Talt_gallery = unknown> = {
 	title?: string
 	description?: string
 	main_image?: string
-	category?: ProjectsEnCategoryOptions[]
 	alt_img?: string
 	date?: IsoDateString
+	category?: ProjectsEnCategoryOptions[]
+	gallery?: string[]
+	alt_gallery?: null | Talt_gallery
 	intro?: HTMLString
 	text_1?: HTMLString
 	text_2?: HTMLString
@@ -143,7 +145,7 @@ export type UsersRecord = {
 
 // Response types include system fields and match responses from the PocketBase API
 export type HomeResponse = Required<HomeRecord> & BaseSystemFields
-export type ProjectsEnResponse = Required<ProjectsEnRecord> & BaseSystemFields
+export type ProjectsEnResponse<Talt_gallery = unknown> = Required<ProjectsEnRecord<Talt_gallery>> & BaseSystemFields
 export type ProjectsFrResponse = Required<ProjectsFrRecord> & BaseSystemFields
 export type UsersResponse = Required<UsersRecord> & AuthSystemFields
 
