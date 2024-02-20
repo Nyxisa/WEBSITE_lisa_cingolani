@@ -17,6 +17,18 @@ const urlAllImg = allImg.map((oneImage: string) => {
     return pb.getFileUrl(ProjectInfo, oneImage);
 });
 console.log(urlAllImg);
+
+// Display either an image or a video
+const isImage = (url: string): boolean => {
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+    const extension = url.substring(url.lastIndexOf('.')).toLowerCase();
+    return imageExtensions.includes(extension);
+};
+const isVideo = (url: string): boolean => {
+    const videoExtensions = ['.mp4', '.webm', '.ogg'];
+    const extension = url.substring(url.lastIndexOf('.')).toLowerCase();
+    return videoExtensions.includes(extension);
+};
 </script>
     
 <template>
@@ -30,7 +42,10 @@ console.log(urlAllImg);
         </section>
 
         <section class="flex flex-col justify-between gap-10 py-10 lg:flex-row [&_p]:pb-5">
-            <img :src="urlAllImg[0]" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
+            <div>
+                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
+                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" controls autoplay muted></video>
+            </div>
             <div>
                 <p v-html="ProjectInfo.text_1"></p>
 
