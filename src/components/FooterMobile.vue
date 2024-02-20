@@ -4,7 +4,7 @@ import linkedinLogo from './icons/linkedin-logo.vue';
 import instagramLogo from './icons/instagram-logo.vue';
 import dribbbleLogo from './icons/dribbble-logo.vue';
 import behanceLogo from './icons/behance-logo.vue';
-import Logo from './icons/logo.vue';
+
 </script>
 <template>
     <footer class="w-screen bg-gradient-to-t from-lightblack to-black footer">
@@ -42,7 +42,7 @@ import Logo from './icons/logo.vue';
                 <button type="submit" class="mx-auto mt-5 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
                     $t('footer.btn') }}</button>
             </div>
-            <Logo class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />
+            <img src="./icons/nav/logo.svg" class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />
         </div>
         <span class="block py-2 text-sm text-center">
             &copy; 2023 Lisa Cingolani.</span>

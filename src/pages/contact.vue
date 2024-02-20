@@ -12,7 +12,7 @@ import ContactForm from '@/components/ContactForm.vue';
     <ContactAnim />
     <section class="margins lg:mt-[25px]">
         <div class="flex items-center w-full gap-4 mb-8">
-            <h1 class="text-transparent whitespace-nowrap lg:hidden div-graphic font_thin">
+            <h1 class="text-transparent normal-case whitespace-nowrap lg:hidden div-graphic font_thin">
                 Contact
             </h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>

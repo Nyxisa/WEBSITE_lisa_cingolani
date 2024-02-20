@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import Logo from './icons/logo.vue';
 
 </script>
 <template>
@@ -8,7 +7,7 @@ import Logo from './icons/logo.vue';
         class="z-10 w-[300px] h-[100vh] rounded-bl-3xl fixed top-0 right-0 shadow-nav overflow-hidden px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl bg-lightblack">
         <div class="w-[200px] h-[200px]">
             <RouterLink to="/">
-                <Logo class="w-full" />
+                <img src="./icons/nav/logo.svg" class="w-full" />
             </RouterLink>
         </div>
         <nav class="z-10 navbar">

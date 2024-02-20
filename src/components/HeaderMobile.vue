@@ -2,7 +2,6 @@
 import { ref, computed, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useWindowScroll } from '@vueuse/core'
-import Logo from './icons/logo.vue'
 
 const { y } = useWindowScroll()
 const underLimit = computed(() => y.value < 400)
@@ -28,7 +27,7 @@ function closeMenu() {
             'shadow-1': underLimit,
         }">
         <RouterLink to="/">
-            <Logo class="w-10 h-auto" />
+            <img src="./icons/nav/logo.svg" class="w-10 h-auto" />
         </RouterLink>
         <RouterLink to="/">
             <span class="text-xs font-thin text-transparent div-graphic font-halyard">Lisa Cingolani</span>
@@ -37,7 +36,7 @@ function closeMenu() {
             <nav aria-label="Site Nav"
                 class="fixed inset-0 invisible w-screen h-[100vh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
-                <ul class="items-center lg:flex-row mt-[20svh] text-center lg:m-0 flex-col flex">
+                <ul class="items-center lg:flex-row mt-[16svh] text-center lg:m-0 flex-col flex">
                     <li class="block menu-item var-font">
                         <RouterLink @click="closeMenu" to="/">{{ $t('menu.link1') }}</RouterLink>
                     </li>
@@ -61,8 +60,8 @@ function closeMenu() {
                         </label>
                     </li>
                 </ul>
-                <RouterLink class="" @click="closeMenu" to="/">
-                    <Logo class="w-24 h-auto mx-auto mt-10 fill-lightwhite" />
+                <RouterLink @click="closeMenu" to="/">
+                    <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-10 fill-lightwhite" />
                 </RouterLink>
             </nav>
 

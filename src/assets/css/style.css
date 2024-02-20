@@ -362,7 +362,7 @@
   }
 
   .project-grid {
-    @apply grid grid-cols-main gap-4;
+    @apply grid grid-cols-main gap-x-4;
   }
 }
 
