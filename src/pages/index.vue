@@ -18,27 +18,41 @@ import { allProjectsSortedEn } from '@/backend'
 const ProjectsListeSortedEn = await allProjectsSortedEn()
 console.log(ProjectsListeSortedEn)
 
+// Managing screen size for projects display
 const screenSize = ref('');
 onMounted(() => {
-  // Initial screen size
   updateScreenSize();
-  // Update screen size on resize
   window.addEventListener('resize', updateScreenSize);
 });
-
 function updateScreenSize() {
   screenSize.value = getScreenSize();
 }
 function getScreenSize() {
-  if (window.matchMedia('(min-width: 1280px)').matches) {
-    return 'xl';
+  if (window.matchMedia('(min-width: 1536px)').matches) {
+    return '3';
   } else {
     return 'other';
   }
 }
 function getProjectsListe() {
-  return screenSize.value === 'xl' ? ProjectsListeSorted.slice(0, 3) : ProjectsListeSorted.slice(0, 2);
+  return screenSize.value === '3' ? ProjectsListeSorted.slice(0, 3) : ProjectsListeSorted.slice(0, 2);
 }
+
+// Trigger animation on scroll
+const targetElement = ref<HTMLElement | null>(null);
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        targetElement.value?.classList.add('anim-slide-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+  if (targetElement.value) {
+    observer.observe(targetElement.value);
+  }
+});
 </script>
 
 <template>
@@ -46,7 +60,7 @@ function getProjectsListe() {
   <section class="margins">
     <div class="flex items-center w-full gap-4 mt-12 mb-8">
       <h3 class="text-xl font-light whitespace-nowrap">{{ $t('home.lastprojects') }}</h3>
-      <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
+      <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
     </div>
 
     <div v-if="$i18n.locale === 'fr'">
@@ -62,7 +76,7 @@ function getProjectsListe() {
 
     <div v-else-if="$i18n.locale === 'en'">
       <ul class="flex-wrap justify-center -mb-8 md:justify-around md:gap-5 xl:gap-8 md:mb-0 md:flex">
-        <li v-for="project in getProjectsListe()" :key="project.id" class="xl:w-[30%]">
+        <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
           <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
             <ProjectCardEn :key="project.id" v-bind="{ ...project }" />
           </RouterLink>

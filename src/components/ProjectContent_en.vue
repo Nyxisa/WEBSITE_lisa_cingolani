@@ -4,8 +4,7 @@ import { ProjectIdEn } from '@/backend';
 import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps<{
     id: string,
-    image: string,
-}>();
+    }>();
 const ProjectInfo = await ProjectIdEn(props.id);
 console.log(ProjectInfo)
 
@@ -39,7 +38,7 @@ const urlMainImg = mainImg && pb.getFileUrl(ProjectInfo, mainImg, { thumb: '100x
                     </div> -->
 
 
-    <section class="mb-10">
+   <div> <section class="mb-10">
         <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
         <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
@@ -88,7 +87,7 @@ const urlMainImg = mainImg && pb.getFileUrl(ProjectInfo, mainImg, { thumb: '100x
         <img :src="urlImg4" class="lg:w-[30%] h-full" /> -->
     </section>
 
-    <p class="max-w-[70ch] py-10 text-base md:text-2xl lg:text-3xl 2xl:text-4xl" v-html="ProjectInfo.outro"></p>
+    <p class="max-w-[70ch] py-10 text-base md:text-2xl lg:text-3xl 2xl:text-4xl" v-html="ProjectInfo.outro"></p></div>
 
     <!-- <div class="">
         <p class="ml-auto font-light border-none btn-style bg-grey">Share on Facebook / Twitter / LinkedIn</p>

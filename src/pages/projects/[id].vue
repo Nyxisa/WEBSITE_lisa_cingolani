@@ -25,6 +25,41 @@ useHead({
     title: `${ProjectInfo.title} | Lisa Cingolani`
 })
 
+// Managing screen size for projects display
+const screenSize = ref('');
+onMounted(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+});
+function updateScreenSize() {
+    screenSize.value = getScreenSize();
+}
+function getScreenSize() {
+    if (window.matchMedia('(min-width: 1536px)').matches) {
+        return '3';
+    } else {
+        return 'other';
+    }
+}
+function getProjectsListe() {
+    return screenSize.value === '3' ? ProjectsListeSorted.slice(0, 3) : ProjectsListeSorted.slice(0, 2);
+}
+
+// Trigger animation on scroll
+const targetElement = ref<HTMLElement | null>(null);
+onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                targetElement.value?.classList.add('anim-slide-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    if (targetElement.value) {
+        observer.observe(targetElement.value);
+    }
+});
 </script>
 
 <template>
@@ -42,14 +77,14 @@ useHead({
     <section class="margins">
         <div class="flex items-center w-full gap-4 mt-12 mb-8">
             <h3 class="text-xl font-light whitespace-nowrap">{{ $t('projects.seemore') }}</h3>
-            <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
+            <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
         </div>
 
         <div v-if="$i18n.locale === 'fr'">
             <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
-                <li v-for="projects_fr in ProjectsListeSorted.slice(0, 3)" :key="projects_fr.id" class="2xl:w-[30%]">
-                    <RouterLink :to="{ name: 'projects-id', params: { id: projects_fr.id } }" class="flex flex-col h-full">
-                        <ProjectCard :key="projects_fr.id" v-bind="{ ...projects_fr }" />
+                <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
+                    <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
+                        <ProjectCard :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>
                 </li>
             </ul>
@@ -57,9 +92,9 @@ useHead({
 
         <div v-else-if="$i18n.locale === 'en'">
             <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
-                <li v-for="projects_en in ProjectsListeSortedEn.slice(0, 3)" :key="projects_en.id" class="2xl:w-[30%]">
-                    <RouterLink :to="{ name: 'projects-id', params: { id: projects_en.id } }" class="flex flex-col h-full">
-                        <ProjectCardEn :key="projects_en.id" v-bind="{ ...projects_en }" />
+                <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
+                    <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
+                        <ProjectCardEn :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>
                 </li>
             </ul>

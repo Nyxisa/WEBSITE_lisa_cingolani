@@ -14,7 +14,7 @@ const urlMainImg = mainImg && pb.getFileUrl(ProjectInfo, mainImg, { thumb: '100x
 
 <template>
   <div class="mx-auto flex flex-col h-full mb-10 text-lightblack rounded-default shadow-1 max-w-[350px]">
-    <img :src="urlMainImg" class="object-cover rounded-b-none rounded-default h-[200px] md:h-[250px] lg:h-[300px]" />
+    <img :src="urlMainImg" class="object-cover rounded-b-none rounded-default h-[250px] lg:h-[300px]" />
     <div class="flex flex-col justify-between h-full px-8 py-5 rounded-t-none rounded-default bg-lightwhite">
       <div class="flex items-center w-full gap-4">
         <h6 class="mb-0">{{ CategoryTab.slice(0, 1).join(' | ') }}</h6>
