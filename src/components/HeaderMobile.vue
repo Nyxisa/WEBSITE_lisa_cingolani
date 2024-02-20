@@ -30,7 +30,7 @@ function closeMenu() {
             <img src="./icons/nav/logo.svg" class="w-10 h-auto" />
         </RouterLink>
         <RouterLink to="/">
-            <span class="text-xs font-thin text-transparent div-graphic font-halyard">Lisa Cingolani</span>
+            <span class="text-xs font-thin text-transparent normal-case div-graphic font-halyard">Lisa Cingolani</span>
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
             <nav aria-label="Site Nav"
@@ -64,7 +64,6 @@ function closeMenu() {
                     <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-10 fill-lightwhite" />
                 </RouterLink>
             </nav>
-
             <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu">
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
                     :class="{ 'translate-y-[9px] rotate-45 bg-lightwhite': activeMenu, '!bg-lightwhite': underLimit }">
@@ -75,7 +74,6 @@ function closeMenu() {
                     :class="{ '-translate-y-[9px] -rotate-45 bg-lightwhite': activeMenu, '!bg-lightwhite': underLimit }">
                 </div>
             </button>
-
         </div>
 
 

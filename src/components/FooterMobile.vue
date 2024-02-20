@@ -42,7 +42,7 @@ import behanceLogo from './icons/behance-logo.vue';
                 <button type="submit" class="mx-auto mt-5 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
                     $t('footer.btn') }}</button>
             </div>
-            <img src="./icons/nav/logo.svg" class="w-[50%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />
+            <img src="./icons/nav/logo.svg" class="w-[40%] h-auto mx-auto mt-8 fill-lightwhite max-w-[200px]" />
         </div>
         <span class="block py-2 text-sm text-center">
             &copy; 2023 Lisa Cingolani.</span>

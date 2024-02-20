@@ -364,6 +364,10 @@
   .project-grid {
     @apply grid grid-cols-main gap-x-4;
   }
+
+  .intro-outro > p {
+    @apply text-base md:text-lg lg:text-xl py-0 !important;
+  }
 }
 
 @layer utilities {
