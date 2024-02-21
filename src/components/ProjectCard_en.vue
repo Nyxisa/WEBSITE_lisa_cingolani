@@ -3,7 +3,8 @@ import { pb } from '@/backend'
 import { ProjectIdEn } from '@/backend'
 import { ref, onMounted, onUnmounted } from 'vue'
 const props = defineProps<{
-  id: string
+  id: string,
+  main_image: string,
 }>()
 const ProjectInfo = await ProjectIdEn(props.id)
 const CategoryTab = ref(ProjectInfo.category)

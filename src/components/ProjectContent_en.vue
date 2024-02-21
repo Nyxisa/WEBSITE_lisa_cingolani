@@ -5,6 +5,7 @@ import CarrouselVue from './Carrousel.vue';
 import Arrow from '@/components/icons/arrow.vue'
 const props = defineProps<{
     id: string,
+    main_image: string,
 }>();
 const ProjectInfo = await ProjectIdEn(props.id);
 console.log(ProjectInfo)
