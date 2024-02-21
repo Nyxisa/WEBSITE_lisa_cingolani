@@ -51,11 +51,11 @@ onMounted(() => {
 <template>
     <section class="relative carrousel_layout">
         <div class="carrousel_images" ref="carrousel" @scroll.passive="debouncedImg()">
-            <img id="ecran-1" v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="1" />
-            <img id="ecran-2" v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="2" />
-            <img id="ecran-3" v-if="urlAllImg[4]" :src="urlAllImg[4]" alt="3" />
-            <img id="ecran-4" v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="4" />
-            <img id="ecran-5" v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="5" />
+            <img id="ecran-1" v-if="urlAllImg[8]" :src="urlAllImg[8]" alt="1" />
+            <img id="ecran-2" v-if="urlAllImg[9]" :src="urlAllImg[9]" alt="2" />
+            <img id="ecran-3" v-if="urlAllImg[10]" :src="urlAllImg[10]" alt="3" />
+            <img id="ecran-4" v-if="urlAllImg[11]" :src="urlAllImg[11]" alt="4" />
+            <img id="ecran-5" v-if="urlAllImg[12]" :src="urlAllImg[12]" alt="5" />
         </div>
         <div class="hidden carrousel_btn lg:flex">
             <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
@@ -66,19 +66,19 @@ onMounted(() => {
             </button>
         </div>
         <ul class="flex gap-4 mt-5">
-            <li v-if="urlAllImg[2]"><a href="#ecran-1" :class="{ carrousel_actif: displayedImg === '#ecran-1' }">
+            <li v-if="urlAllImg[8]"><a href="#ecran-1" :class="{ carrousel_actif: displayedImg === '#ecran-1' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li v-if="urlAllImg[3]"><a href="#ecran-2" :class="{ carrousel_actif: displayedImg === '#ecran-2' }">
+            <li v-if="urlAllImg[9]"><a href="#ecran-2" :class="{ carrousel_actif: displayedImg === '#ecran-2' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li v-if="urlAllImg[4]"><a href="#ecran-3" :class="{ carrousel_actif: displayedImg === '#ecran-3' }">
+            <li v-if="urlAllImg[10]"><a href="#ecran-3" :class="{ carrousel_actif: displayedImg === '#ecran-3' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li v-if="urlAllImg[5]"><a href="#ecran-4" :class="{ carrousel_actif: displayedImg === '#ecran-4' }">
+            <li v-if="urlAllImg[11]"><a href="#ecran-4" :class="{ carrousel_actif: displayedImg === '#ecran-4' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li v-if="urlAllImg[6]"><a href="#ecran-5" :class="{ carrousel_actif: displayedImg === '#ecran-5' }">
+            <li v-if="urlAllImg[12]"><a href="#ecran-5" :class="{ carrousel_actif: displayedImg === '#ecran-5' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
         </ul>

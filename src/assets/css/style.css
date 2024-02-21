@@ -36,7 +36,7 @@
     @apply font-halyard font-thin text-2xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-8xl;
   }
   h2 {
-    @apply font-halyard font-normal lg:text-2xl text-base md:text-lg;
+    @apply font-halyard font-normal lg:text-2xl md:text-xl text-lg;
   }
   h3 {
     @apply font-itc lg:text-xl text-lg;
@@ -89,6 +89,10 @@
 
   .menu-item {
     @apply p-3 grid grid-cols-[1fr,30px] gap-3 hover:tracking-wide transition-all duration-300;
+  }
+
+  .menu-item-mobile {
+    @apply pt-5 pb-4;
   }
 
   .menu-link {

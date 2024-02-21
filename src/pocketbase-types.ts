@@ -87,6 +87,7 @@ export type ProjectsEnRecord = {
 	softwares?: ProjectsEnSoftwaresOptions[]
 	softwares_icons?: string[]
 	outro?: HTMLString
+	link?: string
 }
 
 export enum ProjectsFrCategoryOptions {
@@ -120,21 +121,21 @@ export type ProjectsFrRecord = {
 	title?: string
 	description?: string
 	main_image?: string
-	category?: ProjectsFrCategoryOptions[]
 	alt_image?: string
 	date?: IsoDateString
-	intro?: string
-	text1?: string
-	text2?: string
-	textli1?: string
-	textli2?: string
-	textli3?: string
-	text3?: string
-	text4?: string
-	outro?: string
+	category?: ProjectsFrCategoryOptions[]
+	gallery?: string[]
+	intro?: HTMLString
+	text_1?: HTMLString
+	text_2?: HTMLString
+	text_li?: HTMLString
+	text_3?: HTMLString
+	text_4?: HTMLString
+	text_5?: HTMLString
+	outro?: HTMLString
 	softwares?: ProjectsFrSoftwaresOptions[]
 	softwares_icons?: string[]
-	gallery?: string[]
+	link?: string
 }
 
 export type UsersRecord = {

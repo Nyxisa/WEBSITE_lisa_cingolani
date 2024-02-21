@@ -17,8 +17,10 @@ import ContactForm from '@/components/ContactForm.vue';
             </h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
         </div>
-        <p class="md:text-lg max-w-[65ch] mb-2">{{ $t('contact.p1') }}</p>
-        <p>{{ $t('contact.p2') }}</p>
+        <div class="gap-12 lg:flex">
+            <p class="md:text-lg lg:w-1/2 max-w-[65ch] mb-2">{{ $t('contact.p1') }}</p>
+            <p class="md:text-lg lg:w-1/2 max-w-[65ch] mb-2">{{ $t('contact.p2') }}</p>
+        </div>
         <ContactForm />
     </section>
 </template>

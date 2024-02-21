@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
 import { ProjectIdEn } from '@/backend';
-import { ref, onMounted, onUnmounted } from 'vue';
 import CarrouselVue from './Carrousel.vue';
 import Arrow from '@/components/icons/arrow.vue'
 const props = defineProps<{
@@ -44,16 +43,20 @@ const isVideo = (url: string): boolean => {
     <div
         class="[&_p]:pb-2 [&_h3]:pb-2 [&_h3]:text-grey [&_h3]:font-thin [&_h6]:text-grey [&_h6]:py-2 -mt-16 flex flex-col gap-10">
 
-        <section class="mt-10 col-span-full">
+        <section class="mt-20 col-span-full">
             <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
-            <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
-            <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple" />
+            <h2 class="my-6"> {{ ProjectInfo.category.join(" | ") }}</h2>
 
             <section class="md:project-grid">
-                <div class="col-span-5 py-2 h-[95%] border-b hidden md:block">
+                <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple col-span-full" />
+                <div class="flex flex-col justify-between h-full col-span-5 py-2 mb-10">
                     <h3 class="pt-2 text-right border-t">{{ ProjectInfo.date.slice(0, 7) }}</h3>
                     <h3 class="pt-2 text-right border-t">{{ $t('projects.case') }}</h3>
+                    <a v-if="ProjectInfo.link" :href="ProjectInfo.link" target="_blank"
+                        class="ml-auto hover:bg-lightwhite hover:text-lightblack transition-all pb-1.5 btn-style">{{
+                            $t('projects.link')
+                        }}</a>
                 </div>
                 <div class="col-start-7 col-span-full intro-outro" v-html="ProjectInfo.intro">
                 </div>
@@ -64,14 +67,14 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="flex justify-center w-full col-span-5 gap-4 flex-nowrap">
                 <div class="mb-1 md:mb-0 w-1/2 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
-                    <img v-if="urlAllImg[1]" :src="urlAllImg[1]" alt="Image 1">
+                    <img v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="Image 1">
                     <img v-if="urlAllImg[4]" :src="urlAllImg[4]" alt="Image 2" class="mt-4">
-                    <img v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="Image 3" class="mt-4">
+                    <img v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="Image 3" class="mt-4">
                 </div>
                 <div class="w-1/2 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
-                    <img v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="Image 4">
-                    <img v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="Image 5" class="mt-4">
-                    <img v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="Image 6" class="mt-4">
+                    <img v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="Image 4">
+                    <img v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="Image 5" class="mt-4">
+                    <img v-if="urlAllImg[7]" :src="urlAllImg[7]" alt="Image 6" class="mt-4">
                 </div>
             </div>
             <div class="flex flex-col col-start-7 gap-10 col-span-full">
@@ -81,10 +84,10 @@ const isVideo = (url: string): boolean => {
             </div>
         </section>
 
-        <section class="flex flex-col items-center justify-between gap-10 md:flex-row md:project-grid">
+        <section class="flex flex-col justify-between gap-10 md:flex-row md:project-grid">
             <div class="col-span-5">
-                <img v-if="isImage(urlAllImg[2])" :src="urlAllImg[2]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[2])" :src="urlAllImg[2]" controls autoplay muted></video>
+                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
+                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" controls autoplay muted></video>
             </div>
             <div class="flex flex-col col-start-7 gap-10 col-span-full">
                 <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
@@ -94,14 +97,14 @@ const isVideo = (url: string): boolean => {
 
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="col-span-5">
-                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" controls autoplay muted></video>
+                <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" />
+                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" controls autoplay muted></video>
             </div>
             <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
-            <CarrouselVue :id="props.id" />
+            <CarrouselVue v-if="urlAllImg[8]" :id="props.id" />
         </section>
 
         <section class="flex flex-col justify-between w-full gap-10 lg:gap-4 lg:flex-row col-span-full">

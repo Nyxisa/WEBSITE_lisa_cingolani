@@ -36,20 +36,23 @@ function closeMenu() {
             <nav aria-label="Site Nav"
                 class="fixed inset-0 invisible w-screen h-[100vh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
-                <ul class="items-center lg:flex-row mt-[16svh] text-center lg:m-0 flex-col flex">
-                    <li class="block menu-item var-font">
+                <ul class="items-center lg:flex-row mt-[12vh] text-center lg:m-0 flex-col flex">
+                    <li class="menu-item-mobile var-font">
                         <RouterLink @click="closeMenu" to="/">{{ $t('menu.link1') }}</RouterLink>
                     </li>
-                    <li class="block menu-item var-font">
+                    <div class="w-1/5 h-[1px] rounded-full bg-grey"></div>
+                    <li class="menu-item-mobile">
                         <RouterLink @click="closeMenu" to="/projects">{{ $t('menu.link2') }}</RouterLink>
                     </li>
-                    <li class="block menu-item var-font">
+                    <div class="w-1/5 h-[1px] rounded-full bg-grey"></div>
+                    <li class="menu-item-mobile">
                         <RouterLink @click="closeMenu" to="/about">{{ $t('menu.link3') }}</RouterLink>
                     </li>
-                    <li class="block menu-item var-font">
+                    <div class="w-1/5 h-[1px] rounded-full bg-grey"></div>
+                    <li class="menu-item-mobile">
                         <RouterLink @click="closeMenu" to="/contact">{{ $t('menu.link4') }}</RouterLink>
                     </li>
-                    <li class="block menu-item var-font">
+                    <li class="pb-0 mt-2 menu-item-mobile">
                         <label class="relative z-10 inline-flex items-center cursor-pointer drop-shadow-lg">
                             <input type="checkbox" value="" class="sr-only peer"
                                 @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
@@ -61,7 +64,7 @@ function closeMenu() {
                     </li>
                 </ul>
                 <RouterLink @click="closeMenu" to="/">
-                    <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-10 fill-lightwhite" />
+                    <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-[5vh] fill-lightwhite" />
                 </RouterLink>
             </nav>
             <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu">
