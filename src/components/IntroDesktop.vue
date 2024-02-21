@@ -13,18 +13,22 @@
         <p class="-mb-4 text-lg"><span class="pr-2 text-7xl">5</span>{{ $t('home.nbprojects') }}</p>
       </div>
     </div>
-    <div class="w-3/4 p-8 border border-opacity-10 border-lightwhite rounded-simple">
-      <h2 class="mb-4 bg-lightblack font_normal rounded-simple" v-html="$t('home.intro1')"></h2>
-      <p class="text-base md:text-lg lg:text-2xl font_light w-fill bg-lightblack rounded-simple"
-        v-html="$t('home.intro2')">
-      </p>
-      <p class="text-base w-fill md:text-lg lg:text-2xl bg-lightblack rounded-simple">
-        <span class="font-normal">{{ $t('home.intro3span') }}</span>
-        <span class="font_light" v-html="$t('home.intro3')"></span>
-      </p>
-      <h2 class="mt-4 fw-1/2 bg-lightblack font_normal rounded-simple">
-        {{ $t('home.cta') }}
-      </h2>
+    <div class="w-3/4 p-[1px] rounded-simple"
+      style="background:linear-gradient(to top left, #212121 25%, rgb(117, 117, 117) 100%)">
+      <div class="w-full p-8 rounded-simple bg-lightblack">
+        <h2 class="mb-4 bg-lightblack font_normal rounded-simple" v-html="$t('home.intro1')"></h2>
+        <p class="text-base md:text-lg lg:text-2xl font_light w-fill bg-lightblack rounded-simple"
+          v-html="$t('home.intro2')">
+        </p>
+        <p class="text-base w-fill md:text-lg lg:text-2xl bg-lightblack rounded-simple">
+          <span class="font-normal">{{ $t('home.intro3span') }}</span>
+          <span class="font_light" v-html="$t('home.intro3')"></span>
+        </p>
+        <h2 class="mt-4 fw-1/2 bg-lightblack font_normal rounded-simple">
+          {{ $t('home.cta') }}
+        </h2>
+      </div>
     </div>
   </section>
 </template>
+
