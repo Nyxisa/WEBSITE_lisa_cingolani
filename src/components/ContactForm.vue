@@ -26,7 +26,7 @@
         </div>
     </form>
     <div class="flex flex-col items-center justify-between lg:gap-10 lg:flex-row">
-        <div class="flex items-center gap-4"> <input type="checkbox" id="terms" name="terms" />
+        <div class="flex items-start gap-4 lg:items-center"> <input type="checkbox" id="terms" name="terms" />
             <span>{{ $t('contact.consent') }}</span>
         </div>
         <button type="submit" class="mt-10 lg:mt-0 btn focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">{{

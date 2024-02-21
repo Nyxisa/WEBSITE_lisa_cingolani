@@ -34,7 +34,9 @@ const debouncedImg = useDebounceFn(updateDisplayedImg, 100, { maxWait: 500 });
 const autoScroll = () => {
     const scrollInterval = setInterval(() => {
         if (carrousel.value) {
-            carrousel.value.scrollLeft += carrousel.value.clientWidth;
+            const containerWidth = carrousel.value.scrollWidth;
+            const scrollDistance = containerWidth / 5 + 2.5;
+            carrousel.value.scrollLeft += scrollDistance;
         }
     }, 5000); // 5 seconds
 
@@ -55,28 +57,28 @@ onMounted(() => {
             <img id="ecran-4" v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="4" />
             <img id="ecran-5" v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="5" />
         </div>
-        <div class="carrousel_btn">
+        <div class="hidden carrousel_btn lg:flex">
             <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
-                <Left />
+                <Left class="z-10 bg-opacity-75 rounded-full bg-lightblack backdrop-blur-sm" />
             </button>
             <button @click="carrousel && (carrousel.scrollLeft += carrousel.clientWidth)">
-                <Right />
+                <Right class="z-10 bg-opacity-75 rounded-full bg-lightblack backdrop-blur-sm" />
             </button>
         </div>
         <ul class="flex gap-4 mt-5">
-            <li><a href="#ecran-1" :class="{ carrousel_actif: displayedImg === '#ecran-1' }">
+            <li v-if="urlAllImg[2]"><a href="#ecran-1" :class="{ carrousel_actif: displayedImg === '#ecran-1' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-2" :class="{ carrousel_actif: displayedImg === '#ecran-2' }">
+            <li v-if="urlAllImg[3]"><a href="#ecran-2" :class="{ carrousel_actif: displayedImg === '#ecran-2' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-3" :class="{ carrousel_actif: displayedImg === '#ecran-3' }">
+            <li v-if="urlAllImg[4]"><a href="#ecran-3" :class="{ carrousel_actif: displayedImg === '#ecran-3' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-4" :class="{ carrousel_actif: displayedImg === '#ecran-4' }">
+            <li v-if="urlAllImg[5]"><a href="#ecran-4" :class="{ carrousel_actif: displayedImg === '#ecran-4' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
-            <li><a href="#ecran-5" :class="{ carrousel_actif: displayedImg === '#ecran-5' }">
+            <li v-if="urlAllImg[6]"><a href="#ecran-5" :class="{ carrousel_actif: displayedImg === '#ecran-5' }">
                     <div class="carrousel_circle"></div>
                 </a></li>
         </ul>
@@ -102,18 +104,24 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+        margin-inline: auto;
+    }
+
     scroll-snap-align: center;
+    max-height: 80vh;
 }
 
 .carrousel_images {
     display: flex;
+    gap: 10px;
     align-items: center;
     overflow: hidden;
     overflow-x: auto;
     width: 100%;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    margin-left: 0%;
 }
 
 .carrousel_images::-webkit-scrollbar {
@@ -121,22 +129,18 @@ onMounted(() => {
 }
 
 .carrousel_images img {
-    width: 80%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 1rem;
     display: block;
-    margin-inline: 10%;
-
 }
 
 .carrousel_btn {
-    visibility: hidden;
-    display: flex;
     position: absolute;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 60vw;
     height: 50px;
 }
 </style>

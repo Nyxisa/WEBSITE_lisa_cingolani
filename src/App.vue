@@ -10,7 +10,7 @@ import FooterMobile from '@/components/FooterMobile.vue';
 <template>
     <HeaderPage class="hidden lg:flex" />
     <HeaderMobile class="lg:hidden" />
-    <main class="lg:max-w-[calc(100vw-300px)] pt-24 pb-8 lg:py-0 overflow-hidden">
+    <main class="lg:max-w-[calc(100vw-300px)] pt-24 lg:py-0 overflow-hidden">
         <Suspense>
             <RouterView :key="$route.path" />
         </Suspense>

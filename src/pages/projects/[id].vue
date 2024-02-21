@@ -7,6 +7,7 @@ import ProjectContent from '@/components/ProjectContent.vue';
 import ProjectContentEn from '@/components/ProjectContent_en.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectCardEn from '@/components/ProjectCard_en.vue';
+import Circle from '@/components/icons/circle.vue';
 
 const ProjectsListeSorted = await allProjectsSorted();
 console.log(ProjectsListeSorted)
@@ -64,7 +65,7 @@ onMounted(() => {
 
 <template>
     <article class="margins mt-[25px]">
-        
+
         <div v-if="$i18n.locale === 'fr'">
             <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.main_image }" />
         </div>
@@ -72,11 +73,11 @@ onMounted(() => {
         <div v-else-if="$i18n.locale === 'en'">
             <ProjectContentEn :key="ProjectInfoEn.id" v-bind="{ ...ProjectInfoEn, image: ProjectInfoEn.main_image }" />
         </div>
-        
+
     </article>
-    
-    <section class="margins">
-        
+
+    <section class="pb-8 margins">
+
         <div class="flex items-center w-full gap-4 mt-12 mb-8">
             <h3 class="text-xl font-light whitespace-nowrap">{{ $t('projects.seemore') }}</h3>
             <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
@@ -88,6 +89,7 @@ onMounted(() => {
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCard :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>
+                    <Circle class="mx-auto mb-10 md:hidden" />
                 </li>
             </ul>
         </div>
@@ -98,6 +100,7 @@ onMounted(() => {
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCardEn :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>
+                    <Circle class="mx-auto mb-10 md:hidden" />
                 </li>
             </ul>
         </div>

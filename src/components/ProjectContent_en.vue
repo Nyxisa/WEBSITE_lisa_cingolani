@@ -13,6 +13,13 @@ console.log(ProjectInfo)
 const mainImg = ProjectInfo.main_image
 const urlMainImg = mainImg && pb.getFileUrl(ProjectInfo, mainImg)
 
+const allIcons = ProjectInfo.softwares_icons;
+console.log(allIcons);
+const urlAllIcons = allIcons.map((oneIcon: string) => {
+    return pb.getFileUrl(ProjectInfo, oneIcon);
+});
+console.log(urlAllIcons);
+
 const allImg = ProjectInfo.gallery;
 console.log(allImg);
 const urlAllImg = allImg.map((oneImage: string) => {
@@ -34,73 +41,104 @@ const isVideo = (url: string): boolean => {
 </script>
     
 <template>
-    <div class="lg:project-grid [&_p]:pb-2 [&_h3]:pb-2 [&_h6]:py-2 -mt-16 gap-10 flex-col flex">
+    <div
+        class="[&_p]:pb-2 [&_h3]:pb-2 [&_h3]:text-grey [&_h3]:font-thin [&_h6]:text-grey [&_h6]:py-2 -mt-16 flex flex-col gap-10">
 
         <section class="mt-10 col-span-full">
             <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
             <h2 class="my-6 text-xl font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
             <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple" />
-            <div class="intro-outro" v-html="ProjectInfo.intro"></div>
+
+            <section class="md:project-grid">
+                <div class="col-span-5 py-2 h-[95%] border-b hidden md:block">
+                    <h3 class="pt-2 text-right border-t">{{ ProjectInfo.date.slice(0, 7) }}</h3>
+                    <h3 class="pt-2 text-right border-t">{{ $t('projects.case') }}</h3>
+                </div>
+                <div class="col-start-7 col-span-full intro-outro" v-html="ProjectInfo.intro">
+                </div>
+            </section>
+
         </section>
 
-        <section class="flex flex-col justify-between xl:flex-row col-span-full">
-            <div class="flex flex-wrap justify-center w-full gap-4 md:flex-nowrap">
-                <div class="w-full sm:w-1/2 mb-1 md:mb-0 lg:w-1/3 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
-                    <img v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="Image 1">
-                    <img v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="Image 2" class="mt-8">
-                    <img v-if="urlAllImg[4]" :src="urlAllImg[4]" alt="Image 3" class="mt-8">
+        <section class="flex flex-col justify-between gap-10 md:project-grid">
+            <div class="flex justify-center w-full col-span-5 gap-4 flex-nowrap">
+                <div class="mb-1 md:mb-0 w-1/2 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
+                    <img v-if="urlAllImg[1]" :src="urlAllImg[1]" alt="Image 1">
+                    <img v-if="urlAllImg[4]" :src="urlAllImg[4]" alt="Image 2" class="mt-4">
+                    <img v-if="urlAllImg[5]" :src="urlAllImg[5]" alt="Image 3" class="mt-4">
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/3 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
-                    <img v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="Image 4">
-                    <img v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="Image 5" class="mt-8">
-                    <img v-if="urlAllImg[1]" :src="urlAllImg[6]" alt="Image 6" class="mt-8">
+                <div class="w-1/2 [&_img]:w-full [&_img]:rounded-simple [&_img]:shadow-1">
+                    <img v-if="urlAllImg[2]" :src="urlAllImg[2]" alt="Image 4">
+                    <img v-if="urlAllImg[3]" :src="urlAllImg[3]" alt="Image 5" class="mt-4">
+                    <img v-if="urlAllImg[6]" :src="urlAllImg[6]" alt="Image 6" class="mt-4">
                 </div>
             </div>
-
-
-            <div class="flex flex-col gap-10">
+            <div class="flex flex-col col-start-7 gap-10 col-span-full">
                 <div v-if="ProjectInfo.text_1" v-html="ProjectInfo.text_1"></div>
                 <div v-if="ProjectInfo.text_2" v-html="ProjectInfo.text_2"></div>
                 <ul class="flex flex-col" v-if="ProjectInfo.text_li" v-html="ProjectInfo.text_li"></ul>
             </div>
         </section>
 
-        <section class="flex flex-col justify-between gap-10 lg:flex-row col-span-full">
-            <div>
-                <img v-if="isImage(urlAllImg[2])" :src="urlAllImg[2]" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
+        <section class="flex flex-col items-center justify-between gap-10 md:flex-row md:project-grid">
+            <div class="col-span-5">
+                <img v-if="isImage(urlAllImg[2])" :src="urlAllImg[2]" class="rounded-simple" />
                 <video v-else-if="isVideo(urlAllImg[2])" :src="urlAllImg[2]" controls autoplay muted></video>
             </div>
-            <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
-            <div v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
-            <div>
-                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="max-h-[500px] lg:max-w-[50%] mx-auto" />
+            <div class="flex flex-col col-start-7 gap-10 col-span-full">
+                <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
+                <div v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-between gap-10 md:project-grid">
+            <div class="col-span-5">
+                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
                 <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" controls autoplay muted></video>
             </div>
-            <div v-if="ProjectInfo.text_5" v-html="ProjectInfo.text_5"></div>
+            <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
             <CarrouselVue :id="props.id" />
         </section>
 
-        <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
-            <div class="flex gap-1">
-                <Arrow class="h-fit min-w-[1rem] self-start" />
-                <p class="py-4 md:py-2 intro-outro" v-html="ProjectInfo.outro"></p>
-                <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-fit self-end min-w-[1rem]" />
+        <section class="flex flex-col justify-between w-full gap-10 lg:gap-4 lg:flex-row col-span-full">
+            <div class="flex gap-1 lg:w-[50%]">
+                <Arrow class="self-start h-auto min-w-[2rem] max-w-[2rem]" />
+                <p class="!py-8 md:!py-1 intro-outro" v-html="ProjectInfo.outro"></p>
+                <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-auto self-end min-w-[2rem] max-w-[2rem]" />
             </div>
-            <ul class="software-grid">
-                <li>
-                    <!-- {{ ProjectInfo.softwares_icons[1] }} -->
-                    {{ ProjectInfo.softwares[1] }}
-                </li>
-                <li>{{ ProjectInfo.softwares[2] }}</li>
-                <li v-if="ProjectInfo.softwares[3]">{{ ProjectInfo.softwares[3] }}</li>
-                <li v-if="ProjectInfo.softwares[4]">{{ ProjectInfo.softwares[4] }}</li>
-                <li v-if="ProjectInfo.softwares[5]">{{ ProjectInfo.softwares[5] }}</li>
-                <li v-if="ProjectInfo.softwares[6]">{{ ProjectInfo.softwares[6] }}</li>
-            </ul>
+            <section class="lg:w-[50%]">
+                <h3 class="mx-auto mb-4 text-center lg:mt-2">Made with</h3>
+                <ul class="mx-auto max-w-screen software-flex xl:software-grid">
+                    <li v-if="urlAllIcons[0]" class="software-li">
+                        <img :src="urlAllIcons[0]" />
+                        {{ ProjectInfo.softwares[0] }}
+                    </li>
+                    <li v-if="urlAllIcons[1]" class="software-li">
+                        <img :src="urlAllIcons[1]" />
+                        {{ ProjectInfo.softwares[1] }}
+                    </li>
+                    <li v-if="urlAllIcons[2]" class="software-li">
+                        <img :src="urlAllIcons[2]" />
+                        {{ ProjectInfo.softwares[2] }}
+                    </li>
+                    <li v-if="urlAllIcons[3]" class="software-li">
+                        <img :src="urlAllIcons[3]" />
+                        {{ ProjectInfo.softwares[3] }}
+                    </li>
+                    <li v-if="urlAllIcons[4]" class="software-li">
+                        <img :src="urlAllIcons[4]" />
+                        {{ ProjectInfo.softwares[4] }}
+                    </li>
+                    <li v-if="urlAllIcons[5]" class="software-li">
+                        <img :src="urlAllIcons[5]" />
+                        {{ ProjectInfo.softwares[5] }}
+                    </li>
+                </ul>
+            </section>
         </section>
 
     </div>

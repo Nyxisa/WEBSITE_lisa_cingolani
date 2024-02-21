@@ -25,7 +25,7 @@ console.log(ProjectsListeSortedEn)
 
 <template>
   <ProjectsAnim />
-  <section class="margins lg:mt-[25px]">
+  <section class="margins lg:mt-[25px] pb-8">
     <div class="flex items-center w-full gap-4 mb-8">
       <h1 class="text-transparent normal-case lg:hidden div-graphic font_thin">{{ $t('projects.title') }}</h1>
       <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>

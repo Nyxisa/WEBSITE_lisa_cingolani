@@ -11,8 +11,8 @@ import behanceLogo from './icons/behance-logo.vue';
         <div class="p-10">
             <div class="min-w-fit">
                 <h5 class="mb-5 text-center">{{ $t('footer.cta1') }}</h5>
-                <ul class="flex flex-wrap gap-6 mx-auto w-fit">
-                    <div class="flex flex-col gap-6">
+                <ul class="flex flex-wrap justify-center gap-6 mx-auto w-fit">
+                    <div class="flex flex-col items-center gap-6">
                         <li class="footer-socials-item">
                             <linkedinLogo /><a class="footer-socials-link" href="">Linkedin</a>
                         </li>
@@ -20,7 +20,7 @@ import behanceLogo from './icons/behance-logo.vue';
                             <instagramLogo /><a class="footer-socials-link" href="">Instagram</a>
                         </li>
                     </div>
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col items-center gap-6">
                         <li class="footer-socials-item">
                             <behanceLogo /><a class="footer-socials-link" href="">Behance</a>
                         </li>
@@ -32,8 +32,8 @@ import behanceLogo from './icons/behance-logo.vue';
                 </ul>
             </div>
 
-            <div class="w-[80%] mx-auto">
-                <h5 class="mt-10 mb-5 text-center">{{ $t('footer.cta2') }}</h5>
+            <div class="mt-10 w-[80%] mx-auto">
+                <h5 class="mb-5 text-center">{{ $t('footer.cta2') }}</h5>
                 <form action="#">
                     <input type="email" id="email"
                         class="block w-full px-1 text-base bg-black border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"

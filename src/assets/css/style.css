@@ -114,11 +114,11 @@
   }
 
   .footer-socials-item {
-    @apply grid grid-cols-[30px,auto] items-center text-lg gap-2;
+    @apply grid w-fit grid-cols-[30px,auto] items-center text-lg gap-2;
   }
 
   .footer-socials-link {
-    @apply no-underline -mb-2;
+    @apply no-underline w-fit -mb-2;
   }
 
   /* Scrolling Giant Banner */
@@ -352,13 +352,42 @@
     filter: drop-shadow(10px 10px 10px #000000);
   }
 
-  .software-grid {
-    display: grid;
+  .software-flex {
+    width: 80%;
+    display: flex;
     text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    align-content: center;
+    @media (min-width: 1024px) {
+      height: 80%;
+      flex-direction: column;
+    }
+  }
+
+  .software-grid {
+    width: 50%;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    @media (min-width: 1536px) {
+      grid-template-columns: repeat(3, 1fr);
+      width: 80%;
+    }
+    text-align: center;
+    gap: 2rem;
+    justify-content: space-around;
     margin: 0 auto;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .software-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    max-width: 100px;
   }
 
   .project-grid {
