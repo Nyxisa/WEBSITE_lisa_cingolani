@@ -367,6 +367,8 @@
     @media (min-width: 1024px) {
       height: 80%;
       flex-direction: column;
+      justify-content: start;
+      margin-top: 2rem;
     }
   }
 

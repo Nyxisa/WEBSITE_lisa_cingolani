@@ -87,7 +87,7 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:flex-row md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" controls autoplay muted></video>
+                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay loop muted></video>
             </div>
             <div class="flex flex-col col-start-7 gap-10 col-span-full">
                 <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
@@ -98,7 +98,7 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" controls autoplay muted></video>
+                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay loop muted></video>
             </div>
             <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
         </section>
@@ -114,7 +114,7 @@ const isVideo = (url: string): boolean => {
                 <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-auto self-end min-w-[2rem] max-w-[2rem]" />
             </div>
             <section class="lg:w-[50%]">
-                <h3 class="mx-auto mb-4 text-center lg:mt-2">Made with</h3>
+                <h3 class="mx-auto mb-4 text-center lg:mt-2">{{ $t('projects.made') }}</h3>
                 <ul class="mx-auto max-w-screen software-flex xl:software-grid">
                     <li v-if="urlAllIcons[0]" class="software-li">
                         <img :src="urlAllIcons[0]" />
