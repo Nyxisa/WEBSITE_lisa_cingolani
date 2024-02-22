@@ -20,6 +20,7 @@ module.exports = {
     },
     fontFamily: {
       halyard: ['halyard-display-variable', 'sans-serif'],
+      halyard_text: ['halyard-text-variable', 'sans-serif'],
       itc: ['itc-avant-garde-gothic-pro', 'sans-serif'],
     },
     fontSize: {

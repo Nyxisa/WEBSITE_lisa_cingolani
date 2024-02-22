@@ -29,14 +29,14 @@ function closeMenu() {
         <RouterLink to="/">
             <img src="./icons/nav/logo.svg" class="w-10 h-auto" />
         </RouterLink>
-        <RouterLink to="/">
+        <RouterLink to="#">
             <span class="text-xs font-thin text-transparent normal-case div-graphic font-halyard">Lisa Cingolani</span>
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
             <nav aria-label="Site Nav"
-                class="fixed inset-0 invisible w-screen h-[100vh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
+                class="fixed inset-0 invisible w-screen h-[100svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
-                <ul class="items-center lg:flex-row mt-[12vh] text-center lg:m-0 flex-col flex">
+                <ul class="items-center lg:flex-row mt-[12svh] text-center lg:m-0 flex-col flex">
                     <li class="menu-item-mobile var-font">
                         <RouterLink @click="closeMenu" to="/">{{ $t('menu.link1') }}</RouterLink>
                     </li>
@@ -64,7 +64,7 @@ function closeMenu() {
                     </li>
                 </ul>
                 <RouterLink @click="closeMenu" to="/">
-                    <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-[5vh] fill-lightwhite" />
+                    <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-[5svh] fill-lightwhite" />
                 </RouterLink>
             </nav>
             <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu">

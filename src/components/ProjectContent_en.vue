@@ -42,12 +42,12 @@ const isVideo = (url: string): boolean => {
     
 <template>
     <div
-        class="[&_p]:pb-2 [&_h3]:pb-2 [&_h3]:text-grey [&_h3]:font-thin [&_h6]:text-grey [&_h6]:py-2 -mt-16 flex flex-col gap-10">
+        class="[&_p]:pb-2 [&_h3]:pb-2 [&_h3]:text-grey [&_h3]:font-thin [&_h6]:text-grey [&_h6]:py-2 -mt-16 flex flex-col gap-20">
 
-        <section class="mt-20 col-span-full">
+        <section class="mt-10 lg:mt-20 col-span-full">
             <h1 class="mb-0 font-bold font-itc">{{ ProjectInfo.title }}</h1>
             <div class="w-0 h-[1px] anim-slide-in rounded-full mb-1 bg-lightwhite"></div>
-            <h2 class="my-6"> {{ ProjectInfo.category.join(" | ") }}</h2>
+            <h2 class="my-6 font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
 
             <section class="md:project-grid">
                 <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple col-span-full" />
@@ -78,7 +78,7 @@ const isVideo = (url: string): boolean => {
                     <img v-if="urlAllImg[7]" :src="urlAllImg[7]" alt="Image 6" class="mt-4">
                 </div>
             </div>
-            <div class="flex flex-col col-start-7 gap-10 col-span-full">
+            <div class="flex flex-col col-start-7 gap-10 lg:gap-20 col-span-full">
                 <div v-if="ProjectInfo.text_1" v-html="ProjectInfo.text_1"></div>
                 <div v-if="ProjectInfo.text_2" v-html="ProjectInfo.text_2"></div>
                 <ul class="flex flex-col" v-if="ProjectInfo.text_li" v-html="ProjectInfo.text_li"></ul>
@@ -88,9 +88,10 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:flex-row md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay loop muted></video>
+                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay loop
+                    muted></video>
             </div>
-            <div class="flex flex-col col-start-7 gap-10 col-span-full">
+            <div class="flex flex-col col-start-7 gap-10 lg:gap-20 col-span-full">
                 <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
                 <div v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
             </div>
@@ -99,24 +100,25 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay loop muted></video>
+                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay loop
+                    muted></video>
             </div>
             <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
         </section>
 
-        <section class="flex lg:flex-row flex-col justify-between gap-10 max-w-[100%] col-span-full">
+        <section class="flex lg:flex-row flex-col justify-between gap-10 lg:gap-20 max-w-[100%] col-span-full">
             <CarrouselVue v-if="urlAllImg[8]" :id="props.id" />
         </section>
 
-        <section class="flex flex-col justify-between w-full gap-10 lg:gap-4 lg:flex-row col-span-full">
-            <div class="flex gap-1 lg:w-[50%]">
+        <section class="flex flex-col justify-between w-full gap-10 lg:gap-4 lg:flex-row col-span-full lg:project-grid">
+            <div class="flex col-span-7 gap-1">
                 <Arrow class="self-start h-auto min-w-[2rem] max-w-[2rem]" />
-                <p class="!py-8 md:!py-1 intro-outro" v-html="ProjectInfo.outro"></p>
+                <p class="!py-8 [&_p]:!pb-2 md:!py-1 intro-outro" v-html="ProjectInfo.outro"></p>
                 <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-auto self-end min-w-[2rem] max-w-[2rem]" />
             </div>
-            <section class="lg:w-[50%]">
+            <section class="col-start-8 col-span-full">
                 <h3 class="mx-auto mb-4 text-center lg:mt-2">{{ $t('projects.made') }}</h3>
-                <ul class="mx-auto max-w-screen software-flex xl:software-grid">
+                <ul class="mx-auto max-w-screen software-flex lg:software-grid">
                     <li v-if="urlAllIcons[0]" class="software-li">
                         <img :src="urlAllIcons[0]" />
                         {{ ProjectInfo.softwares[0] }}

@@ -58,7 +58,7 @@ onMounted(() => {
 <template>
   <Hero />
   <section class="margins">
-    <div class="flex items-center w-full gap-4 mt-12 mb-8">
+    <div class="flex items-center w-full gap-4 mt-20 mb-10">
       <h3 class="text-xl font-light whitespace-nowrap">{{ $t('home.lastprojects') }}</h3>
       <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
     </div>

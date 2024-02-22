@@ -10,7 +10,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
 
 <template>
     <AboutAnim />
-    <article class="margins lg:mt-[25px] pb-8">
+    <article class="mb-10 margins lg:mt-8">
         <div class="flex items-center w-full gap-4 mb-8">
             <h1 class="text-transparent normal-case whitespace-nowrap lg:hidden div-graphic font_thin">
                 {{ $t('about.title') }}

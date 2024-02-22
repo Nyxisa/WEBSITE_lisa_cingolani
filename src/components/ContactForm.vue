@@ -29,7 +29,8 @@
         <div class="flex items-start gap-4 lg:items-center"> <input type="checkbox" id="terms" name="terms" />
             <span>{{ $t('contact.consent') }}</span>
         </div>
-        <button type="submit" class="mt-10 lg:mt-0 btn focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">{{
-            $t('footer.btn') }}</button>
+        <button type="submit"
+            class="mt-10 lg:mt-0 btn font-itc focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">{{
+                $t('footer.btn') }}</button>
     </div>
 </template>

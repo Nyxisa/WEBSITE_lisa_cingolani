@@ -5,7 +5,7 @@ import SkillsPills from './SkillsPills.vue';
 </script>
 
 <template>
-    <div class="margins">
+    <div class="mt-8 margins">
         <div class="flex">
             <h1 class="w-full">
                 <strong class="text-transparent normal-case div-graphic font_thin var-font">Lisa Cingolani</strong>
@@ -16,6 +16,6 @@ import SkillsPills from './SkillsPills.vue';
         </div>
         <IntroMobile class="md:hidden" />
         <IntroDesktop class="hidden md:flex" />
-        <SkillsPills class="mt-10" />
+        <SkillsPills class="mt-16" />
     </div>
 </template>

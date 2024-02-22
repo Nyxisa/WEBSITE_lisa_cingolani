@@ -7,7 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: url('/pointer.svg') 25 25, pointer;
+    cursor: url('/pointer.svg') 25 25, auto;
   }
 
   #app {
@@ -29,7 +29,7 @@
   }
 
   body {
-    @apply font-halyard text-base;
+    @apply font-halyard_text font_light text-base;
   }
 
   h1 {
@@ -51,7 +51,7 @@
     @apply font-itc font-medium lg:text-lg text-base;
   }
   p {
-    @apply font-halyard md:text-base lg:text-lg text-sm;
+    @apply font-halyard_text font_light md:text-base lg:text-lg text-sm;
   }
 
   ol,
@@ -60,6 +60,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    @apply font-halyard_text;
   }
 
   .margins {
@@ -72,11 +73,11 @@
 
 @layer components {
   .btn {
-    @apply appearance-none bg-purple block text-lightblack hover:bg-lightpurple hover:text-lightblack font-semibold rounded-full px-5 pt-2 pb-1 text-center transition-all cursor-pointer;
+    @apply appearance-none bg-purple block text-lightblack hover:bg-lightpurple hover:text-lightblack font-semibold rounded-full px-5 pt-[0.5em] pb-[0.25em] text-center transition-all;
   }
 
   .btn-style {
-    @apply w-fit bg-none block font-itc font-bold border-lightwhite border-2 rounded-full px-8 pt-2.5 pb-0.5 text-center;
+    @apply w-fit bg-none block font-itc font-bold border-lightwhite border-2 rounded-full px-8 pt-[0.625em] pb-[0.25em] text-center;
   }
 
   .btn-skills {
@@ -256,7 +257,6 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
-    cursor: pointer;
     border: 1px solid #f4f4f4;
     border-radius: 5px;
   }
@@ -384,16 +384,17 @@
     gap: 2rem;
     justify-content: space-around;
     margin: 0 auto;
-    align-content: center;
+    align-content: start;
     justify-items: center;
   }
 
   .software-li {
     display: flex;
+    gap: 0.5em;
     flex-direction: column;
     justify-content: center;
-    width: auto;
-    max-width: 100px;
+    width: 100%;
+    max-width: 80px;
   }
 
   .project-grid {

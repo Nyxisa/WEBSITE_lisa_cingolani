@@ -64,7 +64,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <article class="margins mt-[25px]">
+    <article class="mt-8 margins">
 
         <div v-if="$i18n.locale === 'fr'">
             <ProjectContent :key="ProjectInfo.id" v-bind="{ ...ProjectInfo, image: ProjectInfo.main_image }" />
@@ -76,15 +76,15 @@ onMounted(() => {
 
     </article>
 
-    <section class="pb-8 margins">
+    <section class="margins">
 
-        <div class="flex items-center w-full gap-4 mt-12 mb-8">
+        <div class="flex items-center w-full gap-4 mt-20 mb-10">
             <h3 class="text-xl font-light whitespace-nowrap">{{ $t('projects.seemore') }}</h3>
             <div ref="targetElement" class="w-0 h-[1px] rounded-full mb-1 bg-lightwhite"></div>
         </div>
 
         <div v-if="$i18n.locale === 'fr'">
-            <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
+            <ul class="flex-wrap justify-center -mb-8 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
                 <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCard :key="project.id" v-bind="{ ...project }" />
@@ -95,7 +95,7 @@ onMounted(() => {
         </div>
 
         <div v-else-if="$i18n.locale === 'en'">
-            <ul class="flex-wrap justify-center -mb-16 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
+            <ul class="flex-wrap justify-center -mb-8 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
                 <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCardEn :key="project.id" v-bind="{ ...project }" />

@@ -1,7 +1,8 @@
 {
   "cta1": "Catch me on socials!",
   "cta2": "Let's stay in touch!",
-  "placeholder": "email{'@'}example.com",
+  "mail": "Enter Your Email",
+  "placeholder": "{'email@example.com'}",
   "btn": "Submit"
 }
 

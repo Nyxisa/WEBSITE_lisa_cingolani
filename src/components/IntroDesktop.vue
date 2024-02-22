@@ -1,5 +1,5 @@
 <template>
-  <section class="flex gap-8 mt-4">
+  <section class="flex gap-8 mt-10">
     <div class="flex flex-col w-1/4 max-h-full gap-8">
       <div class="flex items-center justify-center bg-right bg-cover h-1/2 rounded-simple"
         style="background-image: url(/bg_home3.webp)">
@@ -8,10 +8,12 @@
           <source src="/my_arrow.webm" type="video/webm" />
         </video>
       </div>
-      <div class="flex items-center justify-center bg-left bg-cover h-1/2 rounded-simple"
+      <RouterLink to="/projects" class="flex items-center justify-center bg-left bg-cover h-1/2 rounded-simple group"
         style="background-image: url(/bg_home2.webp)">
-        <p class="-mb-4 text-lg"><span class="pr-2 text-7xl">5</span>{{ $t('home.nbprojects') }}</p>
-      </div>
+        <p class="-mb-4 text-lg transition-all duration-500 group-hover:scale-90">
+          <span class="pr-2 text-7xl">5</span>{{ $t('home.nbprojects') }}
+        </p>
+      </RouterLink>
     </div>
     <div class="w-3/4 p-[1px] rounded-simple"
       style="background:linear-gradient(to top left, #212121 25%, rgb(117, 117, 117) 100%)">

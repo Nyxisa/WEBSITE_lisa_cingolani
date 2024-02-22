@@ -24,7 +24,7 @@ const urlMainImg = mainImg && pb.getFileUrl(ProjectInfo, mainImg, { thumb: '100x
       <div class="flex flex-col justify-between h-full">
         <div class="h-full">
           <h5 class="mt-4 mb-2">{{ ProjectInfo.title }}</h5>
-          <p class="max-w-[70ch] mb-4 h-full">{{ ProjectInfo.description }}</p>
+          <p class="max-w-[70ch] mb-4 font_normal h-full">{{ ProjectInfo.description }}</p>
         </div>
         <RouterLink :to="{ name: 'projects-id', force: true, params: { id } }"
           class="w-full text-xl transition-all border-none focus:translate-y-1 focus:shadow-none hover:-translate-y-[1px] bg-orange text-lightwhite hover:shadow-nav btn-style">
