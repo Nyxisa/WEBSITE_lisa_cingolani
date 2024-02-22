@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 import { useHead } from '@unhead/vue'
 useHead({
-    title: 'À Propos | Lisa Cingolani'
+    title: `${t('about.title')} | Lisa Cingolani`
 })
 
 import AboutAnim from '@/components/AboutAnim.vue'

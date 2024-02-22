@@ -7,10 +7,11 @@ import ProjectCardEn from '@/components/ProjectCard_en.vue'
 import ProjectsAnim from '@/components/ProjectsAnim.vue'
 import Circle from '@/components/icons/circle.vue'
 
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 import { useHead } from '@unhead/vue'
-
 useHead({
-  title: 'Projets | Lisa Cingolani'
+  title: `${t('projects.title')} | Lisa Cingolani`
 })
 
 const props = defineProps<{
