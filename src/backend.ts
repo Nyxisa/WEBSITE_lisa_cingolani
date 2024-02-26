@@ -31,6 +31,12 @@ const allProjectsSortedRecords = await pb.collection('projects_fr').getFullList<
 return allProjectsSortedRecords;
 }
 
+// Liste des projets FR triés de façon aléatoire
+export async function allProjectsRandom() {
+const allProjectsRandomRecords = await pb.collection('projects_fr').getFullList<ProjectsFrResponse>({sort: '@random', requestKey: null});
+return allProjectsRandomRecords;
+}
+
 // ------------------------------ EN
 
 // Liste de tous les projets EN
@@ -49,5 +55,11 @@ export async function ProjectIdEn(id:string) {
 export async function allProjectsSortedEn() {
 const allProjectsSortedEnRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>({sort: '-date', requestKey: null});
 return allProjectsSortedEnRecords;
+}
+
+// Liste des projets EN triés de façon aléatoire
+export async function allProjectsRandomEn() {
+const allProjectsRandomEnRecords = await pb.collection('projects_en').getFullList<ProjectsEnResponse>({sort: '@random', requestKey: null});
+return allProjectsRandomEnRecords;
 }
 

@@ -48,7 +48,7 @@
     @apply font-itc font-bold lg:text-xl text-lg;
   }
   h6 {
-    @apply font-itc font-medium lg:text-lg text-base;
+    @apply font-itc font-thin lg:text-lg text-base;
   }
   p {
     @apply font-halyard_text font_light md:text-base lg:text-lg text-sm;

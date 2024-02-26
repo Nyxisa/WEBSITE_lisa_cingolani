@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { pb } from '@/backend'
 import { ref, onMounted, onUnmounted } from 'vue';
-import { ProjectId, allProjectsSorted, ProjectIdEn, allProjectsSortedEn } from '@/backend'
+import { ProjectId, ProjectIdEn, allProjectsRandom, allProjectsRandomEn } from '@/backend'
 import { useHead } from '@unhead/vue'
 import ProjectContent from '@/components/ProjectContent.vue';
 import ProjectContentEn from '@/components/ProjectContent_en.vue';
@@ -9,10 +9,11 @@ import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectCardEn from '@/components/ProjectCard_en.vue';
 import Circle from '@/components/icons/circle.vue';
 
-const ProjectsListeSorted = await allProjectsSorted();
-console.log(ProjectsListeSorted)
-const ProjectsListeSortedEn = await allProjectsSortedEn();
-console.log(ProjectsListeSortedEn)
+const ProjectsListeRandom = await allProjectsRandom();
+console.log(ProjectsListeRandom)
+const ProjectsListeRandomEn = await allProjectsRandomEn();
+console.log(ProjectsListeRandomEn)
+
 
 const props = defineProps<{
     id: string,
@@ -42,8 +43,11 @@ function getScreenSize() {
         return 'other';
     }
 }
-function getProjectsListe() {
-    return screenSize.value === '3' ? ProjectsListeSorted.slice(0, 3) : ProjectsListeSorted.slice(0, 2);
+function getProjectsListeFr() {
+    return screenSize.value === '3' ? ProjectsListeRandom.slice(0, 3) : ProjectsListeRandom.slice(0, 2);
+}
+function getProjectsListeEn() {
+    return screenSize.value === '3' ? ProjectsListeRandomEn.slice(0, 3) : ProjectsListeRandomEn.slice(0, 2);
 }
 
 // Trigger animation on scroll
@@ -85,7 +89,7 @@ onMounted(() => {
 
         <div v-if="$i18n.locale === 'fr'">
             <ul class="flex-wrap justify-center -mb-8 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
-                <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
+                <li v-for="project in getProjectsListeFr()" :key="project.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCard :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>
@@ -96,7 +100,7 @@ onMounted(() => {
 
         <div v-else-if="$i18n.locale === 'en'">
             <ul class="flex-wrap justify-center -mb-8 md:gap-5 md:justify-around xl:gap-8 md:mb-0 md:flex">
-                <li v-for="project in getProjectsListe()" :key="project.id" class="2xl:w-[30%]">
+                <li v-for="project in getProjectsListeEn()" :key="project.id" class="2xl:w-[30%]">
                     <RouterLink :to="{ name: 'projects-id', params: { id: project.id } }" class="flex flex-col h-full">
                         <ProjectCardEn :key="project.id" v-bind="{ ...project }" />
                     </RouterLink>

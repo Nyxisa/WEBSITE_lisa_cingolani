@@ -20,6 +20,7 @@ coverage
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+./pocketbase/pb-data/backups/*
 .idea
 *.suo
 *.ntvs*

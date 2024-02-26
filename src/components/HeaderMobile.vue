@@ -37,7 +37,7 @@ function closeMenu() {
                 class="fixed inset-0 invisible w-screen h-[100svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[12svh] text-center lg:m-0 flex-col flex">
-                    <li class="menu-item-mobile var-font">
+                    <li class="menu-item-mobile">
                         <RouterLink @click="closeMenu" to="/">{{ $t('menu.link1') }}</RouterLink>
                     </li>
                     <div class="w-1/5 h-[1px] rounded-full bg-grey"></div>

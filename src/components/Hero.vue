@@ -8,7 +8,7 @@ import SkillsPills from './SkillsPills.vue';
     <div class="mt-8 margins">
         <div class="flex">
             <h1 class="w-full">
-                <strong class="text-transparent normal-case div-graphic font_thin var-font">Lisa Cingolani</strong>
+                <strong class="text-transparent normal-case div-graphic font_thin md:var-font">Lisa Cingolani</strong>
             </h1>
             <h1 class="text-transparent font_thin">
                 <strong class="normal-case opacity-40 mirror div-graphic md:opacity-20">Designer</strong>

@@ -103,7 +103,7 @@ const isVideo = (url: string): boolean => {
                 <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay loop
                     muted></video>
             </div>
-            <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_4" v-html="ProjectInfo.text_4"></div>
+            <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_5" v-html="ProjectInfo.text_5"></div>
         </section>
 
         <section class="flex lg:flex-row flex-col justify-between gap-10 lg:gap-20 max-w-[100%] col-span-full">

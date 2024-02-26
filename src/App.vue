@@ -8,6 +8,7 @@ import FooterMobile from '@/components/FooterMobile.vue';
 </script>
 
 <template>
+    <!-- Thanks for checking the code, you're amazing! -->
     <HeaderPage class="hidden lg:flex" />
     <HeaderMobile class="lg:hidden" />
     <main class="lg:max-w-[calc(100vw-300px)] pt-24 lg:pt-0 lg:mb-10 overflow-hidden">
@@ -17,4 +18,5 @@ import FooterMobile from '@/components/FooterMobile.vue';
     </main>
     <FooterPage class="lg:max-w-[calc(100vw-300px)] hidden md:block" />
     <FooterMobile class="md:hidden max-w-[100vw]" />
+    <!-- Have a nice day -->
 </template>
