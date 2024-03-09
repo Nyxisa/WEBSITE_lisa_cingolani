@@ -7,7 +7,8 @@
   "placeholder4": "Objet",
   "placeholder5": "Écrivez votre message ici",
   "consent": "J'accepte que les informations fournies soient collectées et utilisées dans le but de répondre à ma demande.",
-  "btn": "Envoyer"
+  "btn": "Envoyer",
+  "success": "Votre message a bien été envoyé !"
 }
 
 

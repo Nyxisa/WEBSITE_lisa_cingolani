@@ -7,7 +7,8 @@
   "placeholder4": "Object",
   "placeholder5": "Write your message here",
   "consent": "By submitting this contact form, I consent to the collection and use of the provided information for the purpose of responding to my inquiry.",
-  "btn": "Send"
+  "btn": "Send",
+  "success": "Your message has been sent successfully!"
 }
 
 
