@@ -3,7 +3,9 @@
   "cta2": "Restons en contact !",
   "mail": "Entrez votre email",
   "placeholder": "{'email@exemple.com'}",
-  "btn": "Envoyer"
+  "form": "Merci !",
+  "btn": "Envoyer",
+  "btn-ok": "Envoyé !"
 }
 
 
