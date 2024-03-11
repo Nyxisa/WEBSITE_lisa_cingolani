@@ -4,7 +4,13 @@ import Hero from '@/components/Hero.vue'
 import Circle from '@/components/icons/circle.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'Portfolio | Lisa Cingolani'
+  title: 'Portfolio | Lisa Cingolani',
+  meta: [
+    {
+      name: 'description',
+      content: 'Portfolio de Lisa Cingolani, étudiante en design graphique passionnée par l\'innovation créative.'
+    }
+  ]
 })
 
 import ProjectCard from '@/components/ProjectCard.vue'
