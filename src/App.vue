@@ -5,6 +5,7 @@ import HeaderPage from '@/components/HeaderPage.vue'
 import HeaderMobile from '@/components/HeaderMobile.vue'
 import FooterPage from '@/components/FooterPage.vue';
 import FooterMobile from '@/components/FooterMobile.vue';
+
 </script>
 
 <template>

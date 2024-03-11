@@ -6,6 +6,8 @@ import NotFound from '@/components/Page404.vue';
 import { createHead } from "@unhead/vue"
 import './assets/css/style.css'
 import V3ScrollLock from 'v3-scroll-lock'
+
+
 import { createI18n } from 'vue-i18n';
 async function loadLocaleMessages(): Promise<Record<string, any>> {
   const localesContext = import.meta.glob('./locales/**/*.json', { eager: true });

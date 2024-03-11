@@ -7,7 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: url('/pointer.svg') 25 25, auto;
+    cursor: none;
   }
 
   #app {
@@ -63,6 +63,10 @@
     @apply font-halyard_text;
   }
 
+  button {
+    cursor: none;
+  }
+
   .margins {
     margin: 0 25px;
     @media (min-width: 768px) {
@@ -72,6 +76,35 @@
 }
 
 @layer components {
+  .custom-cursor {
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, transparent, rgba(0, 0, 0, 0.25));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2px);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+  }
+
+  .custom-cursor-hover {
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    width: 60px;
+    height: 60px;
+    backdrop-filter: blur(0px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+  }
+
   .btn {
     @apply appearance-none bg-purple block text-lightblack hover:bg-lightpurple hover:text-lightblack font-semibold rounded-full px-5 pt-[0.5em] pb-[0.25em] text-center transition-all;
   }

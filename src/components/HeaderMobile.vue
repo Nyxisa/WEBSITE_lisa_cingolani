@@ -53,7 +53,7 @@ function closeMenu() {
                         <RouterLink @click="closeMenu" to="/contact">{{ $t('menu.link4') }}</RouterLink>
                     </li>
                     <li class="pb-0 mt-2 menu-item-mobile">
-                        <label class="relative z-10 inline-flex items-center cursor-pointer drop-shadow-lg">
+                        <label class="relative z-10 inline-flex items-center drop-shadow-lg">
                             <input type="checkbox" value="" class="sr-only peer"
                                 @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
                             <div
