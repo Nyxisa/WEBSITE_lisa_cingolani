@@ -1,20 +1,25 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue';
 
+let isHovered = ref(false);
 </script>
+
 <template>
-    <header
-        class="z-10 w-[300px] h-[100vh] rounded-bl-3xl fixed top-0 right-0 shadow-nav overflow-hidden px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl bg-lightblack">
+    <header @mouseover="isHovered = true"
+        class="logo_anim z-10 w-[300px] h-[100vh] rounded-bl-3xl fixed top-0 right-0 shadow-nav overflow-hidden px-[50px] py-[30px] flex flex-col gap-6 items-center rounded-tl-3xl bg-lightblack">
         <div class="w-[200px] h-[200px]">
             <RouterLink to="/">
-                <img src="./icons/nav/logo.svg" class="w-full" />
+                <img ref="logoGif" src="./icons/nav/logo.svg" class="w-full logo_svg" :class="{ hidden: isHovered }" />
+                <img ref="logoSvg" src="/public/Logo_Animation.gif" class="w-full logo_gif"
+                    :class="{ hidden: !isHovered }" />
             </RouterLink>
         </div>
-        <nav class="z-10 navbar">
+        <nav class="z-10">
             <ul class="grid justify-center">
                 <li class="menu-item">
-                    <RouterLink class="menu-link" to="/">{{ $t('menu.link1') }}</RouterLink><img src="./icons/nav/home.svg"
-                        alt="home">
+                    <RouterLink class="menu-link" to="/">{{ $t('menu.link1') }}</RouterLink><img
+                        src="./icons/nav/home.svg" alt="home">
                 </li>
                 <li class="menu-item">
                     <RouterLink class="menu-link" to="/projects">{{ $t('menu.link2') }}</RouterLink><img
