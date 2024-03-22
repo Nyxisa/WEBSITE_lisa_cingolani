@@ -11,7 +11,7 @@ let isHovered = ref(false);
         <div class="w-[200px] h-[200px]">
             <RouterLink to="/">
                 <img ref="logoGif" src="./icons/nav/logo.svg" class="w-full logo_svg" :class="{ hidden: isHovered }" />
-                <img ref="logoSvg" src="/public/Logo_Animation.gif" class="w-full logo_gif"
+                <img ref="logoSvg" src="/Logo_Animation.gif" class="w-full logo_gif"
                     :class="{ hidden: !isHovered }" />
             </RouterLink>
         </div>

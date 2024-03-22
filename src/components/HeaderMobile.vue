@@ -21,7 +21,7 @@ function closeMenu() {
 
 <template>
     <header aria-label="Header"
-        class="fixed z-10 flex items-center justify-between w-screen px-6 py-4 transition-all duration-300 ease-in-out translate-y-0 md:shadow-none md:bg-gradient-to-t bg-gradient-to-b from-lightblack/90 to-black/90 text-lightwhite shadow-1 lg:py-4"
+        class="fixed z-10 flex items-center justify-between w-screen px-6 py-4 transition-all duration-300 ease-in-out translate-y-0 h md:shadow-none md:bg-gradient-to-t bg-gradient-to-b from-lightblack/90 to-black/90 text-lightwhite shadow-1 lg:py-4"
         :class="{
             '!-translate-y-full !bg-transparent': !dirTop,
             'shadow-1': underLimit,
@@ -34,7 +34,7 @@ function closeMenu() {
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
             <nav aria-label="Site Nav"
-                class="fixed inset-0 invisible w-screen h-[100svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
+                class="fixed inset-0 invisible w-screen h-[102svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[12svh] text-center lg:m-0 flex-col flex">
                     <li class="menu-item-mobile">
@@ -69,12 +69,12 @@ function closeMenu() {
             </nav>
             <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu">
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
-                    :class="{ 'translate-y-[9px] rotate-45 bg-lightwhite': activeMenu, '!bg-lightwhite': underLimit }">
+                    :class="{ 'translate-y-[9px] rotate-45': activeMenu }">
                 </div>
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
-                    :class="{ 'bg-lightwhite opacity-0': activeMenu, '!bg-lightwhite': underLimit }"></div>
+                    :class="{ 'bg-lightwhite opacity-0': activeMenu }"></div>
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
-                    :class="{ '-translate-y-[9px] -rotate-45 bg-lightwhite': activeMenu, '!bg-lightwhite': underLimit }">
+                    :class="{ '-translate-y-[9px] -rotate-45': activeMenu }">
                 </div>
             </button>
         </div>

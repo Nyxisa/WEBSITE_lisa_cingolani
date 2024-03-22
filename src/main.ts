@@ -2,10 +2,10 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import routes from '~pages';
 import { createRouter, createWebHistory } from 'vue-router';
+import V3ScrollLock from 'v3-scroll-lock'
 import NotFound from '@/components/Page404.vue'; 
 import { createHead } from "@unhead/vue"
 import './assets/css/style.css'
-import V3ScrollLock from 'v3-scroll-lock'
 
 
 import { createI18n } from 'vue-i18n';
@@ -67,7 +67,7 @@ const head = createHead()
 app.use(router);
 app.use(head);
 app.use(i18n);
-app.use(V3ScrollLock, {});
+app.use(V3ScrollLock, {})
 app.mount('#app');
 
 

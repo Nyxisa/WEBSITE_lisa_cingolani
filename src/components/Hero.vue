@@ -5,7 +5,7 @@ import SkillsPills from './SkillsPills.vue';
 </script>
 
 <template>
-    <div class="mt-8 margins">
+    <div class="lg:mt-8 margins">
         <div class="flex">
             <h1 class="w-full">
                 <strong class="text-transparent normal-case div-graphic font_thin md:var-font">Lisa Cingolani</strong>
