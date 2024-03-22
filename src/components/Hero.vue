@@ -10,8 +10,8 @@ import SkillsPills from './SkillsPills.vue';
             <h1 class="w-full">
                 <strong class="text-transparent normal-case div-graphic font_thin md:var-font">Lisa Cingolani</strong>
             </h1>
-            <h1 class="text-transparent font_thin">
-                <strong class="normal-case opacity-40 mirror div-graphic md:opacity-20">Designer</strong>
+            <h1 class="text-transparent transition-all hover:blur-sm font_thin">
+                <strong class="normal-case transition-opacity opacity-40 hover:opacity-80 mirror div-graphic md:opacity-20">Designer</strong>
             </h1>
         </div>
         <IntroMobile class="md:hidden" />
