@@ -1,6 +1,6 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    style="margin: auto; background: #212121; display: block; shape-rendering: auto;" width="200px" height="200px"
+    style="background: #212121; display: block; shape-rendering: auto;" width="200px" height="200px"
     viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
     <defs>
       <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">

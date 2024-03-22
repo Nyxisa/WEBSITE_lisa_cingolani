@@ -241,7 +241,7 @@
   }
 
   .var-font {
-    animation: var-font-anim 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    animation: var-font-anim 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
     transition: font-variation-settings 0.5s ease;
     animation-fill-mode: forwards;
   }
@@ -250,10 +250,10 @@
     0% {
       font-variation-settings: 'wght' 100;
     }
-    30% {
+    20% {
       font-variation-settings: 'wght' 250;
     }
-    90% {
+    50% {
       font-variation-settings: 'wght' 100;
     }
     100% {
