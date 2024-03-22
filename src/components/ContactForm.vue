@@ -95,7 +95,7 @@ export default {
                 </div>
                 <div class="my-8 text-sm">
                     <textarea v-model="message" rows=2 id="message"
-                        class="p-5 border rounded-md input focus:border-4 focus:border-lightpurple"
+                        class="p-5 border rounded-md input lg:focus:border-4 focus:border-2 focus:border-lightpurple"
                         :placeholder="$t('contact.placeholder5')"></textarea>
                 </div>
             </div>
@@ -106,8 +106,8 @@ export default {
                 <span>{{ $t('contact.consent') }}</span>
             </div>
             <button type="submit"
-                class="mt-10 lg:mt-0 btn font-itc focus:translate-y-[1px] lg:text-xl hover:-translate-y-[1px]">{{
-        $t('footer.btn') }}</button>
+                class="mt-10 lg:mt-0 btn font-itc hover:scale-[1.03] focus:tracking-wider lg:text-lg">{{
+                $t('footer.btn') }}</button>
         </div>
 
         <div v-if="showNotification()" class="mx-auto mt-10 text-center text-black lg:mt-20 rounded-simple w-fit">

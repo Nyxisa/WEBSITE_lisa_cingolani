@@ -83,15 +83,15 @@ const errorMessage = () => error.value ? error.value : '';
                     <div>
                         <label for="email" class="block mb-2 text-sm">{{ $t('footer.mail') }}</label>
                         <input type="email" v-model="email" id="email"
-                            class="block w-full px-1 text-base bg-transparent border-b border-b-lightwhite focus:outline-none text-lightwhite"
+                            class="block w-full px-1 text-base bg-transparent border-b focus:border-b-2 focus:border-lightpurple border-b-lightwhite focus:outline-none text-lightwhite"
                             :placeholder="$t('footer.placeholder')">
                     </div>
                     <button v-if="!showNotification() || error" type="submit"
-                        class="my-4 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
+                        class="my-4 btn hover:scale-[1.03] focus:tracking-wider">{{
                     $t('footer.btn')
                 }}</button>
                     <button v-if="!error && showNotification()"
-                        class="my-4 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
+                        class="my-4 btn hover:scale-[1.03] focus:tracking-wider">{{
                     $t('footer.btn-ok')
                 }}</button>
                     <div v-else-if="error && showNotification()"

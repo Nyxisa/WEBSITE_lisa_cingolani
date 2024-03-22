@@ -39,7 +39,7 @@ const isVideo = (url: string): boolean => {
     return videoExtensions.includes(extension);
 };
 </script>
-    
+
 <template>
     <div
         class="[&_p]:pb-2 [&_h3]:pb-2 [&_h3]:text-grey [&_h3]:font-thin [&_h6]:text-grey [&_h6]:py-2 -mt-16 flex flex-col gap-20">
@@ -56,8 +56,8 @@ const isVideo = (url: string): boolean => {
                     <h3 class="pt-2 text-right border-t">{{ $t('projects.case') }}</h3>
                     <a v-if="ProjectInfo.link" :href="ProjectInfo.link" target="_blank"
                         class="ml-auto hover:bg-lightwhite hover:text-lightblack transition-all pb-1.5 btn-style">{{
-                            $t('projects.link')
-                        }}</a>
+                $t('projects.link')
+            }}</a>
                 </div>
                 <div class="col-start-7 col-span-full intro-outro" v-html="ProjectInfo.intro">
                 </div>
@@ -88,8 +88,8 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:flex-row md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay loop
-                    muted></video>
+                <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay
+                    loop muted></video>
             </div>
             <div class="flex flex-col col-start-7 gap-10 lg:gap-20 col-span-full">
                 <div v-if="ProjectInfo.text_3" v-html="ProjectInfo.text_3"></div>
@@ -100,8 +100,8 @@ const isVideo = (url: string): boolean => {
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="col-span-5">
                 <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" />
-                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay loop
-                    muted></video>
+                <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay
+                    loop muted></video>
             </div>
             <div class="col-start-7 col-span-full" v-if="ProjectInfo.text_5" v-html="ProjectInfo.text_5"></div>
         </section>
@@ -114,7 +114,8 @@ const isVideo = (url: string): boolean => {
             <div class="flex col-span-7 gap-1">
                 <Arrow class="self-start h-auto min-w-[2rem] max-w-[2rem]" />
                 <p class="!py-8 [&_p]:!pb-2 md:!py-1 intro-outro" v-html="ProjectInfo.outro"></p>
-                <Arrow class="md:hidden transform scale-x-[-1] scale-y-[-1] h-auto self-end min-w-[2rem] max-w-[2rem]" />
+                <Arrow
+                    class="md:hidden transform scale-x-[-1] scale-y-[-1] h-auto self-end min-w-[2rem] max-w-[2rem]" />
             </div>
             <section class="col-start-8 col-span-full">
                 <h3 class="mx-auto mb-4 text-center lg:mt-2">{{ $t('projects.made') }}</h3>

@@ -87,14 +87,14 @@ const errorMessage = () => error.value ? error.value : '';
                 <h5 class="mb-10 text-center">{{ $t('footer.cta2') }}</h5>
                 <form @submit.prevent="onSubmit">
                     <input type="email" v-model="email" id="email"
-                        class="block text-center w-full px-1 text-base bg-transparent border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"
+                        class="block focus:border-b-2 focus:border-lightpurple text-center w-full px-1 text-base bg-transparent border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"
                         :placeholder="$t('footer.placeholder')">
 
                     <button v-if="!showNotification() || error" type="submit"
-                        class="mx-auto mt-5 btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
+                        class="mx-auto mt-5 btn hover:scale-[1.03] focus:tracking-wider">{{
                     $t('footer.btn') }}</button>
                     <button v-if="!error && showNotification()"
-                        class=" mx-auto mt-5 bg-lightpurple btn focus:translate-y-[1px] hover:-translate-y-[1px]">{{
+                        class=" mx-auto mt-5 bg-lightpurple btn hover:scale-[1.03] focus:tracking-wider">{{
                     $t('footer.btn-ok') }}</button>
                     <div v-else-if="error && showNotification()"
                         class="p-5 mx-auto my-5 text-lightblack bg-lightorange rounded-simple w-fill">

@@ -38,7 +38,7 @@ const autoScroll = () => {
             const scrollDistance = containerWidth / 5 + 2.5;
             carrousel.value.scrollLeft += scrollDistance;
         }
-    }, 5000); // 5 seconds
+    }, 5000); // 5 secondes
 
     onUnmounted(() => {
         clearInterval(scrollInterval);
@@ -59,10 +59,11 @@ onMounted(() => {
         </div>
         <div class="hidden carrousel_btn lg:flex">
             <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
-                <Left class="z-10 bg-opacity-75 rounded-full bg-lightblack backdrop-blur-sm" />
+                <Left
+                    class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>
             <button @click="carrousel && (carrousel.scrollLeft += carrousel.clientWidth)">
-                <Right class="z-10 bg-opacity-75 rounded-full bg-lightblack backdrop-blur-sm" />
+                <Right class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>
         </div>
         <ul class="flex gap-4 mt-5">
@@ -144,4 +145,3 @@ onMounted(() => {
     height: 50px;
 }
 </style>
-

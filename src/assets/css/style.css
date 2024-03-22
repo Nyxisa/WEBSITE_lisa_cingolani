@@ -118,7 +118,7 @@
   }
 
   .btn-skills:hover {
-    @apply text-lightblack before:absolute before:bottom-0 before:left-0 before:top-0 before:-z-10 before:h-full before:bg-lightwhite before:rounded-full before:w-full before:transition-all hover:before:duration-700;
+    @apply text-lightblack italic before:absolute before:bottom-0 before:left-0 before:top-0 before:-z-10 before:h-full before:bg-lightwhite before:rounded-full before:w-full before:transition-all hover:before:duration-700;
   }
 
   .menu-list {
@@ -285,7 +285,7 @@
   }
 
   .input {
-    @apply bg-transparent transition-all w-full px-1 text-base lg:text-xl border-b border-b-lightwhite focus:outline-none focus:border-b-4 focus:border-b-lightpurple placeholder:text-lightwhite;
+    @apply bg-transparent transition-all w-full px-1 text-base lg:text-lg border-b border-b-lightwhite focus:outline-none focus:border-b-2 lg:focus:border-b-4 focus:border-b-lightpurple placeholder:text-lightwhite;
   }
 
   /* Style for custom check mark */
@@ -441,6 +441,7 @@
   .intro-outro > p {
     @apply text-base md:text-lg lg:text-xl py-0 !important;
   }
+
 }
 
 @layer utilities {
