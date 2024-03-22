@@ -17,10 +17,28 @@ function closeMenu() {
     activeMenu.value = false
 }
 
+import { onMounted } from 'vue';
+
+const showName = ref(false);
+
+// Ajouter un écouteur de scroll lorsque le composant est monté
+onMounted(() => {
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        // Changer le seuil de 800 à votre position de scroll souhaitée
+        if (scrollPosition > 100) {
+            showName.value = true;
+        } else {
+            showName.value = false;
+        }
+    });
+});
+
+
 </script>
 
 <template>
-    <header aria-label="Header"
+    <header aria-label="Header" id="header"
         class="fixed z-10 flex items-center justify-between w-screen px-6 py-4 transition-all duration-300 ease-in-out translate-y-0 h md:shadow-none md:bg-gradient-to-t bg-gradient-to-b from-lightblack/90 to-black/90 text-lightwhite shadow-1 lg:py-4"
         :class="{
             '!-translate-y-full !bg-transparent': !dirTop,
@@ -30,11 +48,13 @@ function closeMenu() {
             <img src="./icons/nav/logo.svg" class="w-10 h-auto" />
         </RouterLink>
         <RouterLink to="#">
-            <span class="text-xs font-thin text-transparent normal-case div-graphic font-halyard">Lisa Cingolani</span>
+            <span id="name" v-if="showName"
+                class="text-xs font-thin text-transparent normal-case div-graphic font-halyard">Lisa
+                Cingolani</span>
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
             <nav aria-label="Site Nav"
-                class="fixed inset-0 invisible w-screen h-[102svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t from-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
+                class="fixed inset-0 invisible w-screen h-[101svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t bg-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[12svh] text-center lg:m-0 flex-col flex">
                     <li class="menu-item-mobile">
