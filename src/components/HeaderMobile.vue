@@ -44,16 +44,16 @@ onMounted(() => {
             '!-translate-y-full !bg-transparent': !dirTop,
             'shadow-1': underLimit,
         }">
-        <RouterLink to="/">
+        <RouterLink to="/" aria-label="Return to home">
             <img src="./icons/nav/logo.svg" class="w-10 h-auto" />
         </RouterLink>
-        <RouterLink to="#">
+        <RouterLink to="#" aria-label="Return to top">
             <span id="name" v-if="showName"
                 class="text-xs font-thin text-transparent normal-case div-graphic font-halyard">Lisa
                 Cingolani</span>
         </RouterLink>
         <div class="flex items-center justify-end font-itc">
-            <nav aria-label="Site Nav"
+            <nav aria-label="Navigation"
                 class="fixed inset-0 invisible w-screen h-[101svh] text-2xl transition-all duration-300 ease-in-out opacity-0 bg-gradient-to-t bg-lightblack to-black lg:bg-opacity-0 md:block lg:visible lg:relative lg:flex lg:h-auto lg:w-auto lg:items-center lg:opacity-100"
                 :class="{ '!visible opacity-100': activeMenu }" v-scroll-lock="activeMenu">
                 <ul class="items-center lg:flex-row mt-[12svh] text-center lg:m-0 flex-col flex">
@@ -74,7 +74,7 @@ onMounted(() => {
                     </li>
                     <li class="pb-0 mt-2 menu-item-mobile">
                         <label class="relative z-10 inline-flex items-center drop-shadow-lg">
-                            <input type="checkbox" value="" class="sr-only peer"
+                            <input type="checkbox" value="" class="sr-only peer" aria-label="Language switcher"
                                 @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
                             <div
                                 class="w-20 h-8 bg-grey rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:w-9 after:h-6 after:rounded-full after:bg-white after:transition-all">
@@ -83,12 +83,12 @@ onMounted(() => {
                         </label>
                     </li>
                 </ul>
-                <RouterLink @click="closeMenu" to="/">
+                <RouterLink @click="closeMenu" to="/" aria-label="Return to Home">
                     <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-[5svh] fill-lightwhite" />
                 </RouterLink>
             </nav>
             <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu"
-                aria-label="Menu">
+                aria-label="Open Menu / Close Menu">
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
                     :class="{ 'translate-y-[9px] rotate-45': activeMenu }">
                 </div>

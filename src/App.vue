@@ -14,7 +14,7 @@ const isLoading = ref(true);
 // Simulate loading delay
 setTimeout(() => {
     isLoading.value = false;
-}, 0); // 
+}, 6000); // 
 </script>
 
 <template>

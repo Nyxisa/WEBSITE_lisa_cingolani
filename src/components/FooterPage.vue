@@ -60,19 +60,19 @@ const errorMessage = () => error.value ? error.value : '';
                 <ul class="footer-socials">
                     <li class="footer-socials-item">
                         <linkedinLogo /><a class="footer-socials-link" href="https://www.linkedin.com/in/lisacgln"
-                            target="_blank">LinkedIn</a>
+                            target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
                     </li>
                     <li class="footer-socials-item">
                         <behanceLogo /><a class="footer-socials-link" href="https://www.behance.net/lisa-cingolani"
-                            target="_blank">Behance</a>
+                            target="_blank" aria-label="Instagram Profile">Behance</a>
                     </li>
                     <li class="footer-socials-item">
                         <instagramLogo /><a class="footer-socials-link" href="https://www.instagram.com/lisa_cgln"
-                            target="_blank">Instagram</a>
+                            target="_blank" aria-label="Behance Profile">Instagram</a>
                     </li>
                     <li class="footer-socials-item">
                         <dribbble-logo /><a class="footer-socials-link" href="https://dribbble.com/Nyxisa"
-                            target="_blank">Dribbble</a>
+                            target="_blank" aria-label="Dribbble Profile">Dribbble</a>
                     </li>
                 </ul>
             </div>

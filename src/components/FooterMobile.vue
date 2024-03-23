@@ -58,29 +58,29 @@ const errorMessage = () => error.value ? error.value : '';
         <div class="p-10">
             <div class="min-w-fit">
                 <h5 class="mb-10 text-center">{{ $t('footer.cta1') }}</h5>
-                <ul class="flex flex-wrap justify-center gap-6 mx-auto w-fit">
-                    <div class="flex flex-col items-center gap-6">
+                <div class="flex flex-wrap justify-center gap-6 mx-auto w-fit">
+                    <ul class="flex flex-col items-center gap-6">
                         <li class="footer-socials-item">
                             <linkedinLogo /><a class="footer-socials-link" href="https://www.linkedin.com/in/lisacgln"
-                                target="_blank">LinkedIn</a>
+                                target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
                         </li>
                         <li class="footer-socials-item">
                             <instagramLogo /><a class="footer-socials-link" href="https://www.instagram.com/lisa_cgln"
-                                target="_blank">Instagram</a>
+                                target="_blank" aria-label="Instagram Profile">Instagram</a>
                         </li>
-                    </div>
-                    <div class="flex flex-col items-center gap-6">
+                    </ul>
+                    <ul class="flex flex-col items-center gap-6">
                         <li class="footer-socials-item">
                             <behanceLogo /><a class="footer-socials-link" href="https://www.behance.net/lisa-cingolani"
-                                target="_blank">Behance</a>
+                                target="_blank" aria-label="Behance Profile">Behance</a>
                         </li>
 
                         <li class="footer-socials-item">
                             <dribbble-logo /><a class="footer-socials-link" href="https://dribbble.com/Nyxisa"
-                                target="_blank">Dribbble</a>
+                                target="_blank" aria-label="Dribbble Profile">Dribbble</a>
                         </li>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </div>
 
             <div class="mt-20 w-[80%] mx-auto">
