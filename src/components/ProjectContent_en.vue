@@ -50,14 +50,15 @@ const isVideo = (url: string): boolean => {
             <h2 class="my-6 font-thin font-itc"> {{ ProjectInfo.category.join(" | ") }}</h2>
 
             <section class="md:project-grid">
-                <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple col-span-full" />
+                <img :src="urlMainImg" class="w-full h-auto mx-auto mb-10 rounded-simple col-span-full"
+                    alt="Project Thumbnail" />
                 <div class="flex flex-col justify-between h-full col-span-5 py-2 mb-10">
                     <h3 class="pt-2 text-right border-t">{{ ProjectInfo.date.slice(0, 7) }}</h3>
                     <h3 class="pt-2 text-right border-t">{{ $t('projects.case') }}</h3>
                     <a v-if="ProjectInfo.link" :href="ProjectInfo.link" target="_blank"
                         class="ml-auto hover:bg-lightwhite hover:text-lightblack transition-all pb-1.5 btn-style">{{
-                $t('projects.link')
-            }}</a>
+                        $t('projects.link')
+                        }}</a>
                 </div>
                 <div class="col-start-7 col-span-full intro-outro" v-html="ProjectInfo.intro">
                 </div>
@@ -87,7 +88,7 @@ const isVideo = (url: string): boolean => {
 
         <section class="flex flex-col justify-between gap-10 md:flex-row md:project-grid">
             <div class="col-span-5">
-                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" />
+                <img v-if="isImage(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" alt="Image Bonus 1" />
                 <video v-else-if="isVideo(urlAllImg[0])" :src="urlAllImg[0]" class="rounded-simple" controls autoplay
                     loop muted></video>
             </div>
@@ -99,7 +100,7 @@ const isVideo = (url: string): boolean => {
 
         <section class="flex flex-col justify-between gap-10 md:project-grid">
             <div class="col-span-5">
-                <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" />
+                <img v-if="isImage(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" alt="Image Bonus 2" />
                 <video v-else-if="isVideo(urlAllImg[1])" :src="urlAllImg[1]" class="rounded-simple" controls autoplay
                     loop muted></video>
             </div>
@@ -121,27 +122,27 @@ const isVideo = (url: string): boolean => {
                 <h3 class="mx-auto mb-4 text-center lg:mt-2">{{ $t('projects.made') }}</h3>
                 <ul class="mx-auto max-w-screen software-flex lg:software-grid">
                     <li v-if="urlAllIcons[0]" class="software-li">
-                        <img :src="urlAllIcons[0]" />
+                        <img :src="urlAllIcons[0]" alt="Software 1" />
                         {{ ProjectInfo.softwares[0] }}
                     </li>
                     <li v-if="urlAllIcons[1]" class="software-li">
-                        <img :src="urlAllIcons[1]" />
+                        <img :src="urlAllIcons[1]" alt="Software 2" />
                         {{ ProjectInfo.softwares[1] }}
                     </li>
                     <li v-if="urlAllIcons[2]" class="software-li">
-                        <img :src="urlAllIcons[2]" />
+                        <img :src="urlAllIcons[2]" alt="Software 3" />
                         {{ ProjectInfo.softwares[2] }}
                     </li>
                     <li v-if="urlAllIcons[3]" class="software-li">
-                        <img :src="urlAllIcons[3]" />
+                        <img :src="urlAllIcons[3]" alt="Software 4" />
                         {{ ProjectInfo.softwares[3] }}
                     </li>
                     <li v-if="urlAllIcons[4]" class="software-li">
-                        <img :src="urlAllIcons[4]" />
+                        <img :src="urlAllIcons[4]" alt="Software 5" />
                         {{ ProjectInfo.softwares[4] }}
                     </li>
                     <li v-if="urlAllIcons[5]" class="software-li">
-                        <img :src="urlAllIcons[5]" />
+                        <img :src="urlAllIcons[5]" alt="Software 6" />
                         {{ ProjectInfo.softwares[5] }}
                     </li>
                 </ul>

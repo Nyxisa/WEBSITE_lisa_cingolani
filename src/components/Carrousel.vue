@@ -51,11 +51,11 @@ onMounted(() => {
 <template>
     <section class="relative carrousel_layout">
         <div class="carrousel_images" ref="carrousel" @scroll.passive="debouncedImg()">
-            <img id="ecran-1" v-if="urlAllImg[8]" :src="urlAllImg[8]" alt="1" />
-            <img id="ecran-2" v-if="urlAllImg[9]" :src="urlAllImg[9]" alt="2" />
-            <img id="ecran-3" v-if="urlAllImg[10]" :src="urlAllImg[10]" alt="3" />
-            <img id="ecran-4" v-if="urlAllImg[11]" :src="urlAllImg[11]" alt="4" />
-            <img id="ecran-5" v-if="urlAllImg[12]" :src="urlAllImg[12]" alt="5" />
+            <img id="ecran-1" v-if="urlAllImg[8]" :src="urlAllImg[8]" alt="Image Carrousel 1" />
+            <img id="ecran-2" v-if="urlAllImg[9]" :src="urlAllImg[9]" alt="Image Carrousel 2" />
+            <img id="ecran-3" v-if="urlAllImg[10]" :src="urlAllImg[10]" alt="Image Carrousel 3" />
+            <img id="ecran-4" v-if="urlAllImg[11]" :src="urlAllImg[11]" alt="Image Carrousel 4" />
+            <img id="ecran-5" v-if="urlAllImg[12]" :src="urlAllImg[12]" alt="Image Carrousel 5" />
         </div>
         <div class="hidden carrousel_btn lg:flex">
             <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
@@ -63,7 +63,8 @@ onMounted(() => {
                     class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>
             <button @click="carrousel && (carrousel.scrollLeft += carrousel.clientWidth)">
-                <Right class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
+                <Right
+                    class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>
         </div>
         <ul class="flex gap-4 mt-5">
@@ -97,6 +98,12 @@ onMounted(() => {
     height: 8px;
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 50%;
+}
+
+.carrousel_circle:hover {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .carrousel_layout {

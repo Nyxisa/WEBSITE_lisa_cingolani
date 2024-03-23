@@ -87,7 +87,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-25%, -25%);
     border-radius: 50%;
     pointer-events: none;
     transition-property: all;
@@ -118,7 +118,7 @@
   }
 
   .btn-skills:hover {
-    @apply text-lightblack italic before:absolute before:bottom-0 before:left-0 before:top-0 before:-z-10 before:h-full before:bg-lightwhite before:rounded-full before:w-full before:transition-all hover:before:duration-700;
+    @apply text-lightblack before:absolute before:bottom-0 before:left-0 before:top-0 before:-z-10 before:h-full before:bg-lightwhite before:rounded-full before:w-full before:transition-all hover:before:duration-700;
   }
 
   .menu-list {
@@ -441,7 +441,6 @@
   .intro-outro > p {
     @apply text-base md:text-lg lg:text-xl py-0 !important;
   }
-
 }
 
 @layer utilities {
