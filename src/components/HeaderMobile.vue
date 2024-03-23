@@ -87,7 +87,8 @@ onMounted(() => {
                     <img src="./icons/nav/logo.svg" class="w-[20%] h-auto mx-auto mt-[5svh] fill-lightwhite" />
                 </RouterLink>
             </nav>
-            <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu">
+            <button class="relative z-10 flex flex-col justify-between w-8 h-5 mx-2" @click="activeMenu = !activeMenu"
+                aria-label="Menu">
                 <div class="ease h-[2px] w-full transform rounded-full bg-lightwhite transition duration-300"
                     :class="{ 'translate-y-[9px] rotate-45': activeMenu }">
                 </div>

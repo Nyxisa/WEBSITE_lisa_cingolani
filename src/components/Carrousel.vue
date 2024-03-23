@@ -58,11 +58,11 @@ onMounted(() => {
             <img id="ecran-5" v-if="urlAllImg[12]" :src="urlAllImg[12]" alt="Image Carrousel 5" />
         </div>
         <div class="hidden carrousel_btn lg:flex">
-            <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)">
+            <button @click="carrousel && (carrousel.scrollLeft -= carrousel.clientWidth)" aria-label="Previous Picture">
                 <Left
                     class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>
-            <button @click="carrousel && (carrousel.scrollLeft += carrousel.clientWidth)">
+            <button @click="carrousel && (carrousel.scrollLeft += carrousel.clientWidth)" aria-label="Next Picture">
                 <Right
                     class="z-10 transition-all bg-opacity-75 rounded-full hover:scale-110 bg-lightblack backdrop-blur-sm" />
             </button>

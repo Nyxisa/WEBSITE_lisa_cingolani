@@ -105,8 +105,8 @@ export default {
                     required />
                 <span>{{ $t('contact.consent') }}</span>
             </div>
-            <button type="submit"
-                class="mt-10 lg:mt-0 btn font-itc hover:scale-[1.03] focus:tracking-wider lg:text-lg">{{
+            <button type="submit" class="mt-10 lg:mt-0 btn font-itc hover:scale-[1.03] focus:tracking-wider lg:text-lg"
+                aria-label="Submit">{{
                 $t('footer.btn') }}</button>
         </div>
 

@@ -90,12 +90,12 @@ const errorMessage = () => error.value ? error.value : '';
                         class="block focus:border-b-2 focus:border-lightpurple text-center w-full px-1 text-base bg-transparent border-b max-w-[300px] mx-auto border-b-lightwhite focus:outline-none text-lightwhite"
                         :placeholder="$t('footer.placeholder')">
 
-                    <button v-if="!showNotification() || error" type="submit"
+                    <button v-if="!showNotification() || error" type="submit" aria-label="Submit"
                         class="mx-auto mt-5 btn hover:scale-[1.03] focus:tracking-wider">{{
-                    $t('footer.btn') }}</button>
-                    <button v-if="!error && showNotification()"
+                        $t('footer.btn') }}</button>
+                    <button v-if="!error && showNotification()" aria-label="Submit"
                         class=" mx-auto mt-5 bg-lightpurple btn hover:scale-[1.03] focus:tracking-wider">{{
-                    $t('footer.btn-ok') }}</button>
+                        $t('footer.btn-ok') }}</button>
                     <div v-else-if="error && showNotification()"
                         class="p-5 mx-auto my-5 text-lightblack bg-lightorange rounded-simple w-fill">
                         {{ error }}
