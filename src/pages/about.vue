@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import Download from '@/components/icons/download.vue'
 const { t } = useI18n()
 import { useHead } from '@unhead/vue'
 useHead({
@@ -29,7 +30,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
                     <div class="flex-grow w-3/4 md:w-2/3 md:grow-0">
 
                         <p class="mb-0 text-base md:text-2xl lg:text-3xl 2xl:text-4xl about-text md:max-w-[25ch]">{{
-                            $t('about.p1') }}</p>
+                    $t('about.p1') }}</p>
                     </div>
                     <div class="w-1/4 pb-2 bg-center bg-cover md:aspect-square md:rounded-full rounded-simple"
                         style="background-image: url(/profile_pic.webp)" alt="Photo">
@@ -49,7 +50,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
 
         <section class="grid grid-cols-2 gap-4 md:gap-8 md:mt-10 xl:grid-cols-4 h-fit">
 
-            <div class="row-span-3 p-4 md:row-span-4 h-fit bg-lightblack rounded-simple">
+            <div class="row-span-3 p-4 md:row-span-4 bg-lightblack rounded-simple">
                 <h3 class="w-auto pb-2 font-thin text-transparent div-graphic" v-html="$t('about.h3-1')"></h3>
                 <ul class="grid gap-2 md:grid-cols-2 lg:grid-cols-1">
                     <li class="about-skills">
@@ -91,7 +92,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
                 </ul>
             </div>
 
-            <div class="row-span-2 p-4 md:row-span-4 h-fit bg-lightblack rounded-simple">
+            <div class="row-span-2 p-4 md:row-span-4 bg-lightblack rounded-simple">
                 <h3 class="w-auto pb-2 font-thin text-transparent div-graphic" v-html="$t('about.h3-2')"></h3>
                 <ul class="grid gap-2 pt-2 md:grid-cols-2 lg:grid-cols-1">
                     <li>
@@ -115,7 +116,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
                 </ul>
             </div>
 
-            <div class="row-span-2 p-4 bg-lightblack h-fit rounded-simple">
+            <div class="row-span-2 p-4 bg-lightblack rounded-simple">
                 <h3 class="pb-2 font-thin text-transparent div-graphic">{{ $t('about.h3-3') }}</h3>
                 <ul class="grid gap-2 pt-1 md:grid-cols-2 lg:grid-cols-1">
                     <li class="about-skills">
@@ -137,7 +138,7 @@ import AboutAnim from '@/components/AboutAnim.vue'
                 </ul>
             </div>
 
-            <div class="row-span-4 p-4 bg-lightblack h-fit rounded-simple">
+            <div class="row-span-4 p-4 bg-lightblack rounded-simple">
                 <h3 class="pb-2 font-thin text-transparent div-graphic">{{ $t('about.h3-4') }}</h3>
                 <ul class="grid gap-2 pt-2 md:grid-cols-2 lg:grid-cols-1">
                     <li>
@@ -155,8 +156,19 @@ import AboutAnim from '@/components/AboutAnim.vue'
                 </ul>
             </div>
 
+            <div class="row-span-3 p-4 xl:pb-0 bg-lightblack rounded-simple xl:col-span-4">
+                <h3 class="pb-2 font-thin text-transparent transition-all xl:pb-0 div-graphic">{{ $t('about.h3-5') }}
+                </h3>
+                <div class="flex gap-2 group xl:hidden">
+                    <Download class="group-hover:scale-[1.1]" />
+                    <a href="/public/Lisa_Cingolani-CV.pdf" download
+                        class="mt-0.5 lg:-mt-0.5 transition-all group-hover:tracking-wide">
+                        <p>{{ $t('about.CV') }}</p>
+                    </a>
+                </div>
+            </div>
+            <span class="hidden btn-skills xl:block">{{ $t('about.CV') }}</span>
+
         </section>
     </article>
 </template>
-
-
